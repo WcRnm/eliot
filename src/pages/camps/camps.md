@@ -1,7 +1,8 @@
 ---
-layout: ../../layouts/Layout.astro
 title: "Eliot Camps"
+layout: ../../layouts/Layout.astro
 ---
+
 # Eliot
 
 Eliot Institute creates and supports an intentional, inclusive community of celebration, friendship, and joy with opportunities for exploration, spirituality, and growth for Unitarian Universalists, their families and friends 
