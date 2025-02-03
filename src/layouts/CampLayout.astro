@@ -2,6 +2,10 @@
 const { frontmatter } = Astro.props;
 
 import '../styles/mvp.css'
+
+import { Image } from 'astro:assets';
+import EliotBanner from '../assets/Eliot_Banner.png';
+
 ---
 
 <!doctype html>
@@ -16,10 +20,12 @@ import '../styles/mvp.css'
 
   <body>
     <header>
-      Eliot Institute
+      <Image src={EliotBanner}
+             alt="Eliot Institute"
+             />
     </header>
     <main>
-			<slot />
+		  <slot />
 		</main>
     <footer>
     </footer>

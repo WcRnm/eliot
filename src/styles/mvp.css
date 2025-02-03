@@ -66,14 +66,26 @@ body {
   margin: 0;
   overflow-x: hidden;
   padding: 0;
+  background-image: url(../assets/hood_canal_bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 
 footer,
 header,
 main {
+  background: var(--color-bg);
   margin: 0 auto;
   max-width: var(--width-content);
   padding: 3rem 1rem;
+}
+
+header img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
 }
 
 hr {
