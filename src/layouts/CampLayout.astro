@@ -5,6 +5,7 @@ import '../styles/mvp.css'
 
 import { Image } from 'astro:assets';
 import EliotBanner from '../assets/Eliot_Banner.png';
+import Menu from '../components/Menu.astro';
 
 ---
 
@@ -24,43 +25,7 @@ import EliotBanner from '../assets/Eliot_Banner.png';
       <Image src={EliotBanner}
              alt="Eliot Institute"
              />
-      <nav>
-        <a href="/">Home</a>
-        <ul>
-          <li></li>
-          <li><a href="/camps">Camps</a></li>
-          <li><a href="">Calendar</a></li>
-          <li><a href="">Survival Guide</a></li>
-          <li><a href="/">Volunteers</a></li>
-          <li><a href="/">Donate</a></li>
-          <li><a href="/">About Us</a>
-            <ul>
-              <li><a href="">Mission Statement</a></li>
-              <li><a href="">Values Expressed in Action</a></li>
-              <li><a href="">Eliot Covenant</a></li>
-              <li><a href="">Policies</a></li>
-              <li><a href="">History</a></li>
-              <li><a href="">Board & Staff</a></li>
-              <li><a href="">Committee Charters</a></li>
-              <li><a href="">Committee Chairs</a></li>
-              <li><a href="">Location of Camps</a></li>
-              <li><a href="">Affiliations</a></li>
-              <li><a href="">Hand & Heart Award</a></li>
-              <li><a href="">Past Deans</a></li>
-              <li><a href="">Board Manual</a></li>
-              <li><a href="">Past Speakers</a></li>
-            </ul>
-          </li>
-          <li><a href="/">Links</a>
-            <ul>
-              <li><a href="">Seabeck Conference Center</a></li>
-              <li><a href="">UUA Pacific Western Region</a></li>
-
-            </ul>
-          </li>
-          <li><a href="/">Contact Us</a></li>
-        </ul>
-      </nav>
+      <Menu />
     </header>
     <main>
 		  <slot />
