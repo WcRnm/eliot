@@ -1,0 +1,80 @@
+@import url(mvp/mvp.css);
+
+:root {
+  --active-brightness: 0.85;
+  --border-radius: 5px;
+  --box-shadow: 2px 2px 10px;
+  --color-accent: #118bee15;
+  --color-bg: #fff;
+  --color-bg-secondary: #e9e9e9;
+  --color-link: #118bee;
+  --color-secondary: #920de9;
+  --color-secondary-accent: #920de90b;
+  --color-shadow: #f4f4f4;
+  --color-table: #118bee;
+  --color-text: #000;
+  --color-text-secondary: #999;
+  --color-scrollbar: #cacae8;
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --hover-brightness: 1.2;
+  --justify-important: center;
+  --justify-normal: left;
+  --line-height: 1.5;
+  --width-card: 285px;
+  --width-card-medium: 460px;
+  --width-card-wide: 800px;
+  --width-content: 1080px;
+}
+  
+@media (prefers-color-scheme: dark) {
+  :root[color-mode="user"] {
+    --color-accent: #0097fc4f;
+    --color-bg: #333;
+    --color-bg-secondary: #555;
+    --color-link: #0097fc;
+    --color-secondary: #e20de9;
+    --color-secondary-accent: #e20de94f;
+    --color-shadow: #bbbbbb20;
+    --color-table: #0097fc;
+    --color-text: #f7f7f7;
+    --color-text-secondary: #aaa;
+  }
+}
+
+html {
+  font-size: 110%;
+} 
+
+body {
+  background-image: url(../assets/hood_canal_bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+footer,
+header,
+main {
+  background: var(--color-bg);
+  padding: 1rem 1rem;
+}
+
+header img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}  
+
+nav {
+  margin-bottom: 0.2rem;
+}
+
+/* Columns */
+div {
+  column-count: 2;
+  column-width: auto;
+  column-gap: 2em;
+  column-rule-style: double;
+}
+  
