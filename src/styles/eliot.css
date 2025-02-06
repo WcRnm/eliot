@@ -72,7 +72,7 @@ nav {
 
 /* Columns */
 div {
-  column-count: 2;
+  column-count: 1;
   column-width: auto;
   column-gap: 2em;
   column-rule-style: double;

@@ -5,6 +5,13 @@ import '../styles/eliot.css'
 
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+
+import { getCollection } from 'astro:content';
+const newsletters = await getCollection('newsletters');
+const newsBaseUrl = "https://s3.amazonaws.com/siteninja/multitenant/assets/33945/files/original"
+
+const camps = await getCollection('camps');
+
 ---
 
 <!doctype html>
@@ -21,8 +28,27 @@ import Footer from '../components/Footer.astro';
   <body>
     <Header />
     <main>
-		  <slot />
-	  </main>
+      <slot />
+      <section>
+        <aside>
+          <h2>Eliot News</h2>
+          <ul>
+            {newsletters.map((post: { id: string; data: { date: string; }; }) => (
+              <li><a href={`${newsBaseUrl}/${post.data.file}`} target="news">{post.data.id}</a></li>
+            ))}
+          </ul>
+        </aside>
+        <aside>
+          <h2>Camps</h2>
+          <ul>
+            {camps.map((camp: {id: string; data: {name: string };}) => (
+              <li><a href={`camps/${camp.data.id}.html`}>{camp.data.name}</a></li>
+            ))}
+          </ul>
+        </aside>
+      </section>
+      
+    </main>
     <Footer />
   </body>
 
