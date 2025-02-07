@@ -1,12 +1,19 @@
 ---
 import { Image } from 'astro:assets';
 import EliotBanner from '../assets/Eliot_Banner.png';
-import Menu from '../components/Menu.astro';
+import Navbar from '../components/Navbar.astro';
 ---
 
 <header>
+  <div class="content">
     <Image src={EliotBanner}
         alt="Eliot Institute"
+        class="img-responsive"
         />
-    <Menu />
+    <div class="columns">
+        <div class="column col-xs-12">
+            <Navbar />
+        </div>
+    </div>
+  </div>
 </header>

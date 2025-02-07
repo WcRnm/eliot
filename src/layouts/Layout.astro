@@ -1,7 +1,7 @@
 ---
 const { frontmatter } = Astro.props;
 
-import '../styles/eliot.css'
+import '../styles/eliot-spectre.css'
 
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -27,28 +27,39 @@ const camps = await getCollection('camps');
 
   <body>
     <Header />
-    <main>
-      <slot />
-      <section>
-        <aside>
-          <h2>Eliot News</h2>
-          <ul>
-            {newsletters.map((post: { id: string; data: { date: string; }; }) => (
-              <li><a href={`${newsBaseUrl}/${post.data.file}`} target="news">{post.data.id}</a></li>
-            ))}
-          </ul>
-        </aside>
-        <aside>
-          <h2>Camps</h2>
-          <ul>
+    <div class="container">
+      <div class="columns">
+
+        <div class="column col-xs-9">
+          <slot />
+        </div>
+
+        <div class="column col-xs-3">
+          <ul class="menu">
+            <li class="menu-item">
+              <div class="tile tile-centered">
+                <div class="tile-content">&rarr; CAMPS &larr;</div>
+              </div>
+            </li>
             {camps.map((camp: {id: string; data: {name: string };}) => (
-              <li><a href={`camps/${camp.data.id}.html`}>{camp.data.name}</a></li>
+              <li class="menu-item"><a href={`camps/${camp.data.id}.html`}>{camp.data.name}</a></li>
             ))}
           </ul>
-        </aside>
-      </section>
-      
-    </main>
+          <br>
+          <ul class="menu">
+            <li class="menu-item">
+              <div class="tile tile-centered">
+                <div class="tile-content">&rarr; NEWS &larr;</div>
+              </div>
+            </li>
+            {newsletters.map((post: { id: string; data: { date: string; }; }) => (
+              <li class="menu-item"><a href={`${newsBaseUrl}/${post.data.file}`} target="news">{post.data.id}</a></li>
+            ))}
+          </ul>
+
+        </div>
+      </div>      
+    </div>
     <Footer />
   </body>
 
