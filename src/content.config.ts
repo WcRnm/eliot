@@ -17,4 +17,8 @@ const camps = defineCollection({
     loader: file("src/data/camps.yaml"),
 });
 
-export const collections = { newsletters, camps };
+const caeWorkshops = defineCollection({
+    loader: file("src/data/cae/workshops.yaml"),
+})
+
+export const collections = { newsletters, camps, caeWorkshops };
