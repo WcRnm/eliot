@@ -1,0 +1,371 @@
+/* Navigation */
+
+
+
+
+/*
+	<nav class=''> 
+		<ul>
+			<li><a href=...>Item 1</a></li>
+			<li><a href=...>Item 2</a></li>
+			<li><a href=...>Sub Menu</a>
+				<ul>...
+				</ul>
+			</li>
+
+		</ul>
+	</nav>
+	*/
+
+
+.nav ul, .dropdown-toggle ~ ul, .tabs {
+	// base navigational element: ul
+	box-sizing:border-box;
+	display: flex;
+    background-color: inherit;
+    padding:0;
+    margin:0;
+    list-style: none;
+    position: relative;
+    border-collapse: collapse;
+}
+
+ 	//navigation children. Needs <a> as a child of <li>. javascript helps fix this
+.nav, .dropdown-toggle ~ ul, .tabs {
+	li {
+	    margin: 0;
+	    padding: 0;
+	    flex:0 1 auto;
+	    position: relative;
+	    border-collapse: collapse;
+	    display: block;
+    }
+    li>*:not(ul) {
+	    display:block; // Block level needed to make full height. flex is useful when using eg. horz-group
+	    position: relative;
+	    white-space: nowrap;
+	    cursor: pointer;
+    }
+    li>*:not(ul):not(div) {
+	    margin:0;
+	    padding:0 @nav-padding-horz; // 1em
+	}
+	a {
+		outline:0;
+    	background-color: inherit;
+	    color:inherit;
+	    text-decoration:none;
+	}
+
+	a:hover {
+    	background-color: inherit;
+	    color:inherit;
+	    text-decoration:none;
+	}
+}
+
+// horizontal menu
+.nav.menubar {
+	display:flex;
+}
+.nav.menubar>ul, .tabs {
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	>li {
+	    //display:inline-block; 
+	}
+
+	li>*:not(ul) {
+		line-height: @menubar-line-height; // 3em
+	}
+	.horz-group {
+		>*:not(ul) { 
+			display: inline-block;
+		    padding-left: @nav-padding-horz/2;
+		    padding-right: @nav-padding-horz/2;
+		};
+	}
+}
+
+.nav.sidebar, .dropdown-toggle ~ ul {
+	li>*:not(ul) { // smaller line height for sidebar & dropdown menus
+		line-height: @sidebar-line-height; // 2em
+	}
+}
+
+.nav.menubar{
+	>*:not(ul) { // root level elements as siblings to the base <ul>
+		display: table-cell;
+		line-height: @menubar-line-height; // 3em
+		box-sizing:border-box;
+	}
+}
+
+.nav.menubar ul ul, // 2nd level menu = 1st level dropdown for menubar
+.nav.sidebar ul, // toplevel accordian for sidebar
+.dropdown-toggle ~ ul { // dropdown
+
+	// vertical menu
+	flex-direction: column;
+
+	li {
+	    //display:block;
+	    width: 100%;
+	    position: relative;
+	}
+	li>hr { // separator
+		margin:0;
+		padding: 0;
+	}
+}
+
+// hide all 2nd tier dropdowns by default
+.nav.menubar ul, .nav.sidebar, .dropdown-toggle ~ ul { 
+	// dropdown/accordian menu
+	li>ul, li>.dropdown-toggle>ul {
+		.hide();
+	}
+	li.open > ul, li.open>.dropdown-toggle>ul {
+		.show();
+		z-index: @z-modal;
+	}
+}
+
+.dropdown-toggle ~ ul { // the toplevel is also hidden for dropdowns
+	.hide();
+	position: absolute;
+	top: 100%;
+	left: 0;
+}
+.dropdown-toggle.open ~ ul {
+	.show();
+	z-index: @z-modal;
+}
+.dropdown-toggle:after {
+	font-family: "invisicons"; 
+	content:  ' \e802'; // inv-down
+}
+
+.nav.menubar>ul {
+	// Add down arrow, close to the text ONLY on first level UL
+	li > *:not(ul):after  { // was li>a:after
+		font-family: "invisicons"; 
+		content:  ' \e802'; // inv-down
+	} 
+
+	li>ul {
+	    position: absolute;
+	    top: 100%;
+	    top: calc(100% - 2px);
+	    min-width: 100%;
+		// overflow: hidden; <-- this is bad for 2nd level menus
+	}
+}
+
+.nav.sidebar ul {
+	// Add down arrow, on the far RHS, for all UL
+	li > *:not(ul):after  { // was li>a:after
+		font-family: "invisicons"; 
+		content:  ' \e802'; // inv-down
+		position: absolute;
+		right:0.3em;
+	} 
+}
+
+.popup() {
+	// begin popup/pop-right menu
+	ul {
+	    position: absolute;
+	    top:0;
+	    left:100%;
+	    min-width: auto;
+	}
+
+	li > *:not(ul):after { 
+		font-family: "invisicons"; 
+		content:  '\e805'; // inv-right
+		position: absolute;
+		right: 0.3em;
+	}
+}
+.nav.menubar>ul ul, .dropdown-toggle ~ ul, .nav.sidebar.popup:not(.auto-accordian) ul {
+	.popup();
+}
+@media @sm-viewport {
+	.nav.sidebar.popup.auto-accordian ul {
+		.popup();
+	}
+
+}
+
+
+
+.nav.menubar.right, .nav ul.right, .nav.menubar.right>ul, .nav.sidebar.right {
+	justify-content:flex-end;
+}
+.nav ul.right, .nav.menubar.right>ul, .nav.sidebar.right {
+	ul { // align accordian to the right edge
+		right: 0;
+		left: auto;			
+
+		li {
+			//text-align: right;
+		}
+	}
+}
+
+.nav.sidebar.right {
+	li > *:first-child:before { // was li > a:before 
+		content:  '\e802'; // inv-down
+		font-family: "invisicons"; 
+		position: absolute;
+		left: 0.3em;
+	}
+}
+.right-popup() {
+	ul { // change popup to pop-left menu
+	    left:auto;
+	    right:100%;	
+	}
+	li > *:first-child:before { 
+		content:  '\e804'; // inv-left
+		font-family: "invisicons"; 
+		position: absolute;
+		left: 0.3em;
+	}
+}
+.nav ul.right ul, .nav.menubar.right>ul ul, .dropdown-toggle ~ ul.right, .nav.sidebar.right.popup:not(.auto-accordian) ul {
+	.right-popup();
+}
+@media @sm-viewport {
+	.nav.sidebar.right.popup.auto-accordian ul{
+		.right-popup();
+	}
+}
+.nav>ul.right ul, .nav.menubar.right>ul ul, .nav.sidebar.right>ul {
+	li > *:not(ul):after { content:'' !important; display:none;} // hide arrows on the right
+}
+.nav.menubar.center, .nav.menubar.center>ul, ul.center {
+	justify-content:center;
+} 
+
+.js .nav-toggle {
+    display: inline-block;
+	cursor: pointer;
+    padding:0em @nav-padding-horz;
+    line-height: @menubar-line-height;
+
+	&:after {
+		font-family: "invisicons";
+		content: '\f0c9'; // inv-menu
+	}
+
+	@media @sm-viewport {
+		// hide on larger screens
+		display: none !important;
+	}
+
+}
+.js .nav-collapse {
+
+	& ul {
+		display:none;
+	}
+	&.open ul {
+		display:flex; // make a block level element, ie start a new line
+	}
+
+	&.menubar{
+		&.open {
+			display: block; // overrides .nav.menubar display=flex. This allows the UL to be on the next line (because flex contrains to one line otherwise)
+		}
+		>ul {
+			flex-wrap:nowrap;
+			flex-direction:column;
+			width:100%;
+		}
+		>ul>li {
+		    //display:block;
+		    text-align: center;
+		}
+		ul ul {
+			position: relative;
+			top:0;
+		}
+		ul ul ul {
+			left:0;
+		}
+	}
+	@media @sm-viewport {
+		&.menubar.open, & ul{ display: flex; }
+
+		// reset menubar to operate as per default
+		&.menubar{
+
+			>ul { 		
+				flex-direction:row;
+				flex-wrap: wrap;
+			}
+			>ul>li {
+			    //display:inline-block;
+			    text-align: left;
+			}
+			ul ul {
+				position: absolute;
+				top:100%;
+	    	}
+			ul ul ul {
+				top:0;
+				left:100%;
+			}
+		}
+	}
+}
+
+.nav,.dropdown-toggle ~ ul {
+	// cleanups. hide arrows on things that shouldn't have them
+	&.right,ul.right {
+		li > *:only-child:before { content: '' !important; display: none;}
+	}
+	li > *:only-child:after { content: '' !important; display: none;}	
+}
+
+
+
+/* tabs */
+
+/*
+<ul class="tabs"> 
+<li class="active"><a href="#page1">Tab 1</a></li>
+<li><a href="#page2">Tab 2</a></li>
+</ul>
+<div class="tabs-content">
+	<div id="page1">
+		Page 1
+	</div>
+	<div id="page2">
+		Page 2
+	</div>
+</div>
+*/
+.tabs {
+	> .active {
+		border:1px solid @border-color;
+		border-bottom: none;
+	 	border-top-right-radius: @border-radius;
+	 	border-top-left-radius: @border-radius;
+	}
+}
+.tab-content {
+	padding: 0 @nav-padding-horz;
+
+	>* {
+		.hide();
+	}
+	>.active {
+		.show();
+	}
+}
+
+

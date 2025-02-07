@@ -1,0 +1,134 @@
+
+/* theme-base. This file is used by various pre-packaged themes, but NOT the core inviscss package */
+@import "inviscss.less";
+
+
+
+.shadow-v() {
+	box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.2);
+}
+.shadow-vh() {
+	box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.2);
+}
+
+body {
+	background-color: @bg-color;
+	color:@color;
+	font-family: @font-family;
+};
+
+a { color: @link-color;}
+a:hover { color: @link-hover-color;}
+h2 a:hover { text-decoration: none; }
+h2[id] a:hover:after {
+	content: " \000020 \0000b6"; /*&para;*/
+}
+
+footer,.footer {
+	text-align: center;
+	color:@color-footer;
+	font-size:0.9em;
+	line-height: 2em;
+}
+
+.nav.menubar { 
+	background-color: @bg-menubar; color:@color-menubar; 
+	& when (@menubar-shadow = true) { .shadow-v(); }
+}
+.nav.sidebar { 
+	background-color: @bg-sidebar; color:@color-sidebar; 
+	& when (@sidebar-shadow = true) { .shadow-vh(); }
+}
+.nav.menubar ul ul, .dropdown-toggle ~ ul { background-color: @bg-popup;  color:@color-popup; }
+.dropdown-toggle ~ ul a { color:@color-popup;}
+.dropdown-toggle ~ ul a:hover { background-color: @bg-popup-hover;  }
+
+.nav.menubar ul ul, .dropdown-toggle ~ ul {
+	& when (@popup-shadow = true) { 
+		.shadow-vh(); 
+	}
+}
+.nav.menubar>ul>li, .nav-toggle {
+	background-color: @bg-menubar;
+	color: @color-menubar;
+}
+.nav.menubar>ul>li:hover, .nav-toggle:hover {
+	background-color: @bg-menubar-hover;
+}
+.nav.menubar .dropdown-toggle:hover {
+	background-color: lighten(@bg-menubar-hover, 10%);
+}
+.nav.menubar ul ul, .dropdown-toggle ~ ul {
+	border:1px solid @border-color;
+	transition: opacity 0.15s linear;
+}
+.nav.menubar ul ul li:hover {
+	background-color: @bg-popup-hover;
+}
+.nav.sidebar {
+	background-color: @bg-sidebar;
+	color: @color-sidebar;
+}
+.nav.sidebar li>a:hover {
+	background-color: @bg-sidebar-hover;
+}
+.nav.sidebar a {
+	padding-right: 2em; /* make a bit more space for the drop arrows */
+}
+.nav.sidebar a:after {
+	right: 0.7em; /* the drop down arrow */
+}
+.nav.sidebar:not(.popup) li ul {
+	//transition: opacity 0.5s linear;
+	padding-left:1em;
+}
+
+.tabs { position: relative;}
+.tabs>.active {
+	position: relative;
+	top:1px;  
+	background-color: @bg-tabs;
+	border-bottom:1px solid @bg-modal;
+}
+.tab-content {
+	background-color: @bg-tabs;
+	border:1px solid @border-color;
+	padding: 1em;
+	& when (@tabs-shadow = true) { .shadow-vh(); }
+}
+
+
+.nav.sidebar.popup ul ul {
+	background-color: @bg-popup;  color:@color-popup; 
+	border:1px solid @border-color;
+	transition: opacity 0.15s linear;
+	& when (@popup-shadow = true) { 
+		.shadow-vh(); 
+	}
+}
+
+
+.modal {
+	position: absolute;
+	background-color: @bg-modal;
+	top:10%;
+	border-radius: 7px;
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.8);
+}
+.modal >* { padding: 0 1em; }
+.modal-header h2 { font-size: 1.1em; padding: 0;}
+.modal-body { padding: 0.5em 1em 1em 1em; }
+.modal-footer { padding: 1em; }
+
+.tabs { position: relative;}
+.tabs>.active {
+	position: relative;
+	top:1px;  
+	background-color: @bg-modal;
+	border-bottom:1px solid @bg-modal;
+}
+.tab-content {
+	background-color: @bg-modal;
+	border:1px solid @border-color;
+	padding: 1em;
+}

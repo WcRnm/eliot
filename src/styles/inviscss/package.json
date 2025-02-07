@@ -1,0 +1,26 @@
+{
+  "name": "inviscss",
+  "version": "1.6.6",
+  "description": "InvisCSS base library",
+  "browser": "./js/inviscss.min.js",
+  "scripts": {
+    "build:css": "node ../../build-less.js less/inviscss.less",
+    "build:js": "node ../../build-js.js  js/inviscss.js",
+    "build": "npm run build:css && npm run build:js",
+    "prepublishOnly": "npm run build",
+    "postpublish": "node ../../zip-package.js"
+  },
+  "repository": "https://github.com/cmroanirgo/inviscss/tree/master/packages/inviscss",
+  "devDependencies": {
+    "normalize.css": "^6.0.0"
+  },
+  "keywords": [
+    "responsive",
+    "css",
+    "less",
+    "css-framework",
+    "inviscss"
+  ],
+  "author": "cmroanirgo",
+  "license": "MIT"
+}

@@ -1,16 +1,11 @@
 ---
 const { frontmatter } = Astro.props;
 
-import '../styles/eliot-spectre.css'
+import '../styles/eliot-inviscss.css'
 
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-
-import { getCollection } from 'astro:content';
-const newsletters = await getCollection('newsletters');
-const newsBaseUrl = "https://s3.amazonaws.com/siteninja/multitenant/assets/33945/files/original"
-
-const camps = await getCollection('camps');
+import Sidebar from '../components/Sidebar.astro';
 
 ---
 
@@ -21,6 +16,7 @@ const camps = await getCollection('camps');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <script src="../styles/inviscss-nature/js/inviscss.js"></script>
 
     <title>{frontmatter.title}</title>
   </head>
@@ -28,35 +24,12 @@ const camps = await getCollection('camps');
   <body>
     <Header />
     <div class="container">
-      <div class="columns">
-
-        <div class="column col-xs-9">
-          <slot />
+      <div class="row">
+        <div class="col-xs-3">
+          <Sidebar />
         </div>
-
-        <div class="column col-xs-3">
-          <ul class="menu">
-            <li class="menu-item">
-              <div class="tile tile-centered">
-                <div class="tile-content">&rarr; CAMPS &larr;</div>
-              </div>
-            </li>
-            {camps.map((camp: {id: string; data: {name: string };}) => (
-              <li class="menu-item"><a href={`camps/${camp.data.id}.html`}>{camp.data.name}</a></li>
-            ))}
-          </ul>
-          <br>
-          <ul class="menu">
-            <li class="menu-item">
-              <div class="tile tile-centered">
-                <div class="tile-content">&rarr; NEWS &larr;</div>
-              </div>
-            </li>
-            {newsletters.map((post: { id: string; data: { date: string; }; }) => (
-              <li class="menu-item"><a href={`${newsBaseUrl}/${post.data.file}`} target="news">{post.data.id}</a></li>
-            ))}
-          </ul>
-
+        <div class="col-xs-9">
+          <slot />
         </div>
       </div>      
     </div>

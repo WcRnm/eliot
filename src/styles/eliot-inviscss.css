@@ -1,0 +1,14 @@
+@import url(inviscss-nature/css/inviscss-nature.css);
+
+body {
+  margin: 1rem;
+
+  /*
+  background-image: url(../assets/hood_canal_bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  */
+}
+  

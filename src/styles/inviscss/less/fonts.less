@@ -1,0 +1,158 @@
+@font-face {
+  font-family: 'invisicons';
+  src: url('../fonts/invisicons.eot?36627619');
+  src: url('../fonts/invisicons.eot?36627619#iefix') format('embedded-opentype'),
+       url('../fonts/invisicons.woff2?36627619') format('woff2'),
+       url('../fonts/invisicons.woff?36627619') format('woff'),
+       url('../fonts/invisicons.ttf?36627619') format('truetype'),
+       url('../fonts/invisicons.svg?36627619#invisicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'invisicons';
+    src: url('../fonts/invisicons.svg?36627619#invisicons') format('svg');
+  }
+}
+*/
+ 
+ [class^="inv-"]:before, [class*=" inv-"]:before {
+  font-family: "invisicons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.inv-cancel:before { content: '\e800'; } /* '' */
+.inv-upload:before { content: '\e801'; } /* '' */
+.inv-down:before { content: '\e802'; } /* '' */
+.inv-up:before { content: '\e803'; } /* '' */
+.inv-left:before { content: '\e804'; } /* '' */
+.inv-right:before { content: '\e805'; } /* '' */
+.inv-down-open:before { content: '\e806'; } /* '' */
+.inv-left-open:before { content: '\e807'; } /* '' */
+.inv-right-open:before { content: '\e808'; } /* '' */
+.inv-up-open:before { content: '\e809'; } /* '' */
+.inv-invis:before { content: '\e80a'; } /* '' */
+.inv-menu:before { content: '\f0c9'; } /* '' */
+
+
+
+/*
+Fontello config. Use this to recreate the font:
+
+{
+  "name": "invisicons",
+  "css_prefix_text": "inv-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "eeec3208c90b7b48e804919d0d2d4a41",
+      "css": "upload",
+      "code": 59393,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "2d6150442079cbda7df64522dc24f482",
+      "css": "down",
+      "code": 59394,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "80cd1022bd9ea151d554bec1fa05f2de",
+      "css": "up",
+      "code": 59395,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "9dc654095085167524602c9acc0c5570",
+      "css": "left",
+      "code": 59396,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "fb1c799ffe5bf8fb7f8bcb647c8fe9e6",
+      "css": "right",
+      "code": 59397,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "559647a6f430b3aeadbecd67194451dd",
+      "css": "menu",
+      "code": 61641,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "5211af474d3a9848f67f945e2ccaf143",
+      "css": "cancel",
+      "code": 59392,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "ccddff8e8670dcd130e3cb55fdfc2fd0",
+      "css": "down-open",
+      "code": 59398,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "d870630ff8f81e6de3958ecaeac532f2",
+      "css": "left-open",
+      "code": 59399,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "399ef63b1e23ab1b761dfbb5591fa4da",
+      "css": "right-open",
+      "code": 59400,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "fe6697b391355dec12f3d86d6d490397",
+      "css": "up-open",
+      "code": 59401,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "7fd683b2c518ceb9e5fa6757f2276faa",
+      "css": "invis",
+      "code": 59402,
+      "src": "fontawesome"
+    }
+  ]
+}
+*/
