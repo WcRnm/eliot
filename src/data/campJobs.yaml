@@ -1,0 +1,211 @@
+# Camp Jobs.
+
+# ethics:
+- id:       Camp Staff Code of Ethics
+  group:    ethics
+  file:     27815/files/original/Camp_Staff_Code_of_Ethics__April_2019.pdf
+
+# av:
+- id:       Audio Visual Coordinator
+  group:    av
+  file:     31164/files/originalAV_Coordinator_(2024).pdf
+- id:       AV How-To-Manual
+  group:    av
+  file:
+- id:       Slide Show Creator
+  group:    av
+  file:
+
+# chaplain:
+- id:       Camp Chaplain
+  group:    chaplain
+  file:
+- id:       Youth & Young Adult Chaplain
+  group:    chaplain
+  file:
+
+# youth:
+- id:       Children's Program Director & Youth Advisor
+  group:    youth
+  file:
+- id:       Children's and Youth Program Guidelines
+  group:    youth
+  file:
+- id:       Children's, MAGS and Youth Program Staff
+  group:    youth
+  file:
+- id:       Children/Youth & Parent/Sponsor Orientation - First Night
+  group:    youth
+  file:
+
+# cae:
+- id:       Children's Art Workshop Coordinator
+  group:    cae
+  file:
+- id:       Presenter & Extravaganza Coordinator 
+  group:    cae
+  file:
+
+# dean:
+- id:       Dean
+  group:    dean
+  file:
+- id:       "Dean: Timeline"
+  group:    dean
+  file:
+- id:       "Dean: Staffing Guidelines"
+  group:    dean
+  file:
+- id:       "Dean: Theme Speaker Guidelines"
+  group:    dean
+  file:
+- id:       "Dean: Camp Staffing Lists"
+  group:    dean
+  file:
+
+# misc:
+- id:       Early Morning Coffee Host
+  group:    misc
+  file:
+- id:       Golf Cart Coordinator
+  group:    misc
+  file:
+- id:       House Leader
+  group:    misc
+  file:
+- id:       Newcomer Host
+  group:    misc
+  file:
+- id:       Newsletter Editor
+  group:    misc
+  file:
+- id:       Social Hour Host
+  group:    misc
+  file:
+- id:       Storage Closet Manager
+  group:    misc
+  file:
+- id:       Volunteer Coordinator
+  group:    misc
+  file:
+- id:       Young Adult Coordinator
+  group:    misc
+  file:
+
+# firstAid:
+- id:       First Aid Coordinator
+  group:    firstAid
+  file:
+- id:       First Aid Volunteer
+  group:    firstAid
+  file:
+- id:       First Aid Information
+  group:    firstAid
+  file:
+- id:       First Aid Supplies List
+  group:    firstAid
+  file:
+- id:       Concussion & Head Injury Information
+  group:    firstAid
+  file:
+- id:       EipPen Information
+  group:    firstAid
+  file:
+
+# music:
+- id:       Music Coordinator
+  group:    music
+  file:
+- id:       Music Accompanist 
+  group:    music
+  file:
+- id:       Choir Director
+  group:    music
+  file:
+
+# smallGroups:
+- id:       Small Groups Coordinator
+  group:    smallGroups
+  file:
+- id:       Small Group Facilitator
+  group:    smallGroups
+  file:
+
+# events:
+- id:       Afternoon Art
+  group:    events
+  file:
+- id:       Art Show
+  group:    events
+  file:
+- id:       Concerts
+  group:    events
+  file:
+- id:       Costume Parade
+  group:    events
+  file:
+- id:       Dances
+  group:    events
+  file:
+- id:       Photo Scavenger Hunt
+  group:    events
+  file:
+- id:       Talent Show
+  group:    events
+  file:
+- id:       Tie Dye
+  group:    events
+  file:
+- id:       Trivia Night
+  group:    events
+  file:
+
+# waterfront:
+- id:       Waterfront Director
+  group:    waterfront
+  file:
+- id:       Waterfront Rules
+  group:    waterfront
+  file:
+- id:       Boat Dock Coordinator
+  group:    waterfront
+  file:
+- id:       Boat Dock Volunteer
+  group:    waterfront
+  file:
+- id:       Boating Tests
+  group:    waterfront
+  file:
+  baseurl:  Lifeguard
+- id:
+  group:    waterfront
+  file:
+- id:       Waterfront Badge Information
+  group:    waterfront
+  file:
+- id:       Badge Chart
+  group:    waterfront
+  file:
+
+# winter:
+- id:       Feast Master
+  group:    winter
+  file:
+- id:       Living Room Coordinator
+  group:    winter
+  file:
+
+# worship:
+- id:       Morning Ingathering Coordinator
+  group:    worship
+  file:
+- id:       Evening Worship Coordinator
+  group:    worship
+  file:
+- id:       Worship Manual
+  group:    worship
+  file:
+- id:       Worship Schedule
+  group:    worship
+  file:
+

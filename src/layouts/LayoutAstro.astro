@@ -1,12 +1,11 @@
 ---
-const { frontmatter } = Astro.props;
+const { title } = Astro.props;
 
 import '../styles/eliot-pico.css'
 
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Sidebar from '../components/Sidebar.astro';
-
 ---
 
 <!doctype html>
@@ -16,9 +15,7 @@ import Sidebar from '../components/Sidebar.astro';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <script src="../styles/inviscss-nature/js/inviscss.js"></script>
-
-    <title>{frontmatter.title}</title>
+    <title>{title}</title>
   </head>
 
   <body>

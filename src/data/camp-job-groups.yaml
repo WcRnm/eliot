@@ -1,0 +1,42 @@
+# Camp Job Groups
+- id: ethics
+  name: Camp Staff Code of Ethics
+
+- id: av
+  name: Audio Visual
+
+- id: chaplain
+  name: Chaplins
+
+- id: youth
+  name: Children's/MAGS (Middle School Age Group) and Youth Programs
+
+- id: cae
+  name: Creative Arts Eliot Camp
+
+- id: dean
+  name: Dean
+
+- id: misc
+  name: Miscellaneous
+
+- id: firstAid
+  name: First Aid
+
+- id: music
+  name: Music
+
+- id: smallGroups
+  name: Small Groups
+
+- id: events
+  name: Special Events & Activities
+
+- id: waterfront
+  name: Waterfront - Swimming & Boating
+
+- id: winter
+  name: Winter Eliot
+
+- id: worship
+  name: Worship

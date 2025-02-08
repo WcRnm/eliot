@@ -13,4 +13,12 @@ const caeWorkshops = defineCollection({
     loader: file("src/data/cae/workshops.yaml"),
 })
 
-export const collections = { newsletters, camps, caeWorkshops };
+const campJobGroups = defineCollection({
+    loader: file("src/data/camp-job-groups.yaml"),
+})
+
+const campJobs = defineCollection({
+    loader: file("src/data/campJobs.yaml"),
+})
+
+export const collections = { newsletters, camps, caeWorkshops, campJobGroups, campJobs };
