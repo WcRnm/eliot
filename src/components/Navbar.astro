@@ -1,36 +1,62 @@
-<nav class="nav menubar">
-  <span class="nav-toggle" data-target=".nav.menubar"></span>
+---
+import { Image } from 'astro:assets';
+import Logo from '../assets/eliot-logo.png';
+---
+
+<nav>
   <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/camps/camps.html">Camps</a></li>
-    <li><a href="">Calendar</a></li>
-    <li><a href="">Survival Guide</a></li>
-    <li><a href="/">Volunteers</a></li>
-    <li><a href="/">Donate</a></li>
-    <li data-hasmenu="true">
-      <a href="#">About Us</a>
-      <ul>
-        <li><a href="">Mission Statement</a></li>
-        <li><a href="">Values Expressed in Action</a></li>
-        <li><a href="">Eliot Covenant</a></li>
-        <li><a href="">Policies</a></li>
-        <li><a href="">History</a></li>
-        <li><a href="">Board & Staff</a></li>
-        <li><a href="">Committee Charters</a></li>
-        <li><a href="">Committee Chairs</a></li>
-        <li><a href="">Location of Camps</a></li>
-        <li><a href="">Affiliations</a></li>
-        <li><a href="">Hand & Heart Award</a></li>
-        <li><a href="">Past Deans</a></li>
-        <li><a href="">Board Manual</a></li>
-        <li><a href="">Past Speakers</a></li>
-      </ul>
+    <li><a href="/">
+      <Image src={Logo}
+        alt="Eliot Institute"
+        height=64
+      /></a>
     </li>
-    <li><a href="/">Links</a>
-      <ul>
-        <li><a href="">Seabeck Conference Center</a></li>
-        <li><a href="">UUA Pacific Western Region</a></li>
-      </ul>
+    <li>
+      <details class="dropdown">
+        <summary>
+          Campers
+        </summary>
+        <ul>
+          <li><a href="/camps/camps.html">Camps</a></li>
+          <li><a href="">Survival Guide</a></li>
+          <li><a href="/">Volunteers</a></li>
+        </ul>
+      </details>
+    </li>
+    <li><a href="/">Donate</a></li>
+    <li>
+      <details class="dropdown">
+        <summary>
+          About Us
+        </summary>
+        <ul>
+          <li><a href="">Mission Statement</a></li>
+          <li><a href="">Values Expressed in Action</a></li>
+          <li><a href="">Eliot Covenant</a></li>
+          <li><a href="">Policies</a></li>
+          <li><a href="">History</a></li>
+          <li><a href="">Board & Staff</a></li>
+          <li><a href="">Committee Charters</a></li>
+          <li><a href="">Committee Chairs</a></li>
+          <li><a href="">Location of Camps</a></li>
+          <li><a href="">Affiliations</a></li>
+          <li><a href="">Hand & Heart Award</a></li>
+          <li><a href="">Past Deans</a></li>
+          <li><a href="">Board Manual</a></li>
+          <li><a href="">Past Speakers</a></li>
+        </ul>
+      </details>
+    </li>
+    <li>
+      <details class="dropdown">
+        <summary>
+          Links
+        </summary>
+        <ul>
+          <li><a href="">Seabeck Conference Center</a></li>
+          <li><a href="">UUA Pacific Western Region</a></li>
+        </ul>
+      </details>
     </li>
     <li><a href="/">Contact Us</a></li>
   </ul>

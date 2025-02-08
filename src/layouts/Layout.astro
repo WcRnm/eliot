@@ -1,7 +1,7 @@
 ---
 const { frontmatter } = Astro.props;
 
-import '../styles/eliot-inviscss.css'
+import '../styles/eliot-pico.css'
 
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -23,16 +23,17 @@ import Sidebar from '../components/Sidebar.astro';
 
   <body>
     <Header />
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-3">
+    <main class="parent container">
+      <div class="div1">
+        <aside>
           <Sidebar />
-        </div>
-        <div class="col-xs-9">
+        </aside>
+      </div>
+      <div>
+        <article>
           <slot />
-        </div>
-      </div>      
-    </div>
+        </article>
+      </div>
     <Footer />
   </body>
 
