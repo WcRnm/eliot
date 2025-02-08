@@ -1,16 +1,2 @@
 @import url(pico/css/pico.blue.css);
-/* @import url(flexbox/flexboxgrid.css) */
-
-/* generated using
-   https://cssgrid-generator.netlify.app/
-*/
-.parent {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    }
-    
-    .div1 { grid-area: 1 / 1 / 2 / 2; 
-}
+@import url(flexbox/flexboxgrid.css);

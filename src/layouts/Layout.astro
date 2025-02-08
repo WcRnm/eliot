@@ -23,17 +23,20 @@ import Sidebar from '../components/Sidebar.astro';
 
   <body>
     <Header />
-    <main class="parent container">
-      <div class="div1">
-        <aside>
-          <Sidebar />
-        </aside>
+    <main class="container">
+      <div class="row">
+        <div class="col-xs-3">
+          <aside>
+            <Sidebar />
+          </aside>
+        </div>
+        <div class="col-xs">
+          <article>
+            <slot />
+          </article>
+        </div>
       </div>
-      <div>
-        <article>
-          <slot />
-        </article>
-      </div>
+    </main>
     <Footer />
   </body>
 
