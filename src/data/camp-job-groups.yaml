@@ -1,6 +1,6 @@
 # Camp Job Groups
-- id: ethics
-  name: Camp Staff Code of Ethics
+- id: common
+  name: For All Camp Staff
 
 - id: av
   name: Audio Visual
