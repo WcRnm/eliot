@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/LayoutAstro.astro'
+
+import { getCollection } from 'astro:content';
+
+const camps = await getCollection('camps');
+const today = new Date();
+
+interface Camp {
+    id: string,
+    data: {
+        name: string,
+        presenter: string,
+        theme: string,
+        start: Date,
+        end: Date
+    }
+};
+---
+
+<Layout title="Past Camps">
+    <h1>Past Camps</h1>
+
+        {camps.map((camp: Camp) => {
+            if (camp.data.end < today) {
+                const startDate = new Date(camp.data.start).toDateString();
+                const endDate = new Date(camp.data.end).toDateString();;
+                return (
+                    <h2><a href={`/camps/${camp.id}.html`}>{camp.data.name}</a></h2>
+                    <p>{startDate} &mdash; {endDate}</p>
+                    <p><i>{camp.data.theme}</i></p>
+                    <p>{camp.data.presenter}</p>
+                )
+            }
+        })}
+
+
+</Layout>

@@ -34,31 +34,31 @@
 
 - id:         2024-winter
   name:       Winter Eliot 2024
-  start:      
-  end:        
+  start:      2024-12-28
+  end:        2025-01-01
   theme:      The Practice of Evidence-Based Hope
   presenter:  Elin Kelsy
 
 - id:         2024-cae
   name:       Creative Arts Eliot 2024
-  start:      
-  end:        
+  start:      2024-08-10
+  end:        2024-08-14
   presenter:  
   theme:      Your Choice of Workshops
 
 - id:         2024-august
   name:       August Eliot 2024
-  start:      
-  end:        
-  presenter:  
+  start:      2024-08-03
+  end:        2024-08-10
+  presenter:  Zr. Alex Kapitan
   theme:      Exploring and Celebrating Sexuality, Gender, and Faith
 
 - id:         2024-july
   name:       July Eliot 2024
-  start:      
-  end:        
-  presenter:  
-  theme:      
+  start:      2024-07-13
+  end:        2024-07-20
+  presenter:  Guy Nelson
+  theme:      Creativity Games and Storytelling
 
 # =================================================
 # 2023

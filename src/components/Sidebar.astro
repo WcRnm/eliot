@@ -5,24 +5,45 @@ const fileUrl = "https://s3.amazonaws.com/siteninja/multitenant/assets"
 
 const camps = await getCollection('camps');
 const today = new Date();
+
+interface Camp {
+  id: string,
+  data: {
+    name: string,
+    presenter: string,
+    theme: string,
+    start: Date,
+    end: Date
+  }
+};
+
+interface NewsLetter {
+  id: string;
+  data: {
+    file: string,
+    date: string;
+  };
+};
 ---
-<h2>CAMPS</h2>
+<h2><a href="/camps/camps.html">CAMPS</a></h2>
 <nav>
   <ul>
-    {camps.map((camp: {id: string; data: {id: string, name: string, end: Date };}) => {
+    {camps.map((camp: Camp) => {
       if (camp.data.end >= today) {
         return (
-          <li class="menu-item"><a href={`/camps/${camp.data.id}.html`}>{camp.data.name}</a></li>
+          <li><a href={`/camps/${camp.id}.html`}>{camp.data.name}</a></li>
         )
       }
     })}
+    <li><a href="/camps-past.html">...Past Camps</a></li>
   </ul>
-</nav>  
+</nav>
+<hr>
 <h2>NEWS</h2>
 <nav>
   <ul>
-    {newsletters.map((post: { id: string; data: { id: string, file: string, date: string; }; }) => (
-      <li class="menu-item"><a href={`${fileUrl}/${post.data.file}`} target="other">{post.data.id}</a></li>
+    {newsletters.map((post: NewsLetter) => (
+      <li><a href={`${fileUrl}/${post.data.file}`} target="other">{post.data.id}</a></li>
     ))}
   </ul>
 </nav>

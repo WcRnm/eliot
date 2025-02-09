@@ -1,5 +1,5 @@
 ---
-import Layout2 from '../../layouts/LayoutAstro.astro'
+import Layout from '../../layouts/LayoutAstro.astro'
 
 import { getCollection } from 'astro:content';
 
@@ -9,7 +9,7 @@ const groups = await getCollection('campJobGroups');
 const fileUrl = "https://s3.amazonaws.com/siteninja/multitenant/assets"
 ---
 
-<Layout2 title="Camp Jobs">
+<Layout title="Camp Jobs">
     {groups.map((grp: { id: string; data: {id: string, name: string} }) => {
         return (
             <h2>{grp.data.name}</h2>
