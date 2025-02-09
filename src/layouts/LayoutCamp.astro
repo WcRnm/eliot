@@ -11,8 +11,8 @@ import { getCollection } from 'astro:content';
 const camps = await getCollection('camps');
 const camp = camps.find((c: {id: string}) => c.id === frontmatter.id).data;
 
-console.log("id: " + frontmatter.id);
-console.log("camp: " + JSON.stringify(camp));
+const startDate = new Date(camp.start).toDateString();
+const endDate = new Date(camp.end).toDateString();;
 ---
 
 <!doctype html>
@@ -38,6 +38,8 @@ console.log("camp: " + JSON.stringify(camp));
         <div class="col-xs">
           <article>
             <h1>{camp.name}</h1>
+            <p>{startDate} &mdash; {endDate}</p>
+
             <h2><i>{camp.theme}</i> with {camp.presenter}</h2>
 
             <slot />

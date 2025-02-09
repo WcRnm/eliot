@@ -1,55 +1,65 @@
+# =================================================
+# 2025
+
 - id:         2025-winter
   name:       Winter Eliot 2025
-  startDate:  2025-12-28
-  endDate:    2026-01-01
+  start:      2025-12-28
+  end:        2026-01-01
   presenter:  Melanie DeMore
   theme:      Stick Pounding
 
 - id:         2025-cae
   name:       Creative Arts Eliot 2025
-  startDate:  2025-08-09
-  endDate:    2025-08-13
-  presenter:  Your Choice of Workshops
-  theme:      
+  start:      2025-08-09
+  end:        2025-08-13
+  presenter:  
+  theme:      Your Choice of Workshops
 
 - id:         2025-august
   name:       August Eliot 2025
-  startDate:  2025-08-02
-  endDate:    2025-08-09
+  start:      2025-08-02
+  end:        2025-08-09
   presenter:  Guy Nelson
   theme:      "Creativity Games & Storytelling"
 
 - id:         2025-july
   name:       July Eliot 2025
-  startDate:  2025-07-12
-  endDate:    2025-07-19
+  start:      2025-07-12
+  end:        2025-07-19
   presenter:  Lea Morris
   theme:      "Joyful Noise: Sing Out, Be Free"
 
+# =================================================
+# 2024
+
 - id:         2024-winter
   name:       Winter Eliot 2024
-  startDate:  
-  endDate:    
+  start:      
+  end:        
   theme:      The Practice of Evidence-Based Hope
   presenter:  Elin Kelsy
 
 - id:         2024-cae
   name:       Creative Arts Eliot 2024
-  startDate:  
-  endDate:    
+  start:      
+  end:        
   presenter:  
   theme:      Your Choice of Workshops
 
 - id:         2024-august
   name:       August Eliot 2024
-  startDate:  
-  endDate:    
+  start:      
+  end:        
   presenter:  
   theme:      Exploring and Celebrating Sexuality, Gender, and Faith
 
 - id:         2024-july
   name:       July Eliot 2024
-  startDate:  
-  endDate:    
+  start:      
+  end:        
   presenter:  
   theme:      
+
+# =================================================
+# 2023
+
