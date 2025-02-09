@@ -1,0 +1,46 @@
+---
+const { frontmatter } = Astro.props;
+
+import '../styles/eliot-pico.css'
+
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Sidebar from '../components/Sidebar.astro';
+
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{frontmatter.title}</title>
+  </head>
+
+  <body>
+    <Header />
+    <main class="container">
+      <div class="row">
+        <div class="col-xs-3">
+          <aside>
+            <Sidebar />
+          </aside>
+        </div>
+        <div class="col-xs">
+          <article>
+            <h1>{frontmatter.title}</h1>
+            <h2><i>{frontmatter.theme}</i> with {frontmatter.presenter}</h2>
+
+            <slot />
+
+          </article>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+
+</html>
