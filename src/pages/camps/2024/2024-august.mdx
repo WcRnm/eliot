@@ -5,11 +5,11 @@ start:      2024-08-03
 end:        2024-08-10
 presenter:  Zr. Alex Kapitan
 theme:      "Exploring and Celebrating Sexuality, Gender, and Faith"
-
-layout: ../../layouts/LayoutCamp.astro
 ---
-import photo from '../../assets/presenters/Alex_Kapitan_2022_photo.jpg';
+import Layout from '@layouts/LayoutCamp.astro'
+import photo from '@assets/presenters/Alex_Kapitan_2022_photo.jpg';
 
+<Layout camp={frontmatter}>
 <img 
     src={photo.src} 
     alt="Alex Kapitan"
@@ -70,3 +70,4 @@ congregations in becoming places of radical welcome for all.
  western Massachusetts with per partner Teo Drake and a menagerie 
  of furry and feathered friends.
  
+</Layout>
