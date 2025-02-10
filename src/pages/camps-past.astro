@@ -2,12 +2,12 @@
 import CampList from '../components/CampList.astro'
  
 import { getCollection } from 'astro:content';
-const camps = await getCollection('camps');
+const campsAll = await getCollection('camps');
+const now = new Date();
 
 interface Camp {
     id: string,
     data: {
-        id: string,
         name: string,
         presenter: string,
         presenterUrl: string,
@@ -25,10 +25,14 @@ interface Camp {
 function compare( a: Camp, b: Camp ) {
     const aEnd = new Date(a.data.end).getTime();
     const bEnd = new Date(b.data.end).getTime();
-    return (aEnd > bEnd) ? -1 : 1;
+    return (bEnd > aEnd) ? 1 : -1;
 }
 
-const campsSorted = Object.values(camps).sort(compare); 
+function filter( c: Camp) {
+    return c.data.end < now;
+}
+
+const camps = Object.values(campsAll).filter(filter).sort(compare); 
 ---
 
-<CampList title="Past Camps" camps={campsSorted} future=false />
+<CampList title="Past Camps" camps={camps} future=false />

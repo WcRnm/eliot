@@ -3,15 +3,14 @@ import { getCollection } from 'astro:content';
 const newsletters = await getCollection('newsletters');
 const fileUrl = "https://s3.amazonaws.com/siteninja/multitenant/assets"
 
-const today = new Date();
+const now = new Date();
 
 import { getCollection } from 'astro:content';
-const camps = await getCollection('camps');
+const campsAll = await getCollection('camps');
 
 interface Camp {
     id: string,
     data: {
-        id: string,
         name: string,
         presenter: string,
         presenterUrl: string,
@@ -32,19 +31,21 @@ function compare( a: Camp, b: Camp ) {
     return (aEnd > bEnd) ? 1 : -1;
 }
 
-const campsSorted = Object.values(camps).sort(compare); 
+function filter( c: Camp) {
+    return c.data.end >= now;
+}
+
+const camps = Object.values(campsAll).filter(filter).sort(compare); 
+
 ---
 <h2><a href="/camps-future">CAMPS</a></h2>
 <nav>
   <ul>
-    {campsSorted.map((camp: Camp) => {
-        const end = new Date(camp.data.end);
-        if (end >= today) {
-          const url = "/camps/" + camp.id;
-          return (
-            <li><a href={url}}>{camp.data.name}</a></li>
-          )
-        }
+    {camps.map((camp: Camp) => {
+        const url = "/camps/" + camp.id;
+        return (
+          <li><a href={url}}>{camp.data.name}</a></li>
+        )
     })}
     <li><a href="/camps-past">...Past Camps</a></li>
   </ul>
