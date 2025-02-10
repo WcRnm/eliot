@@ -1,5 +1,5 @@
 ---
-const { frontmatter } = Astro.props;
+const { camp } = Astro.props;
 
 import '../styles/eliot-pico.css'
 
@@ -23,7 +23,7 @@ const endDate = new Date(camp.end).toDateString();;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
 
-    <title>{camp.title}</title>
+    <title>{camp.name}</title>
   </head>
 
   <body>

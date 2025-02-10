@@ -19,7 +19,7 @@ const campJobs = defineCollection({
 
 
 const camps = defineCollection({
-    loader: glob({ pattern: '*.mdx', base: './src/pages/camps'})
+    loader: glob({ pattern: '**/*.mdx', base: './src/pages/camps'})
 });
 
 export const collections = { newsletters, caeWorkshops, campJobGroups, campJobs, camps };
