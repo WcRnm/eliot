@@ -6,9 +6,10 @@ interface Camp {
         id: string,
         name: string,
         presenter: string,
+        presenterUrl: string,
         theme: string,
-        start: string,
-        end: string
+        start: Date,
+        end: Date
     },
     url: string,
     file: string,
@@ -21,8 +22,7 @@ function compare( a: Camp, b: Camp ) {
 }
 
 const matches = import.meta.glob('/src/pages/camps/*.mdx', { eager: true });
-const campsUnsorted = Object.values(matches);
-const camps = campsUnsorted.sort((compare)); 
+const camps = Object.values(matches).sort(compare); 
 const today = new Date();
 ---
 
@@ -33,12 +33,17 @@ const today = new Date();
         const end = new Date(camp.frontmatter.end);
         if (end < today) {
             const startDate = new Date(camp.frontmatter.start).toDateString();
-            const endDate = end.toDateString();;
+            const endDate = end.toDateString();
+
+            const presenter = camp.frontmatter.presenterUrl 
+                            ? <a href={camp.frontmatter.presenterUrl} target="other"><b>{camp.frontmatter.presenter}</b></a>
+                            : <b>{camp.frontmatter.presenter}</b>
+
             return (
                 <h2><a href={`${camp.url}`}>{camp.frontmatter.name}</a></h2>
                 <p>{startDate} &mdash; {endDate}</p>
                 <p><i>{camp.frontmatter.theme}</i></p>
-                <p>{camp.frontmatter.presenter}</p>
+                <p>{presenter}</p>
             )
         }
     })}
