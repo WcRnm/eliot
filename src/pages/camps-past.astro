@@ -1,6 +1,6 @@
 ---
-import Layout from '../layouts/LayoutAstro.astro'
-
+import CampList from '../components/CampList.astro'
+ 
 import { getCollection } from 'astro:content';
 const camps = await getCollection('camps');
 
@@ -29,28 +29,6 @@ function compare( a: Camp, b: Camp ) {
 }
 
 const campsSorted = Object.values(camps).sort(compare); 
-const today = new Date();
 ---
 
-<Layout title="Past Camps">
-    <h1>Past Camps</h1>
-
-    {campsSorted.map((camp: Camp) => {
-        const end = new Date(camp.data.end);
-        if (end >= today) {
-            const startDate = new Date(camp.data.start).toDateString();
-            const endDate = end.toDateString();
-
-            const presenter = camp.data.presenterUrl 
-                            ? <a href={camp.data.presenterUrl} target="other"><b>{camp.data.presenter}</b></a>
-                            : <b>{camp.data.presenter}</b>
-
-            return (
-                <h2><a href={`${camp.url}`}>{camp.data.name}</a></h2>
-                <p>{startDate} &mdash; {endDate}</p>
-                <p><i>{camp.data.theme}</i></p>
-                <p>{presenter}</p>
-            )
-        }
-    })}
-</Layout>
+<CampList title="Past Camps" camps={campsSorted} future=false />
