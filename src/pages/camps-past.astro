@@ -7,34 +7,32 @@ interface Camp {
         name: string,
         presenter: string,
         theme: string,
-        start: Date,
-        end: Date
+        start: string,
+        end: string
     },
     url: string,
     file: string,
 };
 
 function compare( a: Camp, b: Camp ) {
-    const aEnd = new Date(a.frontmatter.end);
-    const bEnd = new Date(b.frontmatter.end);
-    if ( aEnd < bEnd ){
-        return -1;
-    }
-    if ( aEnd > bEnd ){
-        return 1;
-    }
-    return 0;
+    const aEnd = new Date(a.frontmatter.end).getTime();
+    const bEnd = new Date(b.frontmatter.end).getTime();
+    return (aEnd > bEnd) ? -1 : 1;
 }
 
 const matches = import.meta.glob('/src/pages/camps/*.mdx', { eager: true });
-const camps = Object.values(matches).sort(compare); 
+const campsUnsorted = Object.values(matches);
+const camps = campsUnsorted.sort((compare)); 
 const today = new Date();
+
+console.log(JSON.stringify(camps));
 ---
 
 <Layout title="Past Camps">
     <h1>Past Camps</h1>
 
     {camps.map((camp: Camp) => {
+        console.log(camp.frontmatter.id);
         const end = new Date(camp.frontmatter.end);
         if (end < today) {
             const startDate = new Date(camp.frontmatter.start).toDateString();
