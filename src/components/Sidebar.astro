@@ -33,7 +33,7 @@ function compare( a: Camp, b: Camp ) {
 const matches = import.meta.glob('/src/pages/camps/*.mdx', { eager: true });
 const camps = Object.values(matches).sort(compare); 
 ---
-<h2><a href="/camps-future.html">CAMPS</a></h2>
+<h2><a href="/camps-future">CAMPS</a></h2>
 <nav>
   <ul>
     {camps.map((camp: Camp) => {
@@ -44,7 +44,7 @@ const camps = Object.values(matches).sort(compare);
         )
       }
     })}
-    <li><a href="/camps-past.html">...Past Camps</a></li>
+    <li><a href="/camps-past">...Past Camps</a></li>
   </ul>
 </nav>
 <hr>
