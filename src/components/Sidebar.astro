@@ -3,35 +3,44 @@ import { getCollection } from 'astro:content';
 const newsletters = await getCollection('newsletters');
 const fileUrl = "https://s3.amazonaws.com/siteninja/multitenant/assets"
 
-const camps = await getCollection('camps');
 const today = new Date();
 
 interface Camp {
-  id: string,
-  data: {
-    name: string,
-    presenter: string,
-    theme: string,
-    start: Date,
-    end: Date
-  }
+    frontmatter: {
+        id: string,
+        name: string,
+        presenter: string,
+        theme: string,
+        start: Date,
+        end: Date
+    },
+    url: string,
+    file: string,
 };
 
-interface NewsLetter {
-  id: string;
-  data: {
-    file: string,
-    date: string;
-  };
-};
+function compare( a: Camp, b: Camp ) {
+    const aEnd = new Date(a.frontmatter.end);
+    const bEnd = new Date(b.frontmatter.end);
+    if ( aEnd < bEnd ){
+        return -1;
+    }
+    if ( aEnd > bEnd ){
+        return 1;
+    }
+    return 0;
+}
+
+const matches = import.meta.glob('/src/pages/camps/*.mdx', { eager: true });
+const camps = Object.values(matches).sort(compare); 
 ---
 <h2><a href="/camps-future.html">CAMPS</a></h2>
 <nav>
   <ul>
     {camps.map((camp: Camp) => {
-      if (camp.data.end >= today) {
+        const end = new Date(camp.frontmatter.end);
+        if (end >= today) {
         return (
-          <li><a href={`/camps/${camp.id}.html`}>{camp.data.name}</a></li>
+          <li><a href={camp.url}}>{camp.frontmatter.name}</a></li>
         )
       }
     })}
