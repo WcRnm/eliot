@@ -1,38 +1,38 @@
 ---
 import Layout from '../layouts/LayoutAstro.astro'
 
-import { getCollection } from 'astro:content';
-
-const camps = await getCollection('camps');
-const today = new Date();
-
 interface Camp {
-    id: string,
-    data: {
+    frontmatter: {
+        id: string,
         name: string,
         presenter: string,
         theme: string,
         start: Date,
         end: Date
-    }
+    },
+    url: string,
+    file: string,
 };
+
+const matches = import.meta.glob('/src/pages/camps/*.mdx', { eager: true });
+const camps = Object.values(matches);
+const today = new Date();
 ---
 
 <Layout title="Upcoming Camps">
     <h1>Upcoming Camps</h1>
 
-        {camps.map((camp: Camp) => {
-            if (camp.data.end >= today) {
-                const startDate = new Date(camp.data.start).toDateString();
-                const endDate = new Date(camp.data.end).toDateString();;
-                return (
-                    <h2><a href={`/camps/${camp.id}.html`}>{camp.data.name}</a></h2>
-                    <p>{startDate} &mdash; {endDate}</p>
-                    <p><i>{camp.data.theme}</i></p>
-                    <p>{camp.data.presenter}</p>
-                )
-            }
-        })}
-
-
+    {camps.map((camp: Camp) => {
+        const end = new Date(camp.frontmatter.end);
+        if (end >= today) {
+            const startDate = new Date(camp.frontmatter.start).toDateString();
+            const endDate = end.toDateString();;
+            return (
+                <h2><a href={`${camp.url}`}>{camp.frontmatter.name}</a></h2>
+                <p>{startDate} &mdash; {endDate}</p>
+                <p><i>{camp.frontmatter.theme}</i></p>
+                <p>{camp.frontmatter.presenter}</p>
+            )
+        }
+    })}
 </Layout>
