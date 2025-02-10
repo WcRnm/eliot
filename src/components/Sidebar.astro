@@ -5,46 +5,48 @@ const fileUrl = "https://s3.amazonaws.com/siteninja/multitenant/assets"
 
 const today = new Date();
 
+import { getCollection } from 'astro:content';
+const camps = await getCollection('camps');
+
 interface Camp {
-    frontmatter: {
+    id: string,
+    data: {
         id: string,
         name: string,
         presenter: string,
+        presenterUrl: string,
         theme: string,
         start: Date,
-        end: Date
+        end: Date,
+        layout: string,
     },
-    url: string,
+    body: string,
     file: string,
+    filePath: string,
+    digest: string,
 };
 
 function compare( a: Camp, b: Camp ) {
-    const aEnd = new Date(a.frontmatter.end);
-    const bEnd = new Date(b.frontmatter.end);
-    if ( aEnd < bEnd ){
-        return -1;
-    }
-    if ( aEnd > bEnd ){
-        return 1;
-    }
-    return 0;
+    const aEnd = new Date(a.data.end).getTime();
+    const bEnd = new Date(b.data.end).getTime();
+    return (aEnd > bEnd) ? 1 : -1;
 }
 
-const matches = import.meta.glob('/src/pages/camps/*.mdx', { eager: true });
-const camps = Object.values(matches).sort(compare); 
+const campsSorted = Object.values(camps).sort(compare); 
 ---
-<h2><a href="/camps-future.html">CAMPS</a></h2>
+<h2><a href="/camps-future">CAMPS</a></h2>
 <nav>
   <ul>
-    {camps.map((camp: Camp) => {
-        const end = new Date(camp.frontmatter.end);
+    {campsSorted.map((camp: Camp) => {
+        const end = new Date(camp.data.end);
         if (end >= today) {
-        return (
-          <li><a href={camp.url}}>{camp.frontmatter.name}</a></li>
-        )
-      }
+          const url = "/camps/" + camp.id;
+          return (
+            <li><a href={url}}>{camp.data.name}</a></li>
+          )
+        }
     })}
-    <li><a href="/camps-past.html">...Past Camps</a></li>
+    <li><a href="/camps-past">...Past Camps</a></li>
   </ul>
 </nav>
 <hr>

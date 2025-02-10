@@ -1,15 +1,11 @@
 ---
-const { frontmatter } = Astro.props;
+const { camp } = Astro.props;
 
 import '../styles/eliot-pico.css'
 
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Sidebar from '../components/Sidebar.astro';
-
-import { getCollection } from 'astro:content';
-const camps = await getCollection('camps');
-const camp = camps.find((c: {id: string}) => c.id === frontmatter.id).data;
 
 const startDate = new Date(camp.start).toDateString();
 const endDate = new Date(camp.end).toDateString();;
@@ -23,7 +19,7 @@ const endDate = new Date(camp.end).toDateString();;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
 
-    <title>{camp.title}</title>
+    <title>{camp.name}</title>
   </head>
 
   <body>

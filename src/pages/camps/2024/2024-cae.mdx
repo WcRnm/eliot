@@ -1,13 +1,14 @@
 ---
-id:         2025-cae
-name:       Creative Arts Eliot 2025
-start:      2025-08-09
-end:        2025-08-13
+id:         2024-cae
+name:       Creative Arts Eliot 2024
+start:      2024-08-10
+end:        2024-08-14
 presenter:  
 theme:      Your Choice of Workshops
-
-layout: ../../layouts/LayoutMdx.astro
 ---
+import Layout from '@layouts/LayoutCamp.astro'
+
+<Layout camp={frontmatter}>
 
 # Creative Arts Eliot 2025: Your Choice of Workshops
 
@@ -20,11 +21,6 @@ don't delay! Go to our homepage and click on the Big Blue Button
 to register for Creative Arts Eliot! We'll let you know when 
 the workshops are announced (and they'll be posted here!) and 
 you'll get to pick what sounds fun and interesting to you.
-
-NEW IN 2025! Registration deadlines for Creative Arts Eliot have changed.
-
-- The last day to register for CAE and to pick a workshop is 2 weeks before camp starts. (July 26, 2025)
-- If you have children younger than 11 years old, they need to be registered 6 weeks before camp starts (June 28, 2025) to have a guaranteed spot in a children's program. (More details in "Kids at CAE" section below)
 
 ## Kids at CAE
 
@@ -44,3 +40,5 @@ Children under 11 years old may partipate in workshops, if the workshop
 presenter, child, and parent are in agreement! If your kid wants to be 
 in a workshop, please email the registrar to find out if this will be ok. 
 registrar@eliotinstitute.org
+
+</Layout>

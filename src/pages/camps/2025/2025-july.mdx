@@ -8,10 +8,11 @@ theme:      "Joyful Noise: Sing Out, Be Free"
 
 presenterUrl: https://www.thisislea.com/
 
-layout: ../../layouts/LayoutCamp.astro
 ---
-import photo from '../../assets/presenters/lea_morris.jpg';
+import Layout from '@layouts/LayoutCamp.astro'
+import photo from '@assets/presenters/lea_morris.jpg';
 
+<Layout camp={frontmatter}>
 <img 
     src={photo.src} 
     alt="Lea Morris"
@@ -32,3 +33,5 @@ Lea and her compositions have earned many accolades, including Best Vocalist, Be
 
 Having shared the stage with luminaries including Odetta and Mavis Staples, Lea is returning to her 
 roots with multi-layered chants and a community singing project in Braunschweig, Germany, where she currently resides.
+
+</Layout>

@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/LayoutAstro.astro'
+
+interface Camp {
+    id: string,
+    data: {
+        id: string,
+        name: string,
+        presenter: string,
+        presenterUrl: string,
+        theme: string,
+        start: Date,
+        end: Date,
+        layout: string,
+    },
+    body: string,
+    file: string,
+    filePath: string,
+    digest: string,
+};
+
+const { title, camps, future } = Astro.props;
+const today = new Date();
+
+---
+
+<Layout title={title}>
+    <h1>{title}</h1>
+
+    {camps.map((camp: Camp) => {
+        const end = new Date(camp.data.end);
+        if (future ? (end >= today) : (end < today)) {
+            const startDate = new Date(camp.data.start).toDateString();
+            const endDate = end.toDateString();
+            const presenter = camp.data.presenterUrl
+                            ? <a href={camp.data.presenterUrl} target="other"><b>{camp.data.presenter}</b></a>
+                            : <b>{camp.data.presenter}</b>
+
+            return (
+                <h2><a href={`/camps/${camp.id}`}>{camp.data.name}</a></h2>
+                <p>{startDate} &mdash; {endDate}</p>
+                <p><i>{camp.data.theme}</i></p>
+                <p>{presenter}</p>
+            )
+        }
+    })}
+
+</Layout>

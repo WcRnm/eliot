@@ -6,10 +6,12 @@ end:        2025-01-01
 presenter:  Elin Kelsey
 theme:      The Practice of Evidence-Based Hope
 
-layout: ../../layouts/LayoutCamp.astro
+presenterUrl: https://www.elinkelsey.org
 ---
-import photo from '../../assets/presenters/Elin_Kelsey_Photo_Credit-_Esme_Johnson.jpg';
+import Layout from '@layouts/LayoutCamp.astro'
+import photo from '@assets/presenters/Elin_Kelsey_Photo_Credit-_Esme_Johnson.jpg';
 
+<Layout camp={frontmatter}>
 <img 
     src={photo.src} 
     alt="Elin Kelsey"
@@ -52,3 +54,5 @@ She regularly serves as an author/artist in residence for international schools.
 She is a best-selling children's book author, podcast host, and film writer.  
 
 For more, please visit https://www.elinkelsey.org
+
+</Layout>

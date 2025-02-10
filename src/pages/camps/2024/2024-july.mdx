@@ -4,14 +4,14 @@ name:       July Eliot 2024
 start:      2024-07-13
 end:        2024-07-20
 presenter:  Guy Nelson
-theme:      "Creativity Games and Storytelling"
-
-layout: ../../layouts/LayoutCamp.astro
+theme:      "Creativity Games & Storytelling"
 ---
-import photo from '../../assets/presenters/guy_nelson.jpg';
+import Layout from '@layouts/LayoutCamp.astro'
+import Photo from '@assets/presenters/guy_nelson.jpg';
 
+<Layout camp={frontmatter}>
 <img 
-    src={photo.src} 
+    src={Photo.src}
     alt="Guy Nelson"
     width="300" />
 
@@ -52,3 +52,5 @@ Improvisational Games to Transform People, Classrooms and Organizations."
 Guy is a multi-instrumentalist and composer and is currently the Musical Director at 
 Seattle's Amazing Grace Spiritual Center. He also has a long career in 
 public radio as a host and reporter for Seattle's two NPR stations, KUOW and KNKX.
+
+</Layout>

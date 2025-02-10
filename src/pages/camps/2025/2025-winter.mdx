@@ -5,11 +5,11 @@ start:      2025-12-28
 end:        2026-01-01
 presenter:  Melanie DeMore
 theme:      Stick Pounding
-
-layout: ../../layouts/LayoutCamp.astro
 ---
-import photo from '../../assets/presenters/melanie_demore.jpg';
+import Layout from '@layouts/LayoutCamp.astro'
+import photo from '@assets/presenters/melanie_demore.jpg';
 
+<Layout camp={frontmatter}>
 <img 
     src={photo.src} 
     alt="Melanie DeMore"
@@ -40,4 +40,7 @@ ensemble-Linda Tillery and the Cultural Heritage Choir.
 
 She became  Music Director for Obeah Opera by Nicole Brooks  as part of the Luminato Festival in 2019. 
 
-She is a charter member of Kate Munger’s Threshold Choirs and conducts song circles with an emphasis on the voice as a vessel for healing.  In here own words:  “A song can hold you up when there seems to be no ground beneath you”.
+She is a charter member of Kate Munger’s Threshold Choirs and conducts song circles with an emphasis on the voice 
+as a vessel for healing.  In here own words:  “A song can hold you up when there seems to be no ground beneath you”.
+
+</Layout>
