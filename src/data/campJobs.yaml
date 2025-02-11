@@ -1,5 +1,9 @@
 # Camp Jobs.
-
+# -----------------------------------------------------------------------------
+#
+# Notes
+#  - id must be unique
+#
 # -----------------------------------------------------------------------------
 # common:
 - id:       Camp Staff Code of Ethics
@@ -9,11 +13,11 @@
 
 # -----------------------------------------------------------------------------
 # av:
-- id:       Audio Visual Coordinator
+- id:       "Audio Visual Coordinator"
   group:    av
   file:     31164/files/originalAV_Coordinator_(2024).pdf
 
-- id:       AV How-To-Manual
+- id:       "AV How-To-Manual"
   group:    av
   file:     31165/files/original/AV_Manual_(2024).pdf
 
@@ -51,11 +55,11 @@
 
 # -----------------------------------------------------------------------------
 # cae:
-- id:       Children's Art Workshop Coordinator
+- id:       "Children's Art Workshop Coordinator"
   group:    cae
   file:
 
-- id:       Presenter & Extravaganza Coordinator 
+- id:       "Presenter & Extravaganza Coordinator"
   group:    cae
   file:
 
@@ -137,7 +141,7 @@
   group:    firstAid
   file:
 
-- id:       Concussion & Head Injury Information
+- id:       "Concussion & Head Injury Information"
   group:    firstAid
   file:
 
@@ -229,10 +233,6 @@
   group:    waterfront
   file:
   baseurl:  Lifeguard
-
-- id:
-  group:    waterfront
-  file:
 
 - id:       Waterfront Badge Information
   group:    waterfront
