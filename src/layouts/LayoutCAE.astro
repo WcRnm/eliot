@@ -10,10 +10,10 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Sidebar from '../components/Sidebar.astro';
 
-const end = new Date(camp.end);
-const startDate = new Date(camp.start).toDateString();
-const endDate = end.toDateString();
-const year = end.getFullYear();
+const start = new Date(camp.start);
+const startDate = start.toDateString();
+const endDate = new Date(camp.end).toDateString();
+const year = start.getFullYear();
 
 function filter(w) {
   return year === w.data.year;
