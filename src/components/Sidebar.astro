@@ -5,7 +5,6 @@ const fileUrl = "https://s3.amazonaws.com/siteninja/multitenant/assets"
 
 const now = new Date();
 
-import { getCollection } from 'astro:content';
 const campsAll = await getCollection('camps');
 
 interface Camp {
