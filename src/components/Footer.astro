@@ -1,13 +1,17 @@
 ---
 import { getCollection } from 'astro:content';
-const meta = await getCollection('meta');
+const meta = await getCollection('metadata');
 
-const version = meta[0].data.ver;
+function getValue(id: string) {
+    return meta.find((element: any) => element.id === id)?.data.val;
+}
+const version = getValue("version");
+const copyright = getValue("copyright");
 ---
 
 <footer>
     <div class="container">
         <hr>
-        <p>v{version} | <small>Copyright - All rights reserved - &copy; <a href="https://www.eliotinstitute.org/">Eliot Institute</a></small></p>
+        <p>v{version} | <small>{copyright}</small></p>
     </div>
 </footer>
