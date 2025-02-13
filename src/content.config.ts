@@ -1,6 +1,9 @@
 import { defineCollection, z } from 'astro:content';
 import { file, glob } from 'astro/loaders';
 
+const meta = defineCollection({
+    loader: file("src/data/meta.yaml"),
+});
 const newsletters = defineCollection({
     loader: file("src/data/newsletters.yaml"),
 });
@@ -39,4 +42,4 @@ const committees = defineCollection({
     loader: glob({ pattern: '**/*.md', base: './src/content/committees'}),
 });
 
-export const collections = { newsletters, workshops, campJobGroups, campJobs, camps, committees };
+export const collections = { meta, newsletters, workshops, campJobGroups, campJobs, camps, committees };
