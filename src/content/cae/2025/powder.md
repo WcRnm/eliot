@@ -9,7 +9,7 @@ presenterUrl: https://coreypressman.com/artworks
 img: ./cae25_pressman.png
 ---
 
-### Workshop Description
+#### Workshop Description
 
 This workshop experience will introduce students to the unique art form known as waxed powder painting. 
 
@@ -31,7 +31,7 @@ I call “the alphabet of everything.”
 This included witnessing and borrowing elements from the 
 natural world as an alphabet with which to express one’s self…or lack of self.
 
-### Biography
+#### Biography
 
 Corey S. Pressman is an artist, writer, and teacher living in the Pacific Northwest. 
 
@@ -45,10 +45,8 @@ Corey is a member/owner of Portland’s Blackfish Gallery and works as a
 creativity coach and as an instructor in the Integrative Health and 
 Wellness program at the University of Portland. 
 
-### Links
+#### Links
 
 - https://www.instagram.com/cspressman/
 - https://coreypressman.com/artworks
 - https://www.waterstonegallery.com/kingofnocountry
-
-</Layout>

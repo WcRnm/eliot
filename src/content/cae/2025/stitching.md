@@ -18,7 +18,7 @@ img3: ./cae25_betz-art-3.jpg
 alt3: Stitching art sample 3
 ---
 
-### Workshop Description
+#### Workshop Description
 
 We will be exploring the use of embroidery and other embellishments to 
 enhance traditional forms found in quilt making.  
@@ -40,7 +40,7 @@ and/or reviewed.
 Beginners, intermediate and advanced stitchers are all welcome 
 and will find a challenge to enjoy.  
 
-### Biography
+#### Biography
 
 Drew Betz has been an instructor at previous Creative Arts Eliot Camps, 
 leading several workshops on quilt making and for the last two years 
@@ -56,5 +56,3 @@ fibers in a variety of ways all her adult life.
 
 She is an experienced teacher and quilt judge and served on the 
 Seabeck Quilt Team to curate the hangings in New Pines.
-
-</Layout>

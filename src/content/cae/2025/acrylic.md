@@ -11,7 +11,7 @@ alt:         Amy Dapice
 width:       300
 ---
 
-### Workshop Description
+#### Workshop Description
 
 Acrylic painting is one of the most versatile and playful mediums available for artists! 
 
@@ -25,7 +25,7 @@ tried and true techniques as well as more unconventional tips and tricks.
 Instructor Amy Dapice takes a step by step approach from drawing to finished paintings, 
 providing solid instruction as well as a big dose of inspiration and plain old fun! 
 
-### Biography
+#### Biography
 
 Amy Williams Dapice is an artist, teacher, and writer. 
 

@@ -8,7 +8,7 @@ presenter:    Anne Weiss
 img: ./cae25_weiss.jpg
 ---
 
-### Workshop Description
+#### Workshop Description
 
 This fun, inclusive workshop will include songs and styles 
 from  around the world... all the while improving your singing skills! 
@@ -23,7 +23,7 @@ Sight reading ability is a plus, but not required.
 
 Looking forward to singing with you! 
 
-### Biography
+#### Biography
 
 Anne Weiss is an award winning poet, singer-songwriter, 
 and multi-instrumentalist with five albums to her credit 
@@ -51,5 +51,3 @@ California Jamboree and more.
 
 Her students often speak of the joy that is part of the classes, 
 making them exceedingly fun as well as educational. 
-
-</Layout>

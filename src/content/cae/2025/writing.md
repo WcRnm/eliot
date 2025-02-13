@@ -8,7 +8,7 @@ presenter:    Bryan Willis
 img: ./willis_headshot_-_credit_Pat_Dixon.jpg
 ---
 
-### Workshop Description
+#### Workshop Description
 
 Open to everyone who enjoys writing. Our workshop will 
 include the basics of story, character development, and plot 
@@ -24,7 +24,7 @@ All new writing prompts and exercises this year!
 
 Returning CAE writers welcome!
 
-### Biography
+#### Biography
 
 Bryan Willis serves as playwright-in-residence for the Northwest 
 Playwrights Alliance at Seattle Repertory Theatre.  

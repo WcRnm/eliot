@@ -5,11 +5,10 @@ title:        Watercolor Nature Journaling
 presenter:    Elizabeth Higgins
 presenterUrl: https://www.elizabethmhiggins.com
 
-# images in @assets/cae
-img: ./cae25_higgins.jpg'
+img: ./cae25_higgins.jpg
 ---
 
-### Workshop Description
+#### Workshop Description
 
 Slow down to notice, reflect and record your thoughts and observations in a nature journal.  
 
@@ -22,7 +21,7 @@ paint and write in a way that is joyful and process-oriented.
 Each day will offer new techniques, prompts and inspiration for students to use 
 in their own personal nature journal.
 
-### Biography
+#### Biography
 
 Elizabeth Higgins is an Oregon artist and arts instructor who 
 develops and teaches watercolor classes and nature connection 
@@ -40,5 +39,3 @@ She is a juried member of Watercolor Society of Oregon and has won local
 awards for her vibrant, colorful watercolor paintings.  
 
 Learn more about Elizabeth at www.elizabethmhiggins.com
-
-</Layout>

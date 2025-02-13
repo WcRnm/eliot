@@ -14,7 +14,7 @@ img2: ./cae25_goodrich-art.jpg
 alt2: Presenter artwork
 ---
 
-### Workshop Description
+#### Workshop Description
 
 In this combination workshop we will explore true mixed media by 
 combining paper collage, painting, stenciling, and Posca pens, 
@@ -30,7 +30,7 @@ GG will provide you with step-by-step instruction and guidance
 to create delightful little works of art to hang on your wall 
 or give as gifts.
 
-### Bio
+#### Bio
 
 Glenda Goodrich (“GG”) is a mixed media artist, art doula, author, and SoulCollage® 
 facilitator who lives in Salem, OR. 
@@ -45,5 +45,3 @@ unique artistic expression. GG's students describe her teaching style as
 fun, open, warm, inspiring, and supportive. You can see her work on her website: www.glendagoodrich.com. 
 
 GG's book “Solo Passage: 13 Quests, 13 Questions,” is available wherever books are sold.
- 
-</Layout>
