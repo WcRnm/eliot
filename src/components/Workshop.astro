@@ -37,7 +37,6 @@ addImage(info.art3, "Presenter artwork sample 3", info.art3w);
     <h3>{info.title}</h3>
     <p set:html={presenter}></p>
     {images.map((img) => {
-        console.log(JSON.stringify(img));
         return (
             <Image src={img.src} alt={img.alt} width={img.width} />
         )
