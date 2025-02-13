@@ -1,0 +1,22 @@
+---
+import Layout from '@layouts/LayoutAstro.astro'
+
+const { frontmatter } = Astro.props;
+
+import { getCollection } from 'astro:content';
+const docs = await getCollection('docs');
+
+function getDoc(id: string) {
+    return docs.find((element: any) => element.id === id)?.data;
+}
+const doc = getDoc(frontmatter.docId);
+---
+
+<Layout title={frontmatter.title}>
+    <article>
+        <slot />
+        <ul>
+            <li><a href={doc.url} target="other">{doc.name}</a></li>
+        </ul>
+    </article>
+</Layout>
