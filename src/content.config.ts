@@ -35,4 +35,12 @@ const workshops = defineCollection({
     })
 });
 
-export const collections = { newsletters, workshops, campJobGroups, campJobs, camps };
+const committees = defineCollection({
+    loader: file("src/data/commitees.yaml"),
+});
+
+const chairs = defineCollection({
+    loader: file("src/data/commitee-chairs.yaml"),
+});
+
+export const collections = { newsletters, workshops, campJobGroups, campJobs, camps, committees, chairs };
