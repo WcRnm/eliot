@@ -36,11 +36,7 @@ const workshops = defineCollection({
 });
 
 const committees = defineCollection({
-    loader: file("src/data/commitees.yaml"),
+    loader: glob({ pattern: '**/*.md', base: './src/content/committees'}),
 });
 
-const chairs = defineCollection({
-    loader: file("src/data/commitee-chairs.yaml"),
-});
-
-export const collections = { newsletters, workshops, campJobGroups, campJobs, camps, committees, chairs };
+export const collections = { newsletters, workshops, campJobGroups, campJobs, camps, committees };
