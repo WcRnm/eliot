@@ -35,4 +35,8 @@ const workshops = defineCollection({
     })
 });
 
-export const collections = { newsletters, workshops, campJobGroups, campJobs, camps };
+const committees = defineCollection({
+    loader: glob({ pattern: '**/*.md', base: './src/content/committees'}),
+});
+
+export const collections = { newsletters, workshops, campJobGroups, campJobs, camps, committees };
