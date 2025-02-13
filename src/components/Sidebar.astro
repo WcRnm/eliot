@@ -37,7 +37,7 @@ function filter( c: Camp) {
 const camps = Object.values(campsAll).filter(filter).sort(compare); 
 
 ---
-<h2><a href="/camps-future">CAMPS</a></h2>
+<h2><a href="/camps/upcoming">CAMPS</a></h2>
 <nav>
   <ul>
     {camps.map((camp: Camp) => {
@@ -46,7 +46,7 @@ const camps = Object.values(campsAll).filter(filter).sort(compare);
           <li><a href={url}}>{camp.data.name}</a></li>
         )
     })}
-    <li><a href="/camps-past">...Past Camps</a></li>
+    <li><a href="/camps/past">...Past Camps</a></li>
   </ul>
 </nav>
 <hr>
