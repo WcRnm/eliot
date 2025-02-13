@@ -3,10 +3,9 @@
 year:         2025
 title:        Writing Your Story
 presenter:    Bryan Willis
-presenterUrl: 
+#presenterUrl: 
 
-# images in @assets/cae
-img: willis_headshot_-_credit_Pat_Dixon.jpg
+img: ./willis_headshot_-_credit_Pat_Dixon.jpg
 ---
 
 ### Workshop Description

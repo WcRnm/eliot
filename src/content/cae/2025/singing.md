@@ -3,10 +3,9 @@
 year:         2025
 title:        World Music Singing
 presenter:    Anne Weiss
-presenterUrl: 
 
 # images in @assets/cae
-img: cae25_weiss.jpg
+img: ./cae25_weiss.jpg
 ---
 
 ### Workshop Description

@@ -7,10 +7,10 @@ presenterUrl: https://www.glendagoodrich.com
 
 # images in @assets/cae
 img: cae25_goodrich.jpg
-# alt:     default = presenter
+alt: Glenda Goodrich
 # width:   default = 300
 
-img2: cae25_goodrich-art.jpg
+img2: ./cae25_goodrich-art.jpg
 alt2: Presenter artwork
 ---
 

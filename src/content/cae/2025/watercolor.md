@@ -6,7 +6,7 @@ presenter:    Elizabeth Higgins
 presenterUrl: https://www.elizabethmhiggins.com
 
 # images in @assets/cae
-img: cae25_higgins.jpg'
+img: ./cae25_higgins.jpg'
 ---
 
 ### Workshop Description

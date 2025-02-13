@@ -3,10 +3,10 @@
 year:         2025
 title:        Adventures in Acrylic Painting
 presenter:    Amy Dapice
-presenterUrl: 
+presenterUrl: www.artconspiracy.net
 
 # images in @assets/cae
-img:         cae24_dapice.jpg
+img:         ./cae24_dapice.jpg
 alt:         Amy Dapice
 width:       300
 ---
@@ -38,5 +38,3 @@ animation, and fashion illustration.
 
 She divides her time between the United States and Thailand, 
 teaching art workshops internationally both live and online. 
-
-See some of Amy’s work here: www.artconspiracy.net

@@ -6,7 +6,8 @@ presenter:    Shannon Wells-Moran
 presenterUrl: https://swellsmoran.com/
 
 # images in @assets/cae
-img: cae25_wells-moran.jpg
+img: ./cae25_wells-moran.jpg
+alt: Shannon Wells-Moran
 width: 200
 
 img1: shannon_miniatures.jpg

@@ -19,6 +19,14 @@ const camps = defineCollection({
 
 const workshops = defineCollection({
     loader: glob({ pattern: '**/*.md', base: './src/content/cae'}),
+    schema: ({ image }) => z.object({
+        year: z.number(),
+        title: z.string(),
+        presenter: z.string(),
+        presenterUrl: z.string().optional(),
+        img: image(),
+        alt: z.string().optional(),
+    })
 });
 
 export const collections = { newsletters, workshops, campJobGroups, campJobs, camps };

@@ -1,4 +1,5 @@
 ---
+import { Image, inferRemoteSize } from "astro:assets";
 import { marked } from 'marked';
 
 const { workshop } = Astro.props;
@@ -14,6 +15,7 @@ const presenter = info.presenterUrl
 <article>
     <h2>{info.title}</h2>
     <p set:html={presenter}></p>
+    <!-- Image src={info.img} alt={info.presenter} / -->
     <div set:html={content}></div>
     
 </article>

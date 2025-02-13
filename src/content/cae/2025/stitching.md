@@ -3,17 +3,19 @@
 year:         2025
 title:        Crazy About Stitching
 presenter:    Drew Betz
-presenterUrl: 
+# presenterUrl: 
 
 # images in @assets/cae
-img: cae25_betz.jpg
+img: ./cae25_betz.jpg
 
-img1: cae25_betz-art-1.jpg
+img1: ./cae25_betz-art-1.jpg
 alt1: Stitching art sample 1
-img2: cae25_betz-art-2.jpg
-alt1: Stitching art sample 2
-img3: cae25_betz-art-3.jpg
-alt1: Stitching art sample 3
+
+img2: ./cae25_betz-art-2.jpg
+alt2: Stitching art sample 2
+
+img3: ./cae25_betz-art-3.jpg
+alt3: Stitching art sample 3
 ---
 
 ### Workshop Description
