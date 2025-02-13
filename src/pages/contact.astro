@@ -1,0 +1,45 @@
+---
+import Layout from '@layouts/LayoutAstro.astro'
+---
+<Layout title="Eliot::Contact">
+    
+    <h1>Contact Eliot Institute Camps</h1>
+
+    For information about registering for camps, deposits, accommodations, or just about anything else, 
+    please contact our Registrar by filling out the contact form below.
+    
+    <article>
+        Eliot Institute<br>
+        2411 View Ridge Dr<br>
+        Bellingham WA 98229<br>
+        <br>
+        tel: (206) 395-8111<br>
+        <b>NOTE: The registrar cannot be reached by phone during camp!</b>
+    </article>
+    
+
+
+    <form>
+    <label>
+        First Name: *required
+        <input type="text" name="first" /> 
+    </label>
+    <label>
+        Last Name: *required
+        <input type="text" name="first" />
+    </label>
+    <label>
+        Email: *required
+        <input type="email" name="email" /> 
+    </label>
+    <label>
+        Phone:
+        <input type="text" name="phone" />
+    </label>
+    <label>
+        Your Message: *required
+        <textarea id="messag" name="message" rows="4" cols="50"></textarea>
+    </label>
+    <button>Submit</button>
+    </form>
+</Layout>
