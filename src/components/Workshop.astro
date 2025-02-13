@@ -1,11 +1,10 @@
 ---
-import { Image, inferRemoteSize } from "astro:assets";
+import { Image } from "astro:assets";
 import { marked } from 'marked';
 
 const { workshop } = Astro.props;
 const info = workshop.data;
 
-console.log(JSON.stringify(info));
 const content = marked.parse(workshop.body);
 const presenter = info.presenterUrl
                         ? ('<a href="' + info.presenterUrl + '" target="other"><b>' + info.presenter + '</b></a>')
@@ -15,7 +14,7 @@ const presenter = info.presenterUrl
 <article>
     <h3>{info.title}</h3>
     <p set:html={presenter}></p>
-    <!-- Image src={info.img} alt={info.presenter} / -->
+    <Image src={info.img} alt={info.presenter}>
     <div set:html={content}></div>
     
 </article>
