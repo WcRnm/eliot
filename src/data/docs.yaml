@@ -1,8 +1,15 @@
 - id:   camp-flyer
   name: ELiot Flyer (2015)
-  url: https://s3.amazonaws.com/siteninja/multitenant/assets/33990/files/original/2025_Eliot_Flyer.pdf
+  url:  https://s3.amazonaws.com/siteninja/multitenant/assets/33990/files/original/2025_Eliot_Flyer.pdf
 
 - id:   urgent-care
   name: Eliot Emergencies (2021)
-  url: https://s3.amazonaws.com/siteninja/multitenant/assets/31817/files/original/Eliot_Emergencies_2021.pdf
+  url:  https://s3.amazonaws.com/siteninja/multitenant/assets/31817/files/original/Eliot_Emergencies_2021.pdf
 
+- id:   vulnerable-camper
+  name: Vulnerable Camper Protection Policy (DRAFT-5)
+  url:  https://s3.amazonaws.com/siteninja/multitenant/assets/33349/files/original/Vulnerable_Camper_Protection_Policy_-_DRAFT5.pdf
+
+- id:   waterfront-rules
+  name: Waterfront Rules (2019)
+  url:  https://s3.amazonaws.com/siteninja/multitenant/assets/27142/files/original/Eliot_Waterfront_Rules_(2019).pdf

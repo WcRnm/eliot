@@ -9,14 +9,22 @@ const docs = await getCollection('docs');
 function getDoc(id: string) {
     return docs.find((element: any) => element.id === id)?.data;
 }
-const doc = getDoc(frontmatter.docId);
+const docList = []
+const ids = frontmatter.docs.split(',');
+for (const id of ids) {
+    docList.push(getDoc(id.trim()));
+};
 ---
 
 <Layout title={frontmatter.title}>
     <article>
         <slot />
         <ul>
-            <li><a href={doc.url} target="other">{doc.name}</a></li>
+            {docList.map((d) => {
+                return (
+                    <li><a href={d.url} target="other">{d.name}</a></li>
+                )
+            })}
         </ul>
     </article>
 </Layout>
