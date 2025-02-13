@@ -5,7 +5,7 @@ title:        Watercolor Nature Journaling
 presenter:    Elizabeth Higgins
 presenterUrl: https://www.elizabethmhiggins.com
 
-img: ./cae25_higgins.jpg
+photo: ./cae25_higgins.jpg
 ---
 
 #### Workshop Description

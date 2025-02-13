@@ -4,9 +4,7 @@ year:         2025
 title:        Pickleball
 presenter:    Karen Stratton
 
-# images in @assets/cae
-img: ./cae25_stratton.jpg
-alt:  Karen Stratton
+photo: ./cae25_stratton.jpg
 # width:   default = 300
 ---
 

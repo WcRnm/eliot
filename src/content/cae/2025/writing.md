@@ -5,7 +5,7 @@ title:        Writing Your Story
 presenter:    Bryan Willis
 #presenterUrl: 
 
-img: ./willis_headshot_-_credit_Pat_Dixon.jpg
+photo: ./willis_headshot_-_credit_Pat_Dixon.jpg
 ---
 
 #### Workshop Description

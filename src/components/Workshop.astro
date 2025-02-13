@@ -10,12 +10,38 @@ const presenter = info.presenterUrl
                         ? ('<a href="' + info.presenterUrl + '" target="other"><b>' + info.presenter + '</b></a>')
                         : '<b>' + info.presenter + '</b>';
 
+interface WorkshopImage {
+    src: string,
+    alt: string,
+    width: number,
+};
+
+const DEFAULT_WIDTH = 300;
+let images: WorkshopImage[] = [];
+function addImage(src:string, alt:string, width=300) {
+    if (src) {
+        images.push({
+            src: src,
+            alt: alt,
+            width: width ? width : DEFAULT_WIDTH,
+        });
+    }
+}
+addImage(info.photo, info.presenter, info.width);
+addImage(info.art1, "Presenter artwork sample 1", info.art1w);
+addImage(info.art2, "Presenter artwork sample 2", info.art2w);
+addImage(info.art3, "Presenter artwork sample 3", info.art3w);
+
 ---
 <article>
     <h3>{info.title}</h3>
     <p set:html={presenter}></p>
-    <Image src={info.img} alt={info.presenter}>
+    {images.map((img) => {
+        console.log(JSON.stringify(img));
+        return (
+            <Image src={img.src} alt={img.alt} width={img.width} />
+        )
+    })}
     <div set:html={content}></div>
-    
 </article>
     

@@ -5,8 +5,7 @@ title:        Waxed Powder Painting
 presenter:    Corey Pressman
 presenterUrl: https://coreypressman.com/artworks
 
-# images in @assets/cae
-img: ./cae25_pressman.png
+photo: ./cae25_pressman.png
 ---
 
 #### Workshop Description

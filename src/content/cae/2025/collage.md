@@ -5,13 +5,10 @@ title:      Dynamic Mixed Media Collage
 presenter:  Glenda Goodrich
 presenterUrl: https://www.glendagoodrich.com
 
-# images in @assets/cae
-img: cae25_goodrich.jpg
-alt: Glenda Goodrich
+photo: cae25_goodrich.jpg
 # width:   default = 300
 
-img2: ./cae25_goodrich-art.jpg
-alt2: Presenter artwork
+art1: ./cae25_goodrich-art.jpg
 ---
 
 #### Workshop Description

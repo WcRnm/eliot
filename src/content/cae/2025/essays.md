@@ -4,9 +4,7 @@ year:       2025
 title:      "This I Believe: Exploring & Expressing Our Heartfelt Beliefs Through Short Essays"
 presenter:  Rev. Amanda Aikman
 
-# images in @assets/cae
-img:    ./cae25_aikman.jpg
-alt:    Rev. Amanda Aikman
+photo:    ./cae25_aikman.jpg
 # width:   default = 300
 ---
 

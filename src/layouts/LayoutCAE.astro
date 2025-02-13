@@ -1,9 +1,7 @@
 ---
-import { Image } from "astro:assets";
-import { marked } from 'marked';
 import { getCollection } from 'astro:content';
-
 const workshopsAll = await getCollection('workshops');
+
 const { camp } = Astro.props;
 
 import '../styles/eliot-pico.css'
@@ -57,22 +55,11 @@ const workshops = Object.values(workshopsAll).filter(filter);
 
           <h2>Workshops</h2>
           {workshops.map((ws) => {
-            const info = ws.data;
-
-            const content = marked.parse(ws.body);
-            const presenter = info.presenterUrl
-                        ? ('<a href="' + info.presenterUrl + '" target="other"><b>' + info.presenter + '</b></a>')
-                        : '<b>' + info.presenter + '</b>';
-            console.log(info.img);
             return (
-              <article>
-                <h3>{info.title}</h3>
-                <p set:html={presenter}></p>
-                <Image src={info.img} alt={info.presenter}>
-                <div set:html={content}></div>
-              </article>
+              <Workshop workshop={ws}>
+              </Workshop>
             )})}
-    
+  
         </div>
       </div>
     </main>

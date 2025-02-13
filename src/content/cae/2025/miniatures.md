@@ -6,13 +6,11 @@ presenter:    Shannon Wells-Moran
 presenterUrl: https://swellsmoran.com/
 
 # images in @assets/cae
-img: ./cae25_wells-moran.jpg
-alt: Shannon Wells-Moran
+photo: ./cae25_wells-moran.jpg
 width: 200
 
-img1: shannon_miniatures.jpg
-alt1: Painted miniatures
-width1: 500
+art1: ./shannon_miniatures.jpg
+art1w: 500
 ---
 
 #### Workshop Description

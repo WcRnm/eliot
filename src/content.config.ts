@@ -24,8 +24,14 @@ const workshops = defineCollection({
         title: z.string(),
         presenter: z.string(),
         presenterUrl: z.string().optional(),
-        img: image(),
-        alt: z.string().optional(),
+        photo: image(),
+        width: z.number().optional(),
+        art1: image().optional(),
+        art1w: z.number().optional(),
+        art2: image().optional(),
+        art2w: z.number().optional(),
+        art3: image().optional(),
+        art3w: z.number().optional(),
     })
 });
 

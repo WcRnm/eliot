@@ -5,10 +5,9 @@ title:        Adventures in Acrylic Painting
 presenter:    Amy Dapice
 presenterUrl: www.artconspiracy.net
 
-# images in @assets/cae
-img:         ./cae24_dapice.jpg
-alt:         Amy Dapice
-width:       300
+photo:       ./cae24_dapice.jpg
+# alt:         Amy Dapice
+# width:       300
 ---
 
 #### Workshop Description
