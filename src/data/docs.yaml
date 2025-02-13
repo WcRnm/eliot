@@ -1,15 +1,39 @@
 - id:   camp-flyer
-  name: ELiot Flyer (2015)
+  name: ELiot Flyer
   url:  https://s3.amazonaws.com/siteninja/multitenant/assets/33990/files/original/2025_Eliot_Flyer.pdf
 
 - id:   urgent-care
-  name: Eliot Emergencies (2021)
+  name: Eliot Emergencies
   url:  https://s3.amazonaws.com/siteninja/multitenant/assets/31817/files/original/Eliot_Emergencies_2021.pdf
 
 - id:   vulnerable-camper
-  name: Vulnerable Camper Protection Policy (DRAFT-5)
+  name: Vulnerable Camper Protection Policy
   url:  https://s3.amazonaws.com/siteninja/multitenant/assets/33349/files/original/Vulnerable_Camper_Protection_Policy_-_DRAFT5.pdf
 
 - id:   waterfront-rules
-  name: Waterfront Rules (2019)
+  name: Waterfront Rules
   url:  https://s3.amazonaws.com/siteninja/multitenant/assets/27142/files/original/Eliot_Waterfront_Rules_(2019).pdf
+
+- id:   respectful-behavior
+  name: Respectful Behavior Expectations
+  url:  https://s3.amazonaws.com/siteninja/multitenant/assets/23538/files/original/Respectful_Behavior_Expectations__final3.pdf
+
+- id:   right-relations
+  name: Restoring Right Relations Policy
+  url:  https://s3.amazonaws.com/siteninja/multitenant/assets/33767/files/original/ELIOT_INSTITUTE_RRR_POLICY_(April_2024).pdf
+
+- id:   sex-and-gender
+  name: Sex and Gender Diversity Policy and Statement
+  url:  https://s3.amazonaws.com/siteninja/multitenant/assets/33768/files/original/Eliot_Institute_Sex_and_Gender_Diversity_Policy_and_Statement_(April_2024).pdf
+
+- id:   copyrights
+  name: Copyright Guidelines
+  url:  https://s3.amazonaws.com/siteninja/multitenant/assets/32161/files/original/Copyright_Guidelines_(2021).pdf
+
+- id:   duwop
+  name: Photo Sharing (DUWOP - Don't Upload Without Permission)
+  url:  http://s3.amazonaws.com/siteninja/site-ninja1-com/1428443135/original/DUWOP_policy.pdf
+
+- id:   vistors
+  name: Visitor and Attendance Policy
+  url:  https://s3.amazonaws.com/siteninja/multitenant/assets/27206/files/original/Attendance_and_Visitor_Policy.pdf
