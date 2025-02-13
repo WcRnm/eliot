@@ -5,23 +5,13 @@ title:      Dynamic Mixed Media Collage
 presenter:  Glenda Goodrich
 presenterUrl: https://www.glendagoodrich.com
 
+photo: cae25_goodrich.jpg
+# width:   default = 300
+
+art1: ./cae25_goodrich-art.jpg
 ---
-import Layout from '@layouts/LayoutWorkshop.astro'
-import Photo1 from '@assets/presenters/cae25_goodrich.jpg';
-import Photo2 from '@assets/presenters/cae25_goodrich-art.jpg';
 
-<Layout workshop={frontmatter}>
-
-<img 
-    src={Photo1.src} 
-    alt={frontmatter.presenter}
-    width="300" />
-<img 
-    src={Photo2.src} 
-    alt="Presenter artwork"
-    width="300" />
-
-### Workshop Description
+#### Workshop Description
 
 In this combination workshop we will explore true mixed media by 
 combining paper collage, painting, stenciling, and Posca pens, 
@@ -37,7 +27,7 @@ GG will provide you with step-by-step instruction and guidance
 to create delightful little works of art to hang on your wall 
 or give as gifts.
 
-### Bio
+#### Bio
 
 Glenda Goodrich (“GG”) is a mixed media artist, art doula, author, and SoulCollage® 
 facilitator who lives in Salem, OR. 
@@ -52,5 +42,3 @@ unique artistic expression. GG's students describe her teaching style as
 fun, open, warm, inspiring, and supportive. You can see her work on her website: www.glendagoodrich.com. 
 
 GG's book “Solo Passage: 13 Quests, 13 Questions,” is available wherever books are sold.
- 
-</Layout>

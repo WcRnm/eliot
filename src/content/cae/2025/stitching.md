@@ -3,36 +3,19 @@
 year:         2025
 title:        Crazy About Stitching
 presenter:    Drew Betz
-presenterUrl: 
+# presenterUrl: 
+
+photo: ./cae25_betz.jpg
+
+art1: ./cae25_betz-art-1.jpg
+art1w:  300
+art2: ./cae25_betz-art-2.jpg
+art2w:  300
+art3: ./cae25_betz-art-3.jpg
+art3w:  300
 ---
 
-import Layout from '@layouts/LayoutWorkshop.astro'
-import Photo1 from '@assets/presenters/cae25_betz.jpg';
-import Photo2 from '@assets/presenters/cae25_betz-art-1.jpg';
-import Photo3 from '@assets/presenters/cae25_betz-art-2.jpg';
-import Photo4 from '@assets/presenters/cae25_betz-art-3.jpg';
-
-<Layout workshop={frontmatter}>
-
-<img 
-    src={Photo1.src} 
-    alt={frontmatter.presenter}
-    width="300" />
-<img 
-    src={Photo2.src} 
-    alt="Stitching art sample 1"
-    width="300" />
-<img 
-    src={Photo3.src} 
-    alt="Stitching art sample 2"
-    width="300" />
-<img 
-    src={Photo4.src} 
-    alt="Stitching art sample 3"
-    width="300" />
-
-
-### Workshop Description
+#### Workshop Description
 
 We will be exploring the use of embroidery and other embellishments to 
 enhance traditional forms found in quilt making.  
@@ -54,7 +37,7 @@ and/or reviewed.
 Beginners, intermediate and advanced stitchers are all welcome 
 and will find a challenge to enjoy.  
 
-### Biography
+#### Biography
 
 Drew Betz has been an instructor at previous Creative Arts Eliot Camps, 
 leading several workshops on quilt making and for the last two years 
@@ -70,5 +53,3 @@ fibers in a variety of ways all her adult life.
 
 She is an experienced teacher and quilt judge and served on the 
 Seabeck Quilt Team to curate the hangings in New Pines.
-
-</Layout>

@@ -6,20 +6,20 @@ const { camp } = Astro.props;
 
 import '../styles/eliot-pico.css'
 
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import Sidebar from '../components/Sidebar.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import Sidebar from '@components/Sidebar.astro';
+import Workshop from '@components/Workshop.astro';
 
-const end = new Date(camp.end);
-const startDate = new Date(camp.start).toDateString();
-const endDate = end.toDateString();
-const year = end.getFullYear();
+const start = new Date(camp.start);
+const startDate = start.toDateString();
+const endDate = new Date(camp.end).toDateString();
+const year = start.getFullYear();
 
 function filter(w) {
   return year === w.data.year;
 }
-
-const workshops = Object.values(workshopsAll).filter(filter); 
+const workshops = Object.values(workshopsAll).filter(filter);
 ---
 
 <!doctype html>
@@ -55,16 +55,11 @@ const workshops = Object.values(workshopsAll).filter(filter);
 
           <h2>Workshops</h2>
           {workshops.map((ws) => {
-              const url = "/cae/" + ws.id;
-              return (
-                <article>
-                  <h2><a href={url}>{ws.data.title}</a></h2>
-                  <p>{ws.data.presenter}</p>
-                  
-                </article>
-              )
-            })}
-    
+            return (
+              <Workshop workshop={ws}>
+              </Workshop>
+            )})}
+  
         </div>
       </div>
     </main>

@@ -1,11 +1,11 @@
 ---
 const { camp } = Astro.props;
 
-import '../styles/eliot-pico.css'
+import '@styles/eliot-pico.css'
 
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import Sidebar from '../components/Sidebar.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import Sidebar from '@components/Sidebar.astro';
 
 const startDate = new Date(camp.start).toDateString();
 const endDate = new Date(camp.end).toDateString();;

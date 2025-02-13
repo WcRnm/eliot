@@ -3,20 +3,14 @@
 year:         2025
 title:        Adventures in Acrylic Painting
 presenter:    Amy Dapice
-presenterUrl: 
+presenterUrl: www.artconspiracy.net
+
+photo:       ./cae24_dapice.jpg
+# alt:         Amy Dapice
+# width:       300
 ---
 
-import Layout from '@layouts/LayoutWorkshop.astro'
-import Photo1 from '@assets/presenters/cae24_dapice.jpg';
-
-<Layout workshop={frontmatter}>
-
-<img 
-    src={Photo1.src} 
-    alt={frontmatter.presenter}
-    width="300" />
-
-### Workshop Description
+#### Workshop Description
 
 Acrylic painting is one of the most versatile and playful mediums available for artists! 
 
@@ -30,7 +24,7 @@ tried and true techniques as well as more unconventional tips and tricks.
 Instructor Amy Dapice takes a step by step approach from drawing to finished paintings, 
 providing solid instruction as well as a big dose of inspiration and plain old fun! 
 
-### Biography
+#### Biography
 
 Amy Williams Dapice is an artist, teacher, and writer. 
 
@@ -43,7 +37,3 @@ animation, and fashion illustration.
 
 She divides her time between the United States and Thailand, 
 teaching art workshops internationally both live and online. 
-
-See some of Amy’s work here: www.artconspiracy.net
-
-</Layout>

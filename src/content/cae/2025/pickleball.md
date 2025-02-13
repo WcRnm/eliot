@@ -3,20 +3,12 @@
 year:         2025
 title:        Pickleball
 presenter:    Karen Stratton
-presenterUrl: 
+
+photo: ./cae25_stratton.jpg
+# width:   default = 300
 ---
 
-import Layout from '@layouts/LayoutWorkshop.astro'
-import Photo1 from '@assets/presenters/cae25_stratton.jpg';
-
-<Layout workshop={frontmatter}>
-
-<img 
-    src={Photo1.src} 
-    alt={frontmatter.presenter}
-    width="300" />
-
-### Workshop Description
+#### Workshop Description
 
 Pickleball is a fast growing sport that is addictive, fun, and quick to learn. 
 
@@ -38,7 +30,7 @@ If you are a tennis, badminton, or racquetball player, all the better!
 Pickleball is usually played as a doubles game, and the court is small, 
 so people of all ages can play and have fun. 
 
-### Biography
+#### Biography
 
 Karen Stratton took up pickleball in 2020 and has never looked back. 
 
@@ -46,5 +38,3 @@ People have described her play as "cerebral", to which she replies,
 "I'm not the fastest or the hardest hitting, but I play smart. 
 
 You can too." She's a retired teacher whose first job as a teenager was teaching tennis. 
-
-</Layout>

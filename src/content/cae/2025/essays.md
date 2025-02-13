@@ -3,20 +3,12 @@
 year:       2025
 title:      "This I Believe: Exploring & Expressing Our Heartfelt Beliefs Through Short Essays"
 presenter:  Rev. Amanda Aikman
-presenterUrl: 
+
+photo:    ./cae25_aikman.jpg
+# width:   default = 300
 ---
 
-import Layout from '@layouts/LayoutWorkshop.astro'
-import Photo1 from '@assets/presenters/cae25_aikman.jpg';
-
-<Layout workshop={frontmatter}>
-
-<img 
-    src={Photo1.src} 
-    alt={frontmatter.presenter}
-    width="300" />
-
-### Workshop Description
+#### Workshop Description
 
  ”I am not going to talk about religious beliefs but about 
  matters so obvious that it has gone out of style to mention 
@@ -56,7 +48,7 @@ in our own hearts and in those of our neighbors. If you'd like to
 start writing a sermon, a memoir or a novel, or simply want to reflect 
 with others on the central motivating forces of your life, this might be just the spark you need.
 
-### Biography
+#### Biography
 
 The Rev. Amanda Aikman retired in 2016-ish after about 25 years as a parish and 
 community minister in the PNW. 
@@ -70,5 +62,3 @@ various stages in Washington and New York.
 Amanda has been involved with Eliot camps as a theme presenter and chaplain. 
 
 She lives with her spousal unit, Nancy, in Everett.
-
-</Layout>

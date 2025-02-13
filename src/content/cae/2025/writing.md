@@ -3,20 +3,12 @@
 year:         2025
 title:        Writing Your Story
 presenter:    Bryan Willis
-presenterUrl: 
+#presenterUrl: 
+
+photo: ./willis_headshot_-_credit_Pat_Dixon.jpg
 ---
 
-import Layout from '@layouts/LayoutWorkshop.astro'
-import Photo1 from '@assets/presenters/willis_headshot_-_credit_Pat_Dixon.jpg';
-
-<Layout workshop={frontmatter}>
-
-<img 
-    src={Photo1.src} 
-    alt={frontmatter.presenter}
-    width="300" />
-
-### Workshop Description
+#### Workshop Description
 
 Open to everyone who enjoys writing. Our workshop will 
 include the basics of story, character development, and plot 
@@ -32,7 +24,7 @@ All new writing prompts and exercises this year!
 
 Returning CAE writers welcome!
 
-### Biography
+#### Biography
 
 Bryan Willis serves as playwright-in-residence for the Northwest 
 Playwrights Alliance at Seattle Repertory Theatre.  
@@ -58,5 +50,3 @@ Writing at Tisch School of the Arts.
 
 He is a proud member of Artist Trust and received a gold medallion 
 from KC/ACTF, where he served on the National Selection Team in 2011.  
-
-</Layout>
