@@ -35,7 +35,7 @@ const { title, camps } = Astro.props;
                             : <b>{camp.data.presenter}</b>
 
             return (
-                <h2><a href={`/camps/${camp.id}`}>{camp.data.name}</a></h2>
+                <h2><a href={`/eliot/camps/${camp.id}`}>{camp.data.name}</a></h2>
                 <p>{startDate} &mdash; {endDate}</p>
                 <p><i>{camp.data.theme}</i></p>
                 <p>{presenter}</p>

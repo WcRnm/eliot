@@ -41,16 +41,16 @@ const camps = Object.values(campsAll).filter(filter).sort(compare);
 <hr>
 <button class="outline secondary">Donate to Eliot</button>
 <hr>
-<h2><a href="/camps/upcoming">CAMPS</a></h2>
+<h2><a href="/eliot/camps/upcoming">CAMPS</a></h2>
 <nav>
   <ul>
     {camps.map((camp: Camp) => {
-        const url = "/camps/" + camp.id;
+        const url = "/eliot/camps/" + camp.id;
         return (
           <li><a href={url}}>{camp.data.name}</a></li>
         )
     })}
-    <li><a href="/camps/past">...Past Camps</a></li>
+    <li><a href="/eliot/camps/past">...Past Camps</a></li>
   </ul>
 </nav>
 <hr>
