@@ -8,5 +8,8 @@ import netlify from '@astrojs/netlify';
 // https://astro.build/config
 export default defineConfig({
   integrations: [mdx()],
-  adapter: netlify()
+  adapter: netlify(),
+  site: "https://wcrnm.github.io",
+  base: "/eliot",
+  trailingSlash: 'never'
 });
