@@ -1,0 +1,92 @@
+##########################################
+#  Executive Committee
+
+- id:       president
+  position: President
+  name:     Lynn Sabourin
+  group:    exec
+  email:    registrar@eliotinstitute.org
+  photo:    Lynn-Sabourin-Eliot-2023-250x300.jpg
+
+- id:       president-elect
+  position: President-Elect
+  name:     Jody Feldman
+  group:    exec
+  email:    registrar@eliotinstitute.org
+  photo:    Jody_Feldman_2024_-_250_x_300.jpg
+
+- id:       vp-comm
+  position: VP Communications & Marketing
+  name:     Jean DeVenney
+  group:    exec
+  email:    registrar@eliotinstitute.org
+  photo:    Jean_DeVenney_2024__-_250_x_300.jpg
+
+- id:       treasurer
+  position: Treasurer
+  name:     Xander Simmons
+  group:    exec
+  email:    registrar@eliotinstitute.org
+  photo:    Xander-Simmons-Eliot-2024-250x300.jpg
+
+##########################################
+#  At Large
+
+- id:       at-large-1
+  position: Board Member At-Large
+  name:     Rick Duncan
+  group:    at-large
+  email:    registrar@eliotinstitute.org
+  photo:    Rick-Duncan-Eliot-2024-250x300.jpg
+
+- id:       at-large-2
+  position: Board Member At-Large
+  name:     Janelle Durham
+  group:    at-large
+  email:    registrar@eliotinstitute.org
+  photo:    Janelle-Durham-Eliot-2024-250x300.jpg
+
+- id:       at-large-3
+  position: Board Member At-Large
+  name:     Carla Mandy
+  group:    at-large
+  email:    registrar@eliotinstitute.org
+  photo:    Carla-Mandy_-Eliot-2023-250x300.jpg
+
+- id:       at-large-3
+  position: Board Member At-Large
+  name:     Rory McLeod
+  group:    at-large
+  email:    registrar@eliotinstitute.org
+  photo:    Rory_McLeod_-_250_x_300.jpg
+
+- id:       at-large-4
+  position: Board Member At-Large
+  name:     McKenna Neimer
+  group:    at-large
+  email:    registrar@eliotinstitute.org
+  photo:    McKenna_2023_-_250_x_300.jpg
+
+##########################################
+#  Staff
+
+- id:       registrar
+  position: Registrar
+  name:     Calyn McLeod
+  group:    staff
+  email:    registrar@eliotinstitute.org
+  photo:    calyn-seabeck-2022-color-RESIZE-UPLOAD.jpg
+
+- id:       exec-sec
+  position: Executive Secretary
+  name:     Nancy West
+  group:    staff
+  email:    registrar@eliotinstitute.org
+  photo:    Nancy-West_-_Eliot-2023-250x300.jpg
+
+- id:       bookkeeper
+  position: Bookkeeper
+  name:     Bev Hesterberg
+  group:    staff
+  email:    registrar@eliotinstitute.org
+  photo:    BevHthumbnail.jpg
