@@ -20,6 +20,10 @@ const docs = defineCollection({
     loader: file("src/data/docs.yaml"),
 });
 
+const board = defineCollection({
+    loader: file("src/data/board.yaml"),
+});
+
 const camps = defineCollection({
     loader: glob({ pattern: '**/*.mdx', base: './src/pages/camps'}),
 });
@@ -46,4 +50,4 @@ const committees = defineCollection({
     loader: glob({ pattern: '**/*.md', base: './src/content/committees'}),
 });
 
-export const collections = { metadata, newsletters, workshops, campJobGroups, campJobs, camps, committees, docs };
+export const collections = { metadata, newsletters, workshops, campJobGroups, campJobs, camps, committees, docs, board };

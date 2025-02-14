@@ -1,0 +1,85 @@
+- id:       president
+  position: President
+  name:     Lynn Sabourin
+  group:    exec
+  email:    registrar@eliotinstitute.org
+  photo:    
+
+- id:       president-elect
+  position: President-Elect
+  name:     Jody Feldman
+  group:    exec
+  email:    registrar@eliotinstitute.org
+  photo:    
+
+- id:       vp-comm
+  position: VP Communications & Marketing
+  name:     Jean DeVenney
+  group:    exec
+  email:    registrar@eliotinstitute.org
+  photo:    
+
+- id:       treasurer
+  position: Treasurer
+  name:     Xander Simmons
+  group:    exec
+  email:    registrar@eliotinstitute.org
+  photo:    
+
+- id:       at-large-1
+  position: Board Member At-Large
+  name:     Rick Duncan
+  group:    at-large
+  email:    registrar@eliotinstitute.org
+  photo:    
+
+- id:       at-large-2
+  position: Board Member At-Large
+  name:     Janelle Durham
+  group:    at-large
+  email:    registrar@eliotinstitute.org
+  photo:    
+
+- id:       at-large-3
+  position: Board Member At-Large
+  name:     Carla Mandy
+  group:    at-large
+  email:    registrar@eliotinstitute.org
+  photo:    
+
+- id:       at-large-3
+  position: Board Member At-Large
+  name:     Rory McLeod
+  group:    at-large
+  email:    registrar@eliotinstitute.org
+  photo:    
+
+- id:       at-large-4
+  position: Board Member At-Large
+  name:     McKenna Neimer
+  group:    at-large
+  email:    registrar@eliotinstitute.org
+  photo:    
+
+- id:       registrar
+  position: Registrar
+  name:     Calyn McLeod
+  group:    staff
+  email:    registrar@eliotinstitute.org
+  photo:    
+
+- id:       exec-sec
+  position: Executive Secretary
+  name:     Nancy West
+  group:    staff
+  email:    registrar@eliotinstitute.org
+  photo:    
+
+- id:       bookkeeper
+  position: Bookkeeper
+  name:     Bev Hesterberg
+  group:    staff
+  email:    registrar@eliotinstitute.org
+  photo:    
+
+
