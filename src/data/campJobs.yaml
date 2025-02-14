@@ -6,269 +6,330 @@
 #
 # -----------------------------------------------------------------------------
 # common:
-- id:       Camp Staff Code of Ethics
+- id:       code-of-ethics
+  name:     Code of Ethics
   group:    common
-  file:     27815/files/original/Camp_Staff_Code_of_Ethics__April_2019.pdf
+  file:     Camp_Staff_Code_of_Ethics__April_2019.pdf
   note:     Every member of staff must sign this Code of Ethics, along with their staff contract.
 
 # -----------------------------------------------------------------------------
 # av:
-- id:       "Audio Visual Coordinator"
+- id:       av-coord
+  name:     "Audio Visual Coordinator"
   group:    av
-  file:     31164/files/originalAV_Coordinator_(2024).pdf
+  file:     AV_Coordinator_(2024).pdf
 
-- id:       "AV How-To-Manual"
+- id:       av-manual
+  name:     "AV How-To-Manual"
   group:    av
-  file:     31165/files/original/AV_Manual_(2024).pdf
+  file:     AV_Manual_(2024).pdf
 
-- id:       Slide Show Creator
+- id:       av-slide-show
+  name:     Slide Show Creator
   group:    av
-  file:     23203/files/original/Slide_Show_Creator_(2017).pdf
+  file:     Slide_Show_Creator_(2017).pdf
 
 # -----------------------------------------------------------------------------
 # chaplain:
-- id:       Camp Chaplain
+- id:       chaplain
+  name:     Camp Chaplain
   group:    chaplain
-  file:     23171/files/original/Camp_Chaplain.(2017).pdf
+  file:     Camp_Chaplain.(2017).pdf
 
-- id:       Youth & Young Adult Chaplain
+- id:       chaplain-youth+ya
+  name:     Youth & Young Adult Chaplain
   group:    chaplain
-  file:     25116/files/original/Youth-Young_Adult_Chaplain.pdf
+  file:     Youth-Young_Adult_Chaplain.pdf
 
 # -----------------------------------------------------------------------------
 # youth:
-- id:       Children's Program Director & Youth Advisor
+- id:       youth-dir+advisor
+  name:     Children's Program Director & Youth Advisor
   group:    youth
-  file:     23834/files/original/Children's_Program_Director_and_Youth_Advisor_(2024).pdf
+  file:     Children's_Program_Director_and_Youth_Advisor_(2024).pdf
 
-- id:       Children's and Youth Program Guidelines
+- id:       youth-guidelines
+  name:     Children's and Youth Program Guidelines
   group:    youth
-  file:     33634/files/original/Children's_and_Youth_Program_Guidelines_(2024).pdf
+  file:     Children's_and_Youth_Program_Guidelines_(2024).pdf
 
-- id:       Children's, MAGS and Youth Program Staff
+- id:       youth-staff
+  name:     Children's, MAGS and Youth Program Staff
   group:    youth
-  file:     23833/files/original/Children's_and_Youth_Staff_(2024).pdf
+  file:     Children's_and_Youth_Staff_(2024).pdf
 
-- id:       Children/Youth & Parent/Sponsor Orientation - First Night
+- id:       youth-orientaiton
+  name:     Children/Youth & Parent/Sponsor Orientation - First Night
   group:    youth
-  file:     33927/files/original/Children_and_Youth_Orientation_Meetings_(2024).pdf
+  file:     Children_and_Youth_Orientation_Meetings_(2024).pdf
 
 # -----------------------------------------------------------------------------
 # cae:
-- id:       "Children's Art Workshop Coordinator"
+- id:       cae-youth-coord
+  name:     "Children's Art Workshop Coordinator"
   group:    cae
-  file:     33049/files/original/CAW_coordinator_job_description_(2022).pdf
+  file:     CAW_coordinator_job_description_(2022).pdf
 
-- id:       "Presenter & Extravaganza Coordinator"
+- id:       cae-coord
+  name:     "Presenter & Extravaganza Coordinator"
   group:    cae
-  file:     33842/files/original/2024_CAE_Presenter_Extravaganza_Coordinator_JD.pdf
+  file:     2024_CAE_Presenter_Extravaganza_Coordinator_JD.pdf
 
 # -----------------------------------------------------------------------------
 # dean:
-- id:       Dean
+- id:       dean
+  name:     Dean
   group:    dean
-  file:     23825/files/original/Dean_(2024).pdf
+  file:     Dean_(2024).pdf
 
-- id:       "Dean: Timeline"
+- id:       dean-timeline
+  name:     "Dean: Timeline"
   group:    dean
-  file:     27424/files/original/Dean_-_Timeline_(2024).pdf
+  file:     Dean_-_Timeline_(2024).pdf
 
-- id:       "Dean: Staffing Guidelines"
+- id:       dean-staff-guide
+  name:     "Dean: Staffing Guidelines"
   group:    dean
-  file:     23423/files/original/Dean_-_Staffing_Guidelines_(2024).pdf
+  file:     Dean_-_Staffing_Guidelines_(2024).pdf
 
-- id:       "Dean: Theme Speaker Guidelines"
+- id:       dean-speaker-guide
+  name:     "Dean: Theme Speaker Guidelines"
   group:    dean
-  file:     23176/files/original/Dean_-_Theme_Speaker_(2024).pdf
+  file:     Dean_-_Theme_Speaker_(2024).pdf
 
-- id:       "Dean: Camp Staffing Lists"
+- id:       dean-staff-list
+  name:     "Dean: Camp Staffing Lists"
   group:    dean
-  file:     33923/files/original/Dean_-_Camp_Staff_Lists_(2024).pdf
+  file:     Dean_-_Camp_Staff_Lists_(2024).pdf
 
 # -----------------------------------------------------------------------------
 # misc:
-- id:       Early Morning Coffee Host
+- id:       am-coffee
+  name:     Early Morning Coffee Host
   group:    misc
-  file:     23208/files/original/Early_Morning_Coffee_Host_(2017).pdf
+  file:     Early_Morning_Coffee_Host_(2017).pdf
 
-- id:       Golf Cart Coordinator
+- id:       golf-cart
+  name:     Golf Cart Coordinator
   group:    misc
-  file:     33633/files/original/Golf_Cart_Coordinator_Revised_Dec_2023.pdf
+  file:     Golf_Cart_Coordinator_Revised_Dec_2023.pdf
 
-- id:       House Leader
+- id:       house-lead
+  name:     House Leader
   group:    misc
-  file:     28103/files/original/House_Leader_(2024).pdf
+  file:     House_Leader_(2024).pdf
 
-- id:       Newcomer Host
+- id:       newcomer-host
+  name:     Newcomer Host
   group:    misc
-  file:     23838/files/original/Newcomer_Host_(2024).pdf
+  file:     Newcomer_Host_(2024).pdf
 
-- id:       Newsletter Editor
+- id:       newsletter
+  name:     Newsletter Editor
   group:    misc
-  file:     23204/files/original/Newsletter_Editor_(2024).pdf
+  file:     Newsletter_Editor_(2024).pdf
 
-- id:       Social Hour Host
+- id:       social-hour
+  name:     Social Hour Host
   group:    misc
-  file:     23202/files/original/Social_Hour_Host_(2024).pdf
+  file:     Social_Hour_Host_(2024).pdf
 
-- id:       Storage Closet Manager
+- id:       closet
+  name:     Storage Closet Manager
   group:    misc
-  file:     33351/files/original/Storage_Closet_Manager_(2023).pdf
+  file:     Storage_Closet_Manager_(2023).pdf
 
-- id:       Volunteer Coordinator
+- id:       vol-coord
+  name:     Volunteer Coordinator
   group:    misc
-  file:     27306/files/original/Volunteer_Coordinator_(2024).pdf
+  file:     Volunteer_Coordinator_(2024).pdf
 
-- id:       Young Adult Coordinator
+- id:       ya-coord
+  name:     Young Adult Coordinator
   group:    misc
-  file:     23246/files/original/Young_Adult_Coordinator_(2016).pdf
+  file:     Young_Adult_Coordinator_(2016).pdf
 
 # -----------------------------------------------------------------------------
 # firstAid:
-- id:       First Aid Coordinator
+- id:       aid-coord
+  name:     First Aid Coordinator
   group:    firstAid
-  file:     24064/files/original/First_Aid_Coordinator_(Jul_2017).pdf
+  file:     First_Aid_Coordinator_(Jul_2017).pdf
 
-- id:       First Aid Volunteer
+- id:       aid-vol
+  name:     First Aid Volunteer
   group:    firstAid
-  file:     24065/files/original/First_Aid_Volunteer.(Jul_2017).pdf
+  file:     First_Aid_Volunteer.(Jul_2017).pdf
 
-- id:       First Aid Information
+- id:       aid-info
+  name:     First Aid Information
   group:    firstAid
-  file:     24273/files/original/First_Aid_Information_Chart_(Jul_2017).pdf
+  file:     First_Aid_Information_Chart_(Jul_2017).pdf
 
-- id:       First Aid Supplies List
+- id:       aid-supplies
+  name:     First Aid Supplies List
   group:    firstAid
-  file:     33096/files/original/First_Aid_Supllies_(2022).pdf
+  file:     First_Aid_Supllies_(2022).pdf
 
-- id:       "Concussion & Head Injury Information"
+- id:       aid-concussion
+  name:     "Concussion & Head Injury Information"
   group:    firstAid
-  file:     24215/files/original/First_Aid_Info_-_Concussions__Head_Injuries__(2016).pdf
+  file:     First_Aid_Info_-_Concussions__Head_Injuries__(2016).pdf
 
-- id:       EipPen Information
+- id:       aid-epipen
+  name:     EpiPen Information
   group:    firstAid
-  file:     27456/files/original/EpiPen_Document_January_2019.pdf
+  file:     EpiPen_Document_January_2019.pdf
 
 # -----------------------------------------------------------------------------
 # music:
-- id:       Music Coordinator
+- id:       music-coord
+  name:     Music Coordinator
   group:    music
-  file:     23428/files/original/Music_Coordinator__(2017).pdf
+  file:     Music_Coordinator__(2017).pdf
 
-- id:       Music Accompanist 
+- id:       music-acc
+  name:     Music Accompanist 
   group:    music
-  file:     23187/files/original/Music_Accompanist_(2017).pdf
+  file:     Music_Accompanist_(2017).pdf
 
-- id:       Choir Director
+- id:       choir
+  name:     Choir Director
   group:    music
-  file:     23190/files/original/Choir_Director_(2017).pdf
+  file:     Choir_Director_(2017).pdf
 
 # -----------------------------------------------------------------------------
 # smallGroups:
-- id:       Small Groups Coordinator
+- id:       sg-coord
+  name:     Small Groups Coordinator
   group:    smallGroups
-  file:     23837/files/original/Small_Group_Coordinator_(2024).pdf
+  file:     Small_Group_Coordinator_(2024).pdf
 
-- id:       Small Group Facilitator
+- id:       sg-facilitator
+  name:     Small Group Facilitator
   group:    smallGroups
-  file:     23836/files/original/Small_Group_Facilitators_-_(2024).pdf
+  file:     Small_Group_Facilitators_-_(2024).pdf
 
 # -----------------------------------------------------------------------------
 # events:
-- id:       Afternoon Art
+- id:       evt-art
+  name:     Afternoon Art
   group:    events
-  file:     23198/files/original/Afternoon_Art_Coordinator_(2016).pdf
+  file:     Afternoon_Art_Coordinator_(2016).pdf
 
-- id:       Art Show
+- id:       evt-art-show
+  name:     Art Show
   group:    events
-  file:     23197/files/original/Art_Show_Coordinator_(2017)_.pdf
+  file:     Art_Show_Coordinator_(2017)_.pdf
 
-- id:       Concerts
+- id:       evt-concert
+  name:     Concerts
   group:    events
-  file:     23196/files/original/Concerts_(2017).pdf
+  file:     Concerts_(2017).pdf
 
-- id:       Costume Parade
+- id:       evt-parade
+  name:     Costume Parade
   group:    events
-  file:     23199/files/original/Costume_Parade_Coordinator_(2017)_wpd.pdf
+  file:     Costume_Parade_Coordinator_(2017)_wpd.pdf
 
-- id:       Dances
+- id:       evt-dance
+  name:     Dances
   group:    events
-  file:     23195/files/original/Dances_(2017).pdf
+  file:     Dances_(2017).pdf
 
-- id:       Photo Scavenger Hunt
+- id:       evt-photo-hunt
+  name:     Photo Scavenger Hunt
   group:    events
-  file:     23194/files/original/Photo_Scavenger_Hunt__(2017).pdf
+  file:     Photo_Scavenger_Hunt__(2017).pdf
 
-- id:       Talent Show
+- id:       evt-talent
+  name:     Talent Show
   group:    events
-  file:     23426/files/original/Talent_Show_Coordinator_(2017).pdf
+  file:     Talent_Show_Coordinator_(2017).pdf
 
-- id:       Tie Dye
+- id:       evt-tie-dye
+  name:     Tie Dye
   group:    events
-  file:     23192/files/original/Tie-Dye_Coordinator_(2017)_.pdf
+  file:     Tie-Dye_Coordinator_(2017)_.pdf
 
-- id:       Trivia Night
+- id:       evt-trivia
+  name:     Trivia Night
   group:    events
-  file:     23191/files/original/Trivia_Night__(2017).pdf
+  file:     Trivia_Night__(2017).pdf
 
 # -----------------------------------------------------------------------------
 # waterfront:
-- id:       Waterfront Director
+- id:       wf-dir
+  name:     Waterfront Director
   group:    waterfront
-  file:     33376/files/original/Waterfront_Director_(2023)__FINAL.pdf
+  file:     Waterfront_Director_(2023)__FINAL.pdf
 
-- id:       Waterfront Rules
+- id:       wf-rules
+  name:     Waterfront Rules
   group:    waterfront
-  file:     27142/files/original/Eliot_Waterfront_Rules_(2019).pdf
+  file:     Eliot_Waterfront_Rules_(2019).pdf
 
-- id:       Boat Dock Coordinator
+- id:       wf-dock-coord
+  name:     Boat Dock Coordinator
   group:    waterfront
-  file:     23421/files/original/Boat_Dock_Coordinator_(2017).pdf
+  file:     Boat_Dock_Coordinator_(2017).pdf
 
-- id:       Boat Dock Volunteer
+- id:       wf-dock-vol
+  name:     Boat Dock Volunteer
   group:    waterfront
-  file:     23255/files/original/Boat_Dock_Volunteers__(2017).pdf
+  file:     Boat_Dock_Volunteers__(2017).pdf
 
-- id:       Boating Tests
+- id:       wf-boats
+  name:     Boating Tests
   group:    waterfront
-  file:     23420/files/original/Boating_Tests__(2017).pdf
+  file:     Boating_Tests__(2017).pdf
 
-- id:       Lifeguard
+- id:       wf-lifeguard
+  name:     Lifeguard
   group:    waterfront
-  file:     33360/files/original/Lifeguard__(2023)_DRAFT_v4.pdf
+  file:     Lifeguard__(2023)_DRAFT_v4.pdf
 
-- id:       Waterfront Badge Information
+- id:       wf-badge-info
+  name:     Waterfront Badge Information
   group:    waterfront
-  file:     25985/files/original/Swimming___Boating_Badges_Description_(2018).pdf
+  file:     Swimming___Boating_Badges_Description_(2018).pdf
 
-- id:       Badge Chart
+- id:       wf-badge-chart
+  name:     Badge Chart
   group:    waterfront
-  file:     25984/files/original/Swimming___Boating_Badges_Chart_2018_Rev_1.pdf
+  file:     Swimming___Boating_Badges_Chart_2018_Rev_1.pdf
 
 # -----------------------------------------------------------------------------
 # winter:
-- id:       Feast Master
+- id:       win-feast
+  name:     Feast Master
   group:    winter
-  file:     23180/files/original/Feast_Master_-_Winter_Eliot_(2017).pdf
+  file:     Feast_Master_-_Winter_Eliot_(2017).pdf
 
-- id:       Living Room Coordinator
+- id:       win-living-coord
+  name:     Living Room Coordinator
   group:    winter
-  file:     23179/files/original/Living_Room_Coordinator_(2017).pdf
+  file:     Living_Room_Coordinator_(2017).pdf
 
 # -----------------------------------------------------------------------------
 # worship:
-- id:       Morning Ingathering Coordinator
+- id:       ingathering
+  name:     Morning Ingathering Coordinator
   group:    worship
-  file:     23429/files/original/Morning_Ingathering_Coordinator_(2017).pdf
+  file:     Morning_Ingathering_Coordinator_(2017).pdf
 
-- id:       Evening Worship Coordinator
+- id:       evening-worship
+  name:     Evening Worship Coordinator
   group:    worship
-  file:     27307/files/original/Evening_Worship_Coordinator_Job_Description.pdf
+  file:     Evening_Worship_Coordinator_Job_Description.pdf
 
-- id:       Worship Manual
+- id:       worship-manual
+  name:     Worship Manual
   group:    worship
-  file:     23184/files/original/Worship_Manual_(2017).pdf
+  file:     Worship_Manual_(2017).pdf
 
-- id:       Worship Schedule
+- id:       worship-sched
+  name:     Worship Schedule
   group:    worship
-  file:     23185/files/original/Worship_Coordinator_Planning_Grids.pdf
+  file:     Worship_Coordinator_Planning_Grids.pdf
+  
