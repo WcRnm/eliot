@@ -37,3 +37,7 @@
 - id:   vistors
   name: Visitor and Attendance Policy
   url:  https://s3.amazonaws.com/siteninja/multitenant/assets/27206/files/original/Attendance_and_Visitor_Policy.pdf
+
+- id:   hand+heart
+  name: Hand and Heart Recipients
+  url:  https://s3.amazonaws.com/siteninja/multitenant/assets/27200/files/original/HAND_AND_HEART_AWARD.pdf
