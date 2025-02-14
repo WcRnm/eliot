@@ -49,3 +49,12 @@
 - id:   past-speakers
   name: Past Speakers, Presenters, & Guests
   url:  https://s3.amazonaws.com/siteninja/multitenant/assets/33534/files/original/Past_Speakers.pdf
+
+- id:   financial-assistance
+  name: Eliot Institute Financial Assistance Application
+  url:  https://s3.amazonaws.com/siteninja/multitenant/assets/33735/files/original/Eliot_Financial_Assistance_Application_Form_4-24.pdf
+
+- id:   flyer
+  name: Eliot Institute Camp Flyer
+  url:  https://s3.amazonaws.com/siteninja/multitenant/assets/33990/files/original/2025_Eliot_Flyer.pdf
+
