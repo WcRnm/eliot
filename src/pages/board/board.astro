@@ -1,6 +1,8 @@
 ---
 import Layout from '@layouts/LayoutAstro.astro'
 import { getCollection } from 'astro:content';
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
 
 const board = await getCollection('board');
 
@@ -18,8 +20,9 @@ const exec = Object.values(board).filter(filterExec);
 const atLarge = Object.values(board).filter(filterAtLarge); 
 const staff = Object.values(board).filter(filterStaff); 
 
-console.log(board);
-console.log(exec);
+const images = import.meta.glob<{ default: ImageMetadata }>('../../assets/board/*.{jpeg,jpg,png,gif}');
+
+console.log(images);
 ---
 
 <Layout title="Eliot|Board">
@@ -27,8 +30,10 @@ console.log(exec);
     <h2>Executive Committee</h2>
     <article>
         {exec.map((member) => {
+            const imgPath = "../../assets/board/" + member.data.photo;
             return (
-            <p>{member.data.name}, {member.data.position}</p>
+                <p>{member.data.name}, {member.data.position}</p>
+                <Image src={images[imgPath]()} alt={member.data.name} width="150"/>
             )
         })}
     </article>
@@ -36,8 +41,10 @@ console.log(exec);
     <h2>Board Members At-Large</h2>
     <article>
         {atLarge.map((member) => {
+            const imgPath = "../../assets/board/" + member.data.photo;
             return (
-            <p>{member.data.name}</p>
+                <p>{member.data.name}</p>
+                <Image src={images[imgPath]()} alt={member.data.name}  width="150"/>
             )
         })}
     </article>
@@ -45,8 +52,10 @@ console.log(exec);
     <h2>Staff</h2>
     <article>
         {staff.map((member) => {
+            const imgPath = "../../assets/board/" + member.data.photo;
             return (
-            <p>{member.data.name}, {member.data.position}</p>
+                <p>{member.data.name}, {member.data.position}</p>
+                <Image src={images[imgPath]()} alt={member.data.name}  width="150"/>
             )
         })}
     </article>
