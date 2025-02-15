@@ -35,20 +35,25 @@ function filter( c: Camp) {
 
 const camps = Object.values(campsAll).filter(filter).sort(compare); 
 
+const baseUrl = import.meta.env.BASE_URL;
+function pageUrl(page : string) {
+  return baseUrl + page;
+}
+
 ---
 <button class="outline">Register for Camp</button>
 <hr>
 <button class="outline secondary">Donate to Eliot</button>
 <hr>
-<h2><a href="/eliot/camps/upcoming">CAMPS</a></h2>
+<h2><a href={pageUrl("/camps/upcoming")}>CAMPS</a></h2>
 <nav>
   <ul>
     {camps.map((camp: Camp) => {
-        const url = "/eliot/camps/" + camp.id;
+        const url = pageUrl("/camps/" + camp.id);
         return (
           <li><a href={url}}>{camp.data.name}</a></li>
         )
     })}
-    <li><a href="/eliot/camps/past">...Past Camps</a></li>
+    <li><a href={pageUrl("/camps/past")}>...Past Camps</a></li>
   </ul>
 </nav>

@@ -29,6 +29,11 @@ for (const id of ids) {
         docList.push(doc);
     }
 };
+
+const baseUrl = import.meta.env.BASE_URL;
+function pageUrl(page : string) {
+  return baseUrl + page;
+}
 ---
 
 <Layout title={frontmatter.title}>
@@ -36,7 +41,7 @@ for (const id of ids) {
         <slot />
         <ul>
             {docList.map((d) => {
-                const url = '/eliot/docs/' + d.type + '/' + d.file;
+                const url = pageUrl('/docs/' + d.type + '/' + d.file);
                 return (
                     <li><a href={url} target="other">{d.name}</a></li>
                 )
