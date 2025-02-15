@@ -2,30 +2,49 @@
 import Layout from '@layouts/LayoutAstro.astro'
 
 import { getCollection } from 'astro:content';
+const jobs = await getCollection('jobDocs');
+const groups = await getCollection('jobGroups');
+const policyDocs = await getCollection('policyDocs');
 
-const jobs = await getCollection('campJobs');
-const groups = await getCollection('campJobGroups');
+function getPolicy(id: string) {
+    return policyDocs.find((element: any) => element.id === id)?.data;
+}
+const codeOfEthics = getPolicy('code-of-ethics');
 
-const fileUrl = "https://s3.amazonaws.com/siteninja/multitenant/assets"
+function docUrl(doc) {
+    return '/eliot/docs/' + doc.type + '/' + doc.file;
+}
 ---
 
 <Layout title="Camp Jobs">
+    <h1>Camp Jobs</h1>
+    <article>
+        <h2>For All Camp Staff</h2>
+        <ul>
+            <li>
+                <a href={docUrl(codeOfEthics)} target="other">{codeOfEthics.name}</a>
+                <br>{codeOfEthics.note}
+            </li>
+        </ul>
+    </article>
+
     {groups.map((grp: { id: string; data: {id: string, name: string} }) => {
         return (
             <article>
                 <h2>{grp.data.name}</h2>
                 <ul>
-                    {jobs.map((job: { data: {id: string, group: string, file: string, note: string}}) => {
+                    {jobs.map((job) => {
                         if (grp.id === job.data.group) {
                             if (job.data.note) {
                                 return (
                                     <li>
-                                        <a href={`${fileUrl}/${job.data.file}`} target="other">{job.data.id}</a>
-                                        <br>{job.data.note}</li>
+                                        <a href={docUrl(job.data)} target="other">{job.data.name}</a>
+                                        <br>{job.note}
+                                    </li>
                                 )
                             } else {
                                 return (
-                                    <li><a href={`${fileUrl}/${job.data.file}`} target="other">{job.data.id}</a></li>
+                                    <li><a href={docUrl(job.data)} target="other">{job.data.name}</a></li>
                                 )
                             }
 
