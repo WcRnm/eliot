@@ -12,7 +12,7 @@ const board = defineCollection({
 
 // ------------ DOCS -------------
 const jobGroups = defineCollection({
-    loader: file("src/data/job-groups.yaml"),
+    loader: file("src/data/docs/job-groups.yaml"),
 });    
 
 const docTypes = defineCollection({
