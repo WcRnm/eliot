@@ -1,6 +1,5 @@
 ---
 import { getCollection } from 'astro:content';
-const newsletters = await getCollection('newsletters');
 const fileUrl = "https://s3.amazonaws.com/siteninja/multitenant/assets"
 
 const now = new Date();
@@ -51,14 +50,5 @@ const camps = Object.values(campsAll).filter(filter).sort(compare);
         )
     })}
     <li><a href="/eliot/camps/past">...Past Camps</a></li>
-  </ul>
-</nav>
-<hr>
-<h2>NEWS</h2>
-<nav>
-  <ul>
-    {newsletters.map((post: NewsLetter) => (
-      <li><a href={`${fileUrl}/${post.data.file}`} target="other">{post.data.id}</a></li>
-    ))}
   </ul>
 </nav>

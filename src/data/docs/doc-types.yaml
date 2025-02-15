@@ -1,0 +1,19 @@
+# Document Types
+
+- id: flier
+  name: Camp Fliers
+
+- id: policy
+  name: Eliot Policies
+
+- id: firstAid
+  name: First Aid
+
+- id: history
+  name: Eliot History
+
+- id: job
+  name: Camp Jobs
+
+- id: newsletter
+  name: Newsletters

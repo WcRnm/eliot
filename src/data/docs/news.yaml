@@ -1,0 +1,13 @@
+###############################################
+#  Fliers
+- id:   camp-flier
+  name: Eliot Institute Camp Flier
+  file: news/2025_Eliot_Flyer.pdf
+  type: flier
+
+###############################################
+# Newsletters
+- id:   2024-fall
+  date: 2024-12-01
+  file: news/FALL_2024_NEWSLETTER.pdf
+  type: newsletter
