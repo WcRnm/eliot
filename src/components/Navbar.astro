@@ -1,11 +1,16 @@
 ---
 import { Image } from 'astro:assets';
 import Logo from '@assets/eliot-logo.png';
+const baseUrl = import.meta.env.BASE_URL;
+
+function url(page : string) {
+  return baseUrl + page;
+}
 ---
 
 <nav>
   <ul>
-    <li><a href="/eliot">
+    <li><a href={baseUrl}>
       <Image src={Logo}
         alt="Eliot Institute"
         height=64
@@ -17,8 +22,8 @@ import Logo from '@assets/eliot-logo.png';
           Camps
         </summary>
         <ul>
-          <li><a href="/eliot/camps/upcoming">Camps</a></li>
-          <li><a href="/eliot/camps/location">Location of Camps</a></li>
+          <li><a href={url("/camps/upcoming")}>Camps</a></li>
+          <li><a href={url("/camps/location")}>Location of Camps</a></li>
         </ul>
       </details>
     </li>
@@ -28,9 +33,9 @@ import Logo from '@assets/eliot-logo.png';
           Pricing
         </summary>
         <ul>
-          <li><a href="/eliot/camps/pricing">How Much Does It Cost?</a></li>
-          <li><a href="/eliot/camps/cancellation">Deposit/Cancellation Policy</a></li>
-          <li><a href="/eliot/camps/assistance">Financial Assistance</a></li>
+          <li><a href={url("/camps/pricing")}>How Much Does It Cost?</a></li>
+          <li><a href={url("/camps/cancellation")}>Deposit/Cancellation Policy</a></li>
+          <li><a href={url("/camps/assistance")}>Financial Assistance</a></li>
         </ul>
       </details>
     </li>
@@ -40,12 +45,12 @@ import Logo from '@assets/eliot-logo.png';
           Life At Camp
         </summary>
         <ul>
-          <li><a href="/eliot/guides/camp-intro">Introduction to Camps</a></li>
-          <li><a href="/eliot/guides/urgent-care">Urgent Medical Care</a></li>
-          <li><a href="/eliot/guides/program">The Eliot Program</a></li>
-          <li><a href="/eliot/guides/meals">Meals at Eliot</a></li>
-          <li><a href="/eliot/guides/camp-rules">Camp Rules</a></li>
-          <li><a href="/eliot/guides/children+youth">Children & Youth</a></li>
+          <li><a href={url("/guides/camp-intro")}>Introduction to Camps</a></li>
+          <li><a href={url("/guides/urgent-care")}>Urgent Medical Care</a></li>
+          <li><a href={url("/guides/program")}>The Eliot Program</a></li>
+          <li><a href={url("/guides/meals")}>Meals at Eliot</a></li>
+          <li><a href={url("/guides/camp-rules")}>Camp Rules</a></li>
+          <li><a href={url("/guides/children+youth")}>Children & Youth</a></li>
         </ul>
       </details>
     </li>
@@ -54,11 +59,11 @@ import Logo from '@assets/eliot-logo.png';
       <details class="dropdown">
         <summary>Get Involved</summary>
         <ul>
-          <li><a href="/eliot/volunteer/get-involved">Volunteers</a></li>
-          <li><a href="/eliot/volunteer/camp-jobs">Camp Jobs</a></li>
-          <li><a href="/eliot/board/committees">Committees</a></li>
-          <li><a href="/eliot/board/board">Board & Staff</a></li>
-          <li><a href="/eliot/board/board-manual">Board Manual</a></li>
+          <li><a href={url("/volunteer/get-involved")}>Volunteers</a></li>
+          <li><a href={url("/volunteer/camp-jobs")}>Camp Jobs</a></li>
+          <li><a href={url("/board/committees")}>Committees</a></li>
+          <li><a href={url("/board/board")}>Board & Staff</a></li>
+          <li><a href={url("/board/board-manual")}>Board Manual</a></li>
         </ul>
       </details>
     </li>
@@ -68,16 +73,16 @@ import Logo from '@assets/eliot-logo.png';
           About Us
         </summary>
         <ul>
-          <li><a href="/eliot/contact">Contact Us</a></li>
-          <li><a href="/eliot/about/mission">Mission Statement</a></li>
-          <li><a href="/eliot/about/values">Values Expressed in Action</a></li>
-          <li><a href="/eliot/about/covenant">Eliot Covenant</a></li>
-          <li><a href="/eliot/about/policies">Policies</a></li>
-          <li><a href="/eliot/about/history">Our History</a></li>
-          <li><a href="/eliot/about/affiliations">Affiliations</a></li>
-          <li><a href="/eliot/about/fliers">Camp Fliers</a></li>
-          <li><a href="/eliot/about/hand+heart">Hand & Heart Award</a></li>
-          <li><a href="/eliot/about/speakers+deans">Past Deans & Speakers</a></li>
+          <li><a href={url("/contact")}>Contact Us</a></li>
+          <li><a href={url("/about/mission")}>Mission Statement</a></li>
+          <li><a href={url("/about/values")}>Values Expressed in Action</a></li>
+          <li><a href={url("/about/covenant")}>Eliot Covenant</a></li>
+          <li><a href={url("/about/policies")}>Policies</a></li>
+          <li><a href={url("/about/history")}>Our History</a></li>
+          <li><a href={url("/about/affiliations")}>Affiliations</a></li>
+          <li><a href={url("/about/fliers")}>Camp Fliers</a></li>
+          <li><a href={url("/about/hand+heart")}>Hand & Heart Award</a></li>
+          <li><a href={url("/about/speakers+deans")}>Past Deans & Speakers</a></li>
         </ul>
       </details>
     </li>

@@ -21,8 +21,6 @@ const atLarge = Object.values(board).filter(filterAtLarge);
 const staff = Object.values(board).filter(filterStaff); 
 
 const images = import.meta.glob<{ default: ImageMetadata }>('../../assets/board/*.{jpeg,jpg,png,gif}');
-
-console.log(images);
 ---
 
 <Layout title="Eliot|Board">

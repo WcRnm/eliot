@@ -40,8 +40,8 @@
   file: Attendance_and_Visitor_Policy.pdf
   type: policy
 
-- id:       code-of-ethics
-  name:     Code of Ethics
-  file:     jobs/Camp_Staff_Code_of_Ethics__April_2019.pdf
-  note:     Every member of staff must sign this Code of Ethics, along with their staff contract.
-  type:     policy
+- id:   code-of-ethics
+  name: Code of Ethics
+  file: Camp_Staff_Code_of_Ethics__April_2019.pdf
+  note: Every member of staff must sign this Code of Ethics, along with their staff contract.
+  type: policy
