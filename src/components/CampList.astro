@@ -20,6 +20,7 @@ interface Camp {
 };
 
 const { title, camps } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
 
 ---
 
@@ -33,9 +34,10 @@ const { title, camps } = Astro.props;
             const presenter = camp.data.presenterUrl
                             ? <a href={camp.data.presenterUrl} target="other"><b>{camp.data.presenter}</b></a>
                             : <b>{camp.data.presenter}</b>
+            const url = baseUrl + "/camps/" + camp.id;
 
             return (
-                <h2><a href={`/eliot/camps/${camp.id}`}>{camp.data.name}</a></h2>
+                <h2><a href={url}>{camp.data.name}</a></h2>
                 <p>{startDate} &mdash; {endDate}</p>
                 <p><i>{camp.data.theme}</i></p>
                 <p>{presenter}</p>

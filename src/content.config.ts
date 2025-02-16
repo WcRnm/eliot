@@ -1,33 +1,48 @@
 import { defineCollection, z } from 'astro:content';
 import { file, glob } from 'astro/loaders';
 
+// ------------ COMMON -------------
 const metadata = defineCollection({
     loader: file("src/data/metadata.yaml"),
-});
-const newsletters = defineCollection({
-    loader: file("src/data/newsletters.yaml"),
-});
-
-const campJobGroups = defineCollection({
-    loader: file("src/data/camp-job-groups.yaml"),
-});
-
-const campJobs = defineCollection({
-    loader: file("src/data/campJobs.yaml"),
-});
-
-const docs = defineCollection({
-    loader: file("src/data/docs.yaml"),
 });
 
 const board = defineCollection({
     loader: file("src/data/board.yaml"),
 });
 
+// ------------ DOCS -------------
+const jobGroups = defineCollection({
+    loader: file("src/data/docs/job-groups.yaml"),
+});    
+
+const docTypes = defineCollection({
+    loader: file("src/data/docs/doc-types.yaml"),
+});
+
+const newsDocs = defineCollection({
+    loader: file("src/data/docs/news.yaml"),
+});
+
+const jobDocs = defineCollection({
+    loader: file("src/data/docs/jobs.yaml"),
+});
+
+const miscDocs = defineCollection({
+    loader: file("src/data/docs/misc.yaml"),
+});
+
+const policyDocs = defineCollection({
+    loader: file("src/data/docs/policies.yaml"),
+});
+
+// ======================================================
+
+// ------------ CAMPS -------------
 const camps = defineCollection({
     loader: glob({ pattern: '**/*.mdx', base: './src/pages/camps'}),
 });
 
+// ------------ CAE WORKSHOPS -------------
 const workshops = defineCollection({
     loader: glob({ pattern: '**/*.md', base: './src/content/cae'}),
     schema: ({ image }) => z.object({
@@ -46,8 +61,26 @@ const workshops = defineCollection({
     })
 });
 
+// ------------ COMMITTEES -------------
 const committees = defineCollection({
     loader: glob({ pattern: '**/*.md', base: './src/content/committees'}),
 });
 
-export const collections = { metadata, newsletters, workshops, campJobGroups, campJobs, camps, committees, docs, board };
+// ======================================================
+
+export const collections = { 
+    metadata, 
+    board, 
+
+    jobGroups, 
+    jobDocs,
+
+    docTypes,
+    newsDocs,
+    miscDocs,
+    policyDocs,
+
+    camps,
+    workshops,
+    committees,
+ };

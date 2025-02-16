@@ -11,5 +11,5 @@ export default defineConfig({
   adapter: netlify(),
   site: "https://wcrnm.github.io",
   base: "/eliot",
-  trailingSlash: 'never'
+  trailingSlash: "never",
 });

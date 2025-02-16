@@ -1,0 +1,30 @@
+###############################################
+# First Aid
+- id:   urgent-care
+  name: Eliot Emergencies
+  file: Eliot_Emergencies_2021.pdf
+  type: firstAid
+
+###############################################
+# History
+- id:   hand+heart
+  name: Hand and Heart Recipients
+  file: HAND_AND_HEART_AWARD.pdf
+  type: history
+
+- id:   past-deans
+  name: Past & Future Deans
+  file: Camp_Deans.pdf
+  type: history
+
+- id:   past-speakers
+  name: Past Speakers, Presenters, & Guests
+  file: Past_Speakers.pdf
+  type: history
+
+###############################################
+# Camp Info
+- id:   financial-assistance
+  name: Eliot Institute Financial Assistance Application
+  file: Eliot_Financial_Assistance_Application_Form_4-24.pdf
+  type: info

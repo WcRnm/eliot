@@ -1,0 +1,48 @@
+###############################################
+# Policies
+- id:   vulnerable-camper
+  name: Vulnerable Camper Protection Policy
+  file: Vulnerable_Camper_Protection_Policy_-_DRAFT5.pdf
+  type: policy
+
+- id:   waterfront-rules
+  name: Waterfront Rules
+  file: Eliot_Waterfront_Rules_(2019).pdf
+  type: policy
+  group: waterfront
+
+- id:   respectful-behavior
+  name: Respectful Behavior Expectations
+  file: Respectful_Behavior_Expectations__final3.pdf
+  type: policy
+
+- id:   right-relations
+  name: Restoring Right Relations Policy
+  file: ELIOT_INSTITUTE_RRR_POLICY_(April_2024).pdf
+  type: policy
+
+- id:   sex-and-gender
+  name: Sex and Gender Diversity Policy and Statement
+  file: Eliot_Institute_Sex_and_Gender_Diversity_Policy_and_Statement_(April_2024).pdf
+  type: policy
+
+- id:   copyrights
+  name: Copyright Guidelines
+  file: Copyright_Guidelines_(2021).pdf
+  type: policy
+
+- id:   duwop
+  name: Photo Sharing (DUWOP - Don't Upload Without Permission)
+  file: DUWOP_policy.pdf
+  type: policy
+
+- id:   vistors
+  name: Visitor and Attendance Policy
+  file: Attendance_and_Visitor_Policy.pdf
+  type: policy
+
+- id:   code-of-ethics
+  name: Code of Ethics
+  file: Camp_Staff_Code_of_Ethics__April_2019.pdf
+  note: Every member of staff must sign this Code of Ethics, along with their staff contract.
+  type: policy

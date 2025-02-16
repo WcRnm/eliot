@@ -1,0 +1,374 @@
+# Camp Jobs.
+
+# -----------------------------------------------------------------------------
+# av:
+- id:       av-coord
+  name:     "Audio Visual Coordinator"
+  group:    av
+  file:     AV_Coordinator_(2024).pdf
+  type:     job
+
+- id:       av-manual
+  name:     "AV How-To-Manual"
+  group:    av
+  file:     AV_Manual_(2024).pdf
+  type:     job
+
+- id:       av-slide-show
+  name:     Slide Show Creator
+  group:    av
+  file:     Slide_Show_Creator_(2017).pdf
+  type:     job
+
+# -----------------------------------------------------------------------------
+# chaplain:
+- id:       chaplain
+  name:     Camp Chaplain
+  group:    chaplain
+  file:     Camp_Chaplain.(2017).pdf
+  type:     job
+
+- id:       chaplain-youth+ya
+  name:     Youth & Young Adult Chaplain
+  group:    chaplain
+  file:     Youth-Young_Adult_Chaplain.pdf
+  type:     job
+
+# -----------------------------------------------------------------------------
+# youth:
+- id:       youth-dir+advisor
+  name:     Children's Program Director & Youth Advisor
+  group:    youth
+  file:     Children's_Program_Director_and_Youth_Advisor_(2024).pdf
+  type:     job
+
+- id:       youth-guidelines
+  name:     Children's and Youth Program Guidelines
+  group:    youth
+  file:     Children's_and_Youth_Program_Guidelines_(2024).pdf
+  type:     job
+
+- id:       youth-staff
+  name:     Children's, MAGS and Youth Program Staff
+  group:    youth
+  file:     Children's_and_Youth_Staff_(2024).pdf
+  type:     job
+
+- id:       youth-orientaiton
+  name:     Children/Youth & Parent/Sponsor Orientation - First Night
+  group:    youth
+  file:     Children_and_Youth_Orientation_Meetings_(2024).pdf
+  type:     job
+
+# -----------------------------------------------------------------------------
+# cae:
+- id:       cae-youth-coord
+  name:     "Children's Art Workshop Coordinator"
+  group:    cae
+  file:     CAW_coordinator_job_description_(2022).pdf
+  type:     job
+
+- id:       cae-coord
+  name:     "Presenter & Extravaganza Coordinator"
+  group:    cae
+  file:     2024_CAE_Presenter_Extravaganza_Coordinator_JD.pdf
+  type:     job
+
+# -----------------------------------------------------------------------------
+# dean:
+- id:       dean
+  name:     Dean
+  group:    dean
+  file:     Dean_(2024).pdf
+  type:     job
+
+- id:       dean-timeline
+  name:     "Dean: Timeline"
+  group:    dean
+  file:     Dean_-_Timeline_(2024).pdf
+  type:     job
+
+- id:       dean-staff-guide
+  name:     "Dean: Staffing Guidelines"
+  group:    dean
+  file:     Dean_-_Staffing_Guidelines_(2024).pdf
+  type:     job
+
+- id:       dean-speaker-guide
+  name:     "Dean: Theme Speaker Guidelines"
+  group:    dean
+  file:     Dean_-_Theme_Speaker_(2024).pdf
+  type:     job
+
+- id:       dean-staff-list
+  name:     "Dean: Camp Staffing Lists"
+  group:    dean
+  file:     Dean_-_Camp_Staff_Lists_(2024).pdf
+  type:     job
+
+# -----------------------------------------------------------------------------
+# misc:
+- id:       am-coffee
+  name:     Early Morning Coffee Host
+  group:    misc
+  file:     Early_Morning_Coffee_Host_(2017).pdf
+  type:     job
+
+- id:       golf-cart
+  name:     Golf Cart Coordinator
+  group:    misc
+  file:     Golf_Cart_Coordinator_Revised_Dec_2023.pdf
+  type:     job
+
+- id:       house-lead
+  name:     House Leader
+  group:    misc
+  file:     House_Leader_(2024).pdf
+  type:     job
+
+- id:       newcomer-host
+  name:     Newcomer Host
+  group:    misc
+  file:     Newcomer_Host_(2024).pdf
+  type:     job
+
+- id:       newsletter
+  name:     Newsletter Editor
+  group:    misc
+  file:     Newsletter_Editor_(2024).pdf
+  type:     job
+
+- id:       social-hour
+  name:     Social Hour Host
+  group:    misc
+  file:     Social_Hour_Host_(2024).pdf
+  type:     job
+
+- id:       closet
+  name:     Storage Closet Manager
+  group:    misc
+  file:     Storage_Closet_Manager_(2023).pdf
+  type:     job
+
+- id:       vol-coord
+  name:     Volunteer Coordinator
+  group:    misc
+  file:     Volunteer_Coordinator_(2024).pdf
+  type:     job
+
+- id:       ya-coord
+  name:     Young Adult Coordinator
+  group:    misc
+  file:     Young_Adult_Coordinator_(2016).pdf
+  type:     job
+
+# -----------------------------------------------------------------------------
+# firstAid:
+- id:       aid-coord
+  name:     First Aid Coordinator
+  group:    firstAid
+  file:     First_Aid_Coordinator_(Jul_2017).pdf
+  type:     job
+
+- id:       aid-vol
+  name:     First Aid Volunteer
+  group:    firstAid
+  file:     First_Aid_Volunteer.(Jul_2017).pdf
+  type:     job
+
+- id:       aid-info
+  name:     First Aid Information
+  group:    firstAid
+  file:     First_Aid_Information_Chart_(Jul_2017).pdf
+  type:     job
+
+- id:       aid-supplies
+  name:     First Aid Supplies List
+  group:    firstAid
+  file:     First_Aid_Supllies_(2022).pdf
+  type:     job
+
+- id:       aid-concussion
+  name:     "Concussion & Head Injury Information"
+  group:    firstAid
+  file:     First_Aid_Info_-_Concussions__Head_Injuries__(2016).pdf
+  type:     job
+
+- id:       aid-epipen
+  name:     EpiPen Information
+  group:    firstAid
+  file:     EpiPen_Document_January_2019.pdf
+  type:     job
+
+# -----------------------------------------------------------------------------
+# music:
+- id:       music-coord
+  name:     Music Coordinator
+  group:    music
+  file:     Music_Coordinator__(2017).pdf
+  type:     job
+
+- id:       music-acc
+  name:     Music Accompanist 
+  group:    music
+  file:     Music_Accompanist_(2017).pdf
+  type:     job
+
+- id:       choir
+  name:     Choir Director
+  group:    music
+  file:     Choir_Director_(2017).pdf
+  type:     job
+
+# -----------------------------------------------------------------------------
+# smallGroups:
+- id:       sg-coord
+  name:     Small Groups Coordinator
+  group:    smallGroups
+  file:     Small_Group_Coordinator_(2024).pdf
+  type:     job
+
+- id:       sg-facilitator
+  name:     Small Group Facilitator
+  group:    smallGroups
+  file:     Small_Group_Facilitators_-_(2024).pdf
+  type:     job
+
+# -----------------------------------------------------------------------------
+# events:
+- id:       evt-art
+  name:     Afternoon Art
+  group:    events
+  file:     Afternoon_Art_Coordinator_(2016).pdf
+  type:     job
+
+- id:       evt-art-show
+  name:     Art Show
+  group:    events
+  file:     Art_Show_Coordinator_(2017)_.pdf
+  type:     job
+
+- id:       evt-concert
+  name:     Concerts
+  group:    events
+  file:     Concerts_(2017).pdf
+  type:     job
+
+- id:       evt-parade
+  name:     Costume Parade
+  group:    events
+  file:     Costume_Parade_Coordinator_(2017)_wpd.pdf
+  type:     job
+
+- id:       evt-dance
+  name:     Dances
+  group:    events
+  file:     Dances_(2017).pdf
+  type:     job
+
+- id:       evt-photo-hunt
+  name:     Photo Scavenger Hunt
+  group:    events
+  file:     Photo_Scavenger_Hunt__(2017).pdf
+  type:     job
+
+- id:       evt-talent
+  name:     Talent Show
+  group:    events
+  file:     Talent_Show_Coordinator_(2017).pdf
+  type:     job
+
+- id:       evt-tie-dye
+  name:     Tie Dye
+  group:    events
+  file:     Tie-Dye_Coordinator_(2017)_.pdf
+  type:     job
+
+- id:       evt-trivia
+  name:     Trivia Night
+  group:    events
+  file:     Trivia_Night__(2017).pdf
+  type:     job
+
+# -----------------------------------------------------------------------------
+# waterfront:
+- id:       wf-dir
+  name:     Waterfront Director
+  group:    waterfront
+  file:     Waterfront_Director_(2023)__FINAL.pdf
+  type:     job
+
+- id:       wf-dock-coord
+  name:     Boat Dock Coordinator
+  group:    waterfront
+  file:     Boat_Dock_Coordinator_(2017).pdf
+
+- id:       wf-dock-vol
+  name:     Boat Dock Volunteer
+  group:    waterfront
+  file:     Boat_Dock_Volunteers__(2017).pdf
+  type:     job
+
+- id:       wf-boats
+  name:     Boating Tests
+  group:    waterfront
+  file:     Boating_Tests__(2017).pdf
+  type:     job
+
+- id:       wf-lifeguard
+  name:     Lifeguard
+  group:    waterfront
+  file:     Lifeguard__(2023)_DRAFT_v4.pdf
+  type:     job
+
+- id:       wf-badge-info
+  name:     Waterfront Badge Information
+  group:    waterfront
+  file:     Swimming___Boating_Badges_Description_(2018).pdf
+  type:     job
+
+- id:       wf-badge-chart
+  name:     Badge Chart
+  group:    waterfront
+  file:     Swimming___Boating_Badges_Chart_2018_Rev_1.pdf
+  type:     job
+
+# -----------------------------------------------------------------------------
+# winter:
+- id:       win-feast
+  name:     Feast Master
+  group:    winter
+  file:     Feast_Master_-_Winter_Eliot_(2017).pdf
+  type:     job
+
+- id:       win-living-coord
+  name:     Living Room Coordinator
+  group:    winter
+  file:     Living_Room_Coordinator_(2017).pdf
+  type:     job
+
+# -----------------------------------------------------------------------------
+# worship:
+- id:       ingathering
+  name:     Morning Ingathering Coordinator
+  group:    worship
+  file:     Morning_Ingathering_Coordinator_(2017).pdf
+  type:     job
+
+- id:       evening-worship
+  name:     Evening Worship Coordinator
+  group:    worship
+  file:     Evening_Worship_Coordinator_Job_Description.pdf
+  type:     job
+
+- id:       worship-manual
+  name:     Worship Manual
+  group:    worship
+  file:     Worship_Manual_(2017).pdf
+  type:     job
+
+- id:       worship-sched
+  name:     Worship Schedule
+  group:    worship
+  file:     Worship_Coordinator_Planning_Grids.pdf
+  type:     job
