@@ -31,6 +31,8 @@ function docUrl(doc) {
     </article>
 
     {groups.map((grp: { id: string; data: {id: string, name: string} }) => {
+        const groupHasPolicies = policies.find((p) => {return grp.id === p.data.group}) !== undefined;
+        const heading = groupHasPolicies ? '<h3>Policies</h3>' : undefined;
         return (
             <article>
                 <h2>{grp.data.name}</h2>
@@ -44,6 +46,9 @@ function docUrl(doc) {
                             )
                         }}
                     )}
+                </ul>
+                <Fragment set:html={heading}/>
+                <ul>
                     {policies.map((policy) => {
                         if (grp.id === policy.data.group) {
                             return (
