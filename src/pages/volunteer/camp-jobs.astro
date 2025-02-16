@@ -1,15 +1,17 @@
 ---
-import Layout from '@layouts/LayoutAstro.astro'
+import Layout from '@layouts/LayoutAstro.astro';
+import Doc from '@components/Doc.astro';
 
 import { getCollection } from 'astro:content';
 const jobs = await getCollection('jobDocs');
 const groups = await getCollection('jobGroups');
-const policyDocs = await getCollection('policyDocs');
+const policies = await getCollection('policyDocs');
 
 function getPolicy(id: string) {
-    return policyDocs.find((element: any) => element.id === id)?.data;
+    return policies.find((element: any) => element.id === id);
 }
 const codeOfEthics = getPolicy('code-of-ethics');
+
 const baseUrl = import.meta.env.BASE_URL;
 
 function docUrl(doc) {
@@ -23,8 +25,7 @@ function docUrl(doc) {
         <h2>For All Camp Staff</h2>
         <ul>
             <li>
-                <a href={docUrl(codeOfEthics)} target="other">{codeOfEthics.name}</a>
-                <br>{codeOfEthics.note}
+                <Doc doc={codeOfEthics} />
             </li>
         </ul>
     </article>
@@ -36,19 +37,20 @@ function docUrl(doc) {
                 <ul>
                     {jobs.map((job) => {
                         if (grp.id === job.data.group) {
-                            if (job.data.note) {
-                                return (
-                                    <li>
-                                        <a href={docUrl(job.data)} target="other">{job.data.name}</a>
-                                        <br>{job.note}
-                                    </li>
-                                )
-                            } else {
-                                return (
-                                    <li><a href={docUrl(job.data)} target="other">{job.data.name}</a></li>
-                                )
-                            }
-
+                            return (
+                                <li>
+                                    <Doc doc={job} />
+                                </li>
+                            )
+                        }}
+                    )}
+                    {policies.map((policy) => {
+                        if (grp.id === policy.data.group) {
+                            return (
+                                <li>
+                                    <Doc doc={policy} />
+                                </li>
+                            )
                         }}
                     )}
                 </ul>

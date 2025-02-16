@@ -9,6 +9,7 @@
   name: Waterfront Rules
   file: Eliot_Waterfront_Rules_(2019).pdf
   type: policy
+  group: waterfront
 
 - id:   respectful-behavior
   name: Respectful Behavior Expectations
