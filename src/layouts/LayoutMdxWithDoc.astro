@@ -4,7 +4,6 @@ import Layout from '@layouts/LayoutAstro.astro'
 const { frontmatter } = Astro.props;
 
 import { getCollection } from 'astro:content';
-import { undefined } from 'astro:schema';
 const miscDocs = await getCollection('miscDocs');
 const newsDocs = await getCollection('newsDocs');
 const policyDocs = await getCollection('policyDocs');
