@@ -2,10 +2,7 @@
 const { workshop } = Astro.props;
 
 import '../styles/eliot.css'
-
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import Sidebar from '../components/Sidebar.astro';
+import BaseLayout from '@layouts/LayoutAstro.astro';
 
 const baseUrl = import.meta.env.BASE_URL;
 const caePage = baseUrl + "/eliot/camps/" + workshop.year + "/eliot/cae";
@@ -16,39 +13,15 @@ const presenter = workshop.presenterUrl
 const favicon = baseUrl + "/favicon.svg";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/svg+xml" href={favicon} />
-    <meta name="generator" content={Astro.generator} />
+<BaseLayout title={workshop.title}>
 
-    <title>{workshop.title}</title>
-  </head>
+  <article>
+    <h1>{workshop.title}</h1>
+    <p set:html={presenter}></p>
+    <p><a href={caePage}>Creative Arts Eliot {workshop.year}</a></p>
 
-  <body>
-    <Header />
-    <main class="container">
-      <div class="row">
-        <div class="col-xs-3">
-          <aside>
-            <Sidebar />
-          </aside>
-        </div>
-        <div class="col-xs">
-          <article>
-            <h1>{workshop.title}</h1>
-            <p set:html={presenter}></p>
-            <p><a href={caePage}>Creative Arts Eliot {workshop.year}</a></p>
+    <slot />
 
-            <slot />
+  </article>
 
-          </article>
-        </div>
-      </div>
-    </main>
-    <Footer />
-  </body>
-
-</html>
+</BaseLayout>

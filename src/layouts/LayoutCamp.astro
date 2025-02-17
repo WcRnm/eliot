@@ -2,10 +2,7 @@
 const { camp } = Astro.props;
 
 import '@styles/eliot.css'
-
-import Header from '@components/Header.astro';
-import Footer from '@components/Footer.astro';
-import Sidebar from '@components/Sidebar.astro';
+import BaseLayout from '@layouts/LayoutAstro.astro';
 
 const startDate = new Date(camp.start).toDateString();
 const endDate = new Date(camp.end).toDateString();
@@ -13,41 +10,16 @@ const endDate = new Date(camp.end).toDateString();
 const baseUrl = import.meta.env.BASE_URL;
 const favicon = baseUrl + "/favicon.svg";
 ---
+<BaseLayout title={camp.name}>
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/svg+xml" href={favicon} />
-    <meta name="generator" content={Astro.generator} />
+  <article>
+    <h1>{camp.name}</h1>
+    <p>{startDate} &mdash; {endDate}</p>
 
-    <title>{camp.name}</title>
-  </head>
+    <h2><i>{camp.theme}</i> with {camp.presenter}</h2>
 
-  <body>
-    <Header />
-    <main class="container">
-      <div class="row">
-        <div class="col-xs-3">
-          <aside>
-            <Sidebar />
-          </aside>
-        </div>
-        <div class="col-xs">
-          <article>
-            <h1>{camp.name}</h1>
-            <p>{startDate} &mdash; {endDate}</p>
+    <slot />
 
-            <h2><i>{camp.theme}</i> with {camp.presenter}</h2>
+  </article>
 
-            <slot />
-
-          </article>
-        </div>
-      </div>
-    </main>
-    <Footer />
-  </body>
-
-</html>
+</BaseLayout>
