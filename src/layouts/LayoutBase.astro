@@ -24,13 +24,13 @@ const favicon = import.meta.env.BASE_URL + "/favicon.svg";
   <body>
     <Header />
     <main class="container">
-      <div class="row">
-        <div class="col-xs-3">
+      <div class="grid">
+        <div>
           <aside>
             <Sidebar />
           </aside>
         </div>
-        <div class="col-xs">
+        <div>
           <slot />
         </div>
       </div>
