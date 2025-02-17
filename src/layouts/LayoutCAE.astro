@@ -5,7 +5,7 @@ const workshopsAll = await getCollection('workshops');
 const { camp } = Astro.props;
 
 import '../styles/eliot.css'
-import BaseLayout from '@layouts/LayoutAstro.astro';
+import Layout from '@layouts/LayoutBase.astro';
 
 import Workshop from '@components/Workshop.astro';
 
@@ -21,7 +21,7 @@ const workshops = Object.values(workshopsAll).filter(filter);
 
 ---
 
-<BaseLayout title={camp.name}>
+<Layout title={camp.name}>
 
   <article>
     <h1>{camp.name}</h1>
@@ -40,4 +40,4 @@ const workshops = Object.values(workshopsAll).filter(filter);
       </Workshop>
     )})}
 
-</BaseLayout>
+</Layout>

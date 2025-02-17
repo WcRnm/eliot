@@ -1,5 +1,5 @@
 ---
-import Layout from '@layouts/LayoutAstro.astro';
+import Layout from '@layouts/LayoutBase.astro';
 import Doc from '@components/Doc.astro';
 
 import { getCollection } from 'astro:content';
@@ -12,14 +12,9 @@ function getPolicy(id: string) {
 }
 const codeOfEthics = getPolicy('code-of-ethics');
 
-const baseUrl = import.meta.env.BASE_URL;
-
-function docUrl(doc) {
-    return baseUrl + '/docs/' + doc.type + '/' + doc.file;
-}
 ---
 
-<Layout title="Camp Jobs">
+<Layout title="Eliot|Camp Jobs">
     <h1>Camp Jobs</h1>
     <article>
         <h2>For All Camp Staff</h2>
