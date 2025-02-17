@@ -8,6 +8,7 @@ import Footer from '@components/Footer.astro';
 import Sidebar from '@components/Sidebar.astro';
 
 const favicon = import.meta.env.BASE_URL + "/favicon.svg";
+const script = import.meta.env.BASE_URL + '/scripts/tabs.js'; 
 ---
 
 <!doctype html>
@@ -36,6 +37,7 @@ const favicon = import.meta.env.BASE_URL + "/favicon.svg";
       </div>
     </main>
     <Footer />
+    <script is:inline src={script}></script>
   </body>
 
 </html>
