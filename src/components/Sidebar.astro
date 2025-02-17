@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-const fileUrl = "https://s3.amazonaws.com/siteninja/multitenant/assets"
+import Navbar from '@components/Navbar.astro';
 
 const now = new Date();
 
@@ -40,18 +40,24 @@ function pageUrl(page : string) {
   return baseUrl + page;
 }
 
+function dateSpan(camp) {
+  return camp.data.start.toLocaleDateString() + '-' + camp.data.end.toLocaleDateString()
+}
+
 ---
-<button class="outline">Register for Camp</button>
+<Navbar />
 <hr>
-<button class="outline secondary">Donate to Eliot</button>
-<hr>
-<h2><a href={pageUrl("/camps/upcoming")}>CAMPS</a></h2>
+<h2><a href={pageUrl("/camps/upcoming")}>Upcoming Camps</a></h2>
 <nav>
   <ul>
     {camps.map((camp: Camp) => {
         const url = pageUrl("/camps/" + camp.id);
         return (
-          <li><a href={url}}>{camp.data.name}</a></li>
+          <li>
+            <a href={url}}>{camp.data.name}</a>
+            <small>{dateSpan(camp)}</small><br>
+            <i>{camp.data.theme}</i>
+          </li>
         )
     })}
     <li><a href={pageUrl("/camps/past")}>...Past Camps</a></li>
