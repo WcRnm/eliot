@@ -1,8 +1,28 @@
 ---
+import { Image } from 'astro:assets';
+import Logo from '@assets/eliot-logo.png';
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <header>
   <div class="container">
-    
+    <nav>
+      <ul>
+        <li><a href={baseUrl}>
+          <Image src={Logo}
+            alt="Eliot Institute"
+            height=64
+          /></a>
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          <li><button class="primary outline"><a href="#">Donate</a></button></li>
+          <li><button class="primary outline"><a href="#">Register for Camp</a></button></li>
+        </li>
+      </ul>
+
+    </nav>
   </div>
 </header>

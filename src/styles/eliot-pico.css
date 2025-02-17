@@ -13,3 +13,9 @@
     flex-direction: column;
   }
 }
+
+/* Vertical nav dropdown */
+aside nav details.dropdown {
+  width: 95%;
+  margin-top: 0.1em;
+}

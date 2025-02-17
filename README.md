@@ -1,5 +1,9 @@
 # Eliot Institute Static Website
 
+## TODO
+
+- Ensure dates are always shown as Pacific Time 
+
 ## Adding a Camp
 
 ### 1) Add an camp to src/data/camps.yaml
