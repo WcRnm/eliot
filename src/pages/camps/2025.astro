@@ -1,11 +1,12 @@
 ---
 import BaseLayout from "@layouts/LayoutBase.astro";
+import Camp from "@components/Camp2.astro";
 
 const year = Astro.request.url.split("/").slice(-1);
 const title = "Eliot|" + year;
  
 import { getCollection } from 'astro:content';
-const campsAll = await getCollection('camps');
+const campsAll = await getCollection('camps2');
 const now = new Date();
 
 interface Camp {
@@ -36,8 +37,6 @@ function filter( c: Camp) {
 }
 
 const camps = Object.values(campsAll).filter(filter).sort(compare); 
-let i = 0;
-let j = 0;
 ---
 
 <BaseLayout title={title}>
@@ -50,25 +49,19 @@ let j = 0;
     <nav role="tab-control">
       <ul>
         {camps.map((camp: Camp) => {
-          const tab = "tab" + i;
-          ++i;
-
             return (<li><label for={camp.id}>{camp.data.name}</label></li>)
-
-          })}
+        })}
       </ul>
     </nav>
 
     <div role="tabs">
       <section>
         { camps.map((camp: Camp) => {
-          const tab = "tab" + i;
-          ++i;
           return(
             <input hidden="hidden" type="radio" name="tabs" id={camp.id} checked="checked" />
             <figure>
               <article>
-                <h2>{camp.data.name}</h2>
+                <Camp camp={camp} year={year}></Camp>
               </article>
             </figure>
           )})}

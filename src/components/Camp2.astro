@@ -1,0 +1,27 @@
+---
+import { Image } from 'astro:assets';
+
+const { camp, year } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
+
+const startDate = new Date(camp.data.start).toDateString();
+const endDate = camp.data.end.toDateString();
+const presenter = camp.data.presenterUrl
+                ? '<a href=' + camp.data.presenterUrl + ' target="other"><b>' + camp.data.presenter + '</b></a>'
+                : '<b>' + camp.data.presenter + '</b>'
+const url = baseUrl + "/camps/" + camp.id;
+
+const img = {
+    src: camp.data.photo,
+    alt: camp.data.presenter,
+    width: camp.data.width ? camp.data.width : 300,
+};
+---
+
+<h2><a href={url}>{camp.data.name}</a></h2>
+<p>{startDate} &mdash; {endDate}</p>
+<p><i>{camp.data.theme}</i></p>
+<p set:html={presenter}></p>
+<Image src={img.src} alt={img.alt} width={img.width} />
+
+<article set:html={camp.rendered.html}></article>

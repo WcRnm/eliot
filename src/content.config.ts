@@ -42,6 +42,19 @@ const camps = defineCollection({
     loader: glob({ pattern: '**/*.mdx', base: './src/pages/camps'}),
 });
 
+const camps2 = defineCollection({
+    loader: glob({ pattern: '**/*.md', base: './src/content/camps'}),
+    schema: ({ image }) => z.object({
+        name: z.string(),
+        start: z.date(),
+        end: z.date(),
+        presenter: z.string().optional(),
+        theme: z.string(), 
+        photo: image().optional(),
+        width: z.number().optional(),
+    }),
+})
+
 // ------------ CAE WORKSHOPS -------------
 const workshops = defineCollection({
     loader: glob({ pattern: '**/*.md', base: './src/content/cae'}),
@@ -81,6 +94,7 @@ export const collections = {
     policyDocs,
 
     camps,
+    camps2,
     workshops,
     committees,
  };
