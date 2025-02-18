@@ -1,5 +1,8 @@
 ---
+import Workshop from '@components/Workshop.astro';
+
 import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
 
 const { camp, year } = Astro.props;
 const baseUrl = import.meta.env.BASE_URL;
@@ -16,6 +19,14 @@ const img = {
     alt: camp.data.presenter,
     width: camp.data.width ? camp.data.width : 300,
 };
+
+const workshopsAll = await getCollection('workshops');
+const isCAE = camp.data.name === 'Creative Arts';
+
+function filterByYear(w) {
+    return parseInt(year) === w.data.year;
+}
+const workshops = isCAE ? Object.values(workshopsAll).filter(filterByYear) : [];
 ---
 
 <h2><a href={url}>{campName}</a></h2>
@@ -25,3 +36,10 @@ const img = {
 <Image src={img.src} alt={img.alt} width={img.width} />
 
 <article set:html={camp.rendered.html}></article>
+
+{ isCAE && <h3>Workshops</h3>}
+{ isCAE && workshops.map((ws) => {
+    return (
+      <Workshop workshop={ws}>
+      </Workshop>
+    )})}
