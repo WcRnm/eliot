@@ -47,8 +47,6 @@ nav[role="tab-control"] label {
   border: 1px;
   border-style: dashed;
   padding: 0.2em;
-  padding-left: 1em;
-  padding-right: 1em;
 }
 
 nav[role="tab-control"] label.active {
