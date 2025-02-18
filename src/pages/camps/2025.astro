@@ -7,7 +7,6 @@ const title = "Eliot|" + year;
  
 import { getCollection } from 'astro:content';
 const campsAll = await getCollection('camps2');
-const now = new Date();
 
 interface Camp {
     id: string,

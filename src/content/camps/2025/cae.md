@@ -1,5 +1,5 @@
 ---
-name:       Creative Arts Eliot
+name:       Creative Arts
 theme:      Your choice of workshops
 start:      2025-08-09
 end:        2025-08-13

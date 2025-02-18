@@ -1,5 +1,5 @@
 ---
-name:       Winter Eliot
+name:       Winter
 start:      2025-12-28
 end:        2026-01-01
 presenter:  Melanie DeMore

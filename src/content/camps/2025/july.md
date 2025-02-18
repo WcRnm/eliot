@@ -1,5 +1,5 @@
 ---
-name:       July Eliot
+name:       July
 start:      2025-07-12
 end:        2025-07-19
 presenter:  Lea Morris
