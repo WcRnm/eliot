@@ -1,0 +1,62 @@
+---
+import Layout from "@layouts/LayoutBase.astro";
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+
+import meetingHouse from '@assets/meeting-house.jpg';
+
+const meta = await getCollection('metadata');
+
+function getValue(id: string) {
+    return meta.find((element: any) => element.id === id)?.data.val;
+}
+const email = getValue("email");
+
+function pageUrl(page : string) {
+  return import.meta.env.BASE_URL + page;
+}
+
+---
+
+<Layout title="Eliot|Donate">
+    <h1>Donate to Eliot</h1>
+    <h2>Eliot Institute Welcomes Donations of Time and Money</h2>
+
+    <p><strong>Eliot Institute</strong> welcomes your financial support. 
+        Thank you for considering a donation to our organization!</p>
+
+    <p>Donations to Eliot may be directed to the Operations 
+        Fund to pay for innovative programs and camps without 
+        increasing fees; to the Opportunity Fund to help to secure 
+        Eliot's future financial vitality; or to the Scholarship 
+        Fund to provide financial assistance to those who otherwise 
+        could not attend.</p>
+
+    <p>Consider making your gift a regular, automated monthly donation to Eliot! 
+        You can check the box for that when you click on the yellow donate button below.</p>
+
+    <p>Eliot Institute is a charity under Section 501(c)(3) of the United States Internal Revenue Code.</p>
+
+    <p>Donations may also be made by mailing a check or using PayPal online.</p>
+
+    <p>Mail donations to:</p>
+
+    <article>
+        Eliot Institute<br>
+        2411 View Ridge Dr<br>
+        Bellingham WA 98229
+    </article>
+
+    Or donate online:
+
+
+    <h2>Canadian Donors</h2>
+
+    <p>Some gifts made to U.S. charities can be claimed on a Canadian tax return, 
+        but the tax benefits are limited. These gifts can only be claimed against 
+        U.S.- sourced net income. <a href={pageUrl("/tax-status")}>Click here for more information</a>.</p>
+
+    <p>Other ways you can donate to Eliot Institute include donating time and
+        skills as part of a camp program, or donating your time by service on 
+        the <a href={pageUrl("/volunteer/board")}>Eliot Board</a> or a <a href={pageUrl("/volunteer/committees")}>board committee</a>.  Contact us here, 
+        {email}, to let us know what you would be willing to do.</p>
