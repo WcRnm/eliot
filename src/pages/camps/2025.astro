@@ -1,0 +1,70 @@
+---
+import BaseLayout from "@layouts/LayoutBase.astro";
+import Camp from "@components/Camp2.astro";
+
+const year = Astro.request.url.split("/").slice(-1);
+const title = "Eliot|" + year;
+ 
+import { getCollection } from 'astro:content';
+const campsAll = await getCollection('camps2');
+
+interface Camp {
+    id: string,
+    data: {
+        name: string,
+        presenter: string,
+        presenterUrl: string,
+        theme: string,
+        start: Date,
+        end: Date,
+        layout: string,
+    },
+    body: string,
+    file: string,
+    filePath: string,
+    digest: string,
+};
+
+function compare( a: Camp, b: Camp ) {
+    const aEnd = new Date(a.data.end).getTime();
+    const bEnd = new Date(b.data.end).getTime();
+    return (aEnd > bEnd) ? 1 : -1;
+}
+
+function filter( c: Camp) {
+    return new Date(c.data.end).getFullYear() >= year;
+}
+
+const camps = Object.values(campsAll).filter(filter).sort(compare); 
+---
+
+<BaseLayout title={title}>
+  <div class="container">
+
+    <hgroup>
+      <h1>Eliot Institute: {year} Camps</h1>
+    </hgroup>
+
+    <nav role="tab-control">
+      <ul>
+        {camps.map((camp: Camp) => {
+            return (<li><label for={camp.id}>{camp.data.name}</label></li>)
+        })}
+      </ul>
+    </nav>
+
+    <div role="tabs">
+      <section>
+        { camps.map((camp: Camp) => {
+          return(
+            <input hidden="hidden" type="radio" name="tabs" id={camp.id} checked="checked" />
+            <figure>
+              <article>
+                <Camp camp={camp} year={year}></Camp>
+              </article>
+            </figure>
+          )})}
+      </section>
+    </div>
+  </div>
+</BaseLayout>

@@ -19,3 +19,42 @@ aside nav details.dropdown {
   width: 95%;
   margin-top: 0.1em;
 }
+
+.wide95 {
+  width: 95%;
+}
+
+[role="tabs"] {
+  display: flex;
+}
+
+[role="tabs"] section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+[role="tabs"] figure {
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+[role="tabs"] [type="radio"]:checked + figure {
+  display: block;
+}
+
+nav[role="tab-control"] label {
+  color: var(--pico-secondary);
+  cursor: pointer;
+  border: 1px;
+  border-style: dashed;
+  padding: 0.2em;
+}
+
+nav[role="tab-control"] label.active {
+  color: var(--pico-primary);
+  border: 3px;
+  border-style: groove;
+}
