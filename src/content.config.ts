@@ -53,7 +53,7 @@ const camps2 = defineCollection({
         photo: image().optional(),
         width: z.number().optional(),
     }),
-})
+});
 
 // ------------ CAE WORKSHOPS -------------
 const workshops = defineCollection({

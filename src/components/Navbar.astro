@@ -5,17 +5,7 @@ function pageUrl(page : string) {
 ---
 
 <nav>
-    <li>
-      <details class="dropdown">
-        <summary>
-          Camps
-        </summary>
-        <ul>
-          <li><a href={pageUrl("/camps/upcoming")}>Camps</a></li>
-          <li><a href={pageUrl("/camps/location")}>Location of Camps</a></li>
-        </ul>
-      </details>
-    </li>
+    <li><button class="wide95 outline"><a href={pageUrl("/camps/upcoming")}>Camps</a></button></li>
     <li>
       <details class="dropdown">
         <summary>
@@ -65,6 +55,7 @@ function pageUrl(page : string) {
         </summary>
         <ul>
           <li><a href={pageUrl("/contact")}>Contact Us</a></li>
+          <li><a href={pageUrl("/camps/location")}>Location of Camps</a></li>
           <li><a href={pageUrl("/about/mission")}>Mission Statement</a></li>
           <li><a href={pageUrl("/about/values")}>Values Expressed in Action</a></li>
           <li><a href={pageUrl("/about/covenant")}>Eliot Covenant</a></li>

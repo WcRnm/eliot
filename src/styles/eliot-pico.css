@@ -20,6 +20,10 @@ aside nav details.dropdown {
   margin-top: 0.1em;
 }
 
+.wide95 {
+  width: 95%;
+}
+
 [role="tabs"] {
   display: flex;
 }

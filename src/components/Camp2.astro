@@ -40,6 +40,5 @@ const workshops = isCAE ? Object.values(workshopsAll).filter(filterByYear) : [];
 { isCAE && <h3>Workshops</h3>}
 { isCAE && workshops.map((ws) => {
     return (
-      <Workshop workshop={ws}>
-      </Workshop>
+      <Workshop workshop={ws} />
     )})}
