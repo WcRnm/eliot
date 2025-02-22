@@ -1,62 +1,151 @@
 ---
 import Layout from "@layouts/LayoutBase.astro";
-import { Image } from 'astro:assets';
-import { getCollection } from 'astro:content';
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
 
-import meetingHouse from '@assets/meeting-house.jpg';
+import meetingHouse from "@assets/meeting-house.jpg";
 
-const meta = await getCollection('metadata');
+const meta = await getCollection("metadata");
 
 function getValue(id: string) {
     return meta.find((element: any) => element.id === id)?.data.val;
 }
 const email = getValue("email");
 
-function pageUrl(page : string) {
-  return import.meta.env.BASE_URL + page;
+function pageUrl(page: string) {
+    return import.meta.env.BASE_URL + page;
 }
-
 ---
 
 <Layout title="Eliot|Donate">
     <h1>Donate to Eliot</h1>
     <h2>Eliot Institute Welcomes Donations of Time and Money</h2>
 
-    <p><strong>Eliot Institute</strong> welcomes your financial support. 
-        Thank you for considering a donation to our organization!</p>
+    <p>
+        <strong>Eliot Institute</strong> welcomes your financial support. Thank you
+        for considering a donation to our organization!
+    </p>
 
-    <p>Donations to Eliot may be directed to the Operations 
-        Fund to pay for innovative programs and camps without 
-        increasing fees; to the Opportunity Fund to help to secure 
-        Eliot's future financial vitality; or to the Scholarship 
-        Fund to provide financial assistance to those who otherwise 
-        could not attend.</p>
+    <p>
+        Donations to Eliot may be directed to the Operations Fund to pay for
+        innovative programs and camps without increasing fees; to the
+        Opportunity Fund to help to secure Eliot's future financial vitality; or
+        to the Scholarship Fund to provide financial assistance to those who
+        otherwise could not attend.
+    </p>
 
-    <p>Consider making your gift a regular, automated monthly donation to Eliot! 
-        You can check the box for that when you click on the yellow donate button below.</p>
+    <p>
+        Consider making your gift a regular, automated monthly donation to
+        Eliot! You can check the box for that when you click on the yellow
+        donate button below.
+    </p>
 
-    <p>Eliot Institute is a charity under Section 501(c)(3) of the United States Internal Revenue Code.</p>
+    <p>
+        Eliot Institute is a charity under Section 501(c)(3) of the United
+        States Internal Revenue Code.
+    </p>
 
     <p>Donations may also be made by mailing a check or using PayPal online.</p>
 
     <p>Mail donations to:</p>
 
     <article>
-        Eliot Institute<br>
-        2411 View Ridge Dr<br>
+        Eliot Institute<br />
+        2411 View Ridge Dr<br />
         Bellingham WA 98229
     </article>
 
     Or donate online:
 
+    <article>
+        <form
+            action="https://www.paypal.com/cgi-bin/webscr"
+            method="post"
+            target="_top" >
+            <fieldset>
+                <input type="hidden" name="cmd" value="_donations" />
+                <input type="hidden" name="business" value="EZHEQHGZMA9V2" />
+                <input type="hidden" name="lc" value="US" />
+                <input type="hidden" name="item_name" value="Eliot Institute Donation" />
+                <input type="hidden" name="button_subtype" value="services" />
+                <input type="hidden" name="no_note" value="0" />
+                <input type="hidden" name="cn" value="Add special instructions to the seller:" />
+                <input type="hidden" name="no_shipping" value="2" />
+                <input type="hidden" name="currency_code" value="USD" />
+                <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHosted" />
+
+                <label>
+                    Type of Donation
+                    <input type="hidden" name="on0" value="Type of Donation" />
+                    <select name="os0">
+                        <option value="Operations Fund"
+                            >Operations Fund</option
+                        >
+                        <option value="Opportunity Fund"
+                            >Opportunity Fund</option
+                        >
+                        <option value="Scholarship Fund"
+                            >Scholarship Fund</option
+                        >
+                    </select>
+                </label>
+
+                <label>
+                    Name of Donor(s):
+                    <input type="text" name="os1" maxlength="200" />
+                </label>
+
+                <label>
+                    In honor or memory of:
+                    <input type="text" name="os1" maxlength="200" />
+                </label>
+                <input
+                    type="image"
+                    src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"
+                    alt="PayPal - The safer, easier way to pay online!"
+                />
+                <img
+                    alt=""
+                    border="0"
+                    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"
+                    width="1"
+                    height="1"
+                    rlcfsszbj=""
+                />
+            </fieldset>
+        </form>
+
+
+    </article>
 
     <h2>Canadian Donors</h2>
 
-    <p>Some gifts made to U.S. charities can be claimed on a Canadian tax return, 
-        but the tax benefits are limited. These gifts can only be claimed against 
-        U.S.- sourced net income. <a href={pageUrl("/tax-status")}>Click here for more information</a>.</p>
+    <p>
+        Some gifts made to U.S. charities can be claimed on a Canadian tax
+        return, but the tax benefits are limited. These gifts can only be
+        claimed against U.S.- sourced net income. <a
+            href={pageUrl("/tax-status")}>Click here for more information</a
+        >.
+    </p>
 
-    <p>Other ways you can donate to Eliot Institute include donating time and
-        skills as part of a camp program, or donating your time by service on 
-        the <a href={pageUrl("/volunteer/board")}>Eliot Board</a> or a <a href={pageUrl("/volunteer/committees")}>board committee</a>.  Contact us here, 
-        {email}, to let us know what you would be willing to do.</p>
+    <p>
+        Other ways you can donate to Eliot Institute include donating time and
+        skills as part of a camp program, or donating your time by service on
+        the <a href={pageUrl("/volunteer/board")}>Eliot Board</a> or a <a
+            href={pageUrl("/volunteer/committees")}>board committee</a
+        >. Contact us here,
+        {email}, to let us know what you would be willing to do.
+    </p>
+
+    <article>
+        <h2><a href="/docs/news/Eliot.Giving.Opportunity.Brochure.online.pdf"
+               target="other">Click here for more information about donating to Eliot.</a></h2>
+    </article>
+
+    <a href="https://www.paypal.com/webapps/mpp/paypal-popup" 
+        title="How PayPal Works" 
+        onclick="javascript:window.open('https://www.paypal.com/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;">
+        <img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_SbyPP_mc_vs_dc_ae.jpg" border="0" alt="PayPal Acceptance Mark">
+    </a>
+    
+</Layout>
