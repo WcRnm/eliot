@@ -25,11 +25,10 @@ const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <Layout title={title}>
-    <article>
-        <h1>{title}</h1>
-
-        {camps.map((camp: Camp) => {
-            const startDate = new Date(camp.data.start).toDateString();
+    <h1>{title}</h1>
+    
+    {camps.map((camp: Camp) => {
+        const startDate = new Date(camp.data.start).toDateString();
             const endDate = camp.data.end.toDateString();
             const presenter = camp.data.presenterUrl
                             ? <a href={camp.data.presenterUrl} target="other"><b>{camp.data.presenter}</b></a>
@@ -37,11 +36,12 @@ const baseUrl = import.meta.env.BASE_URL;
             const url = baseUrl + "/camps/" + camp.id;
 
             return (
-                <h2><a href={url}>{camp.data.name}</a></h2>
-                <p>{startDate} &mdash; {endDate}</p>
-                <p><i>{camp.data.theme}</i></p>
-                <p>{presenter}</p>
+                <article>
+                    <h2><a href={url}>{camp.data.name}</a></h2>
+                    <p>{startDate} &mdash; {endDate}</p>
+                    <p><i>{camp.data.theme}</i></p>
+                    <p>{presenter}</p>
+                </article>
             )
         })}
-    </article>
 </Layout>

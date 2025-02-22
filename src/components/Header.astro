@@ -1,14 +1,17 @@
 ---
 import { Image } from 'astro:assets';
 import Logo from '@assets/eliot-logo.png';
-const baseUrl = import.meta.env.BASE_URL;
+
+function pageUrl(page : string) {
+  return import.meta.env.BASE_URL + page;
+}
 ---
 
 <header>
   <div class="container">
     <nav>
       <ul>
-        <li><a href={baseUrl}>
+        <li><a href={pageUrl('')}>
           <Image src={Logo}
             alt="Eliot Institute"
             height=64
@@ -18,8 +21,8 @@ const baseUrl = import.meta.env.BASE_URL;
 
       <ul>
         <li>
-          <li><button class="primary outline"><a href="#">Donate</a></button></li>
-          <li><button class="primary outline"><a href="#">Register for Camp</a></button></li>
+          <li><button class="primary outline"><a href={pageUrl('/donate')}>Donate</a></button></li>
+          <li><button class="primary outline"><a href={pageUrl('/camps/register')}>Register for Camp</a></button></li>
         </li>
       </ul>
 

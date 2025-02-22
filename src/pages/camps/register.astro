@@ -1,0 +1,84 @@
+---
+import Layout from "@layouts/LayoutBase.astro";
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+
+import meetingHouse from '@assets/meeting-house.jpg';
+
+const meta = await getCollection('metadata');
+
+function getValue(id: string) {
+    return meta.find((element: any) => element.id === id)?.data.val;
+}
+const email = getValue("email");
+const tel = getValue("tel");
+
+---
+
+<Layout title="Eliot|Register">
+  <h1>Register For Camp</h1>
+  
+  <p>We're delighted that you want to register for an upcoming camp!</p>
+  
+  <p>Please enter your name and email address into this form, and we'll get right back to 
+  you to gather the additional information we'll need. </p>
+  
+  <p>Be sure to keep a close eye on your email inbox!</p>
+  
+  <p><mark>First-time campers in 2025 get a $50 discount!</mark></p>
+  
+  <p>This discount applies per person, so, for example, a family of 4 will get $200 off! 
+  Newcomers who have already registered for an upcoming camp - don't worry, you'll get the discount too!</p>
+  
+  <p>If you are adding a camper to an already submitted registration, please do not 
+  use this form, but rather send an email to {email}, or call {tel}.</p>
+
+  <article>
+  <form
+    action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
+    method="POST">
+
+    <fieldset>
+
+      <input name="orgid" type="hidden" value="00D41000002IlEF" />
+      <input
+        name="retURL"
+        type="hidden"
+        value="https://www.eliotinstitute.org/reg-start-follow-up" />
+      <input name="type" id="type" type="hidden" value="Registration" />
+
+      <input
+        name="subject"
+        id="subject"
+        type="hidden"
+        value="Registration from www.eliotinstitute.org" />
+      <input name="orgin" id="origin" type="hidden" value="Web" />
+
+      <label>
+        Name
+        <input 
+          type="text" 
+          size="20" 
+          maxlength="80" />
+      </label>
+      <label>
+        Email Address
+        <input
+          name="email"
+          id="email"
+          type="text"
+          size="20"
+          maxlength="80"
+        />
+      </label>
+
+      <input type="Submit" border="0" value="Submit" />
+
+    </fieldset>
+  </form>
+  </article>
+  <Image src={meetingHouse} width="596"
+      alt="The Meeting House, a red building nestled amongst evergreen trees"
+      width="596"
+    />
+</Layout>
