@@ -1,10 +1,11 @@
 ---
-name:       Creative Arts
+name:       Creative Arts Eliot 2025
 theme:      Your choice of workshops
 start:      2025-08-09
 end:        2025-08-13
 presenter:  Some creative artwork!
 photo:      cae25_goodrich-art.jpg
+isCAE:      true
 ---
 
 ## CAE Overview

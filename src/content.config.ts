@@ -52,6 +52,7 @@ const camps2 = defineCollection({
         theme: z.string(), 
         photo: image().optional(),
         width: z.number().optional(),
+        isCAE: z.boolean().default(false),
     }),
 });
 

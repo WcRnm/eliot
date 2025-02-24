@@ -1,5 +1,5 @@
 ---
-name:       August
+name:       August Eliot 2025
 start:      2025-08-02
 end:        2025-08-09
 presenter:  Guy Nelson

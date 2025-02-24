@@ -13,7 +13,6 @@ const presenter = camp.data.presenterUrl
                 ? '<a href=' + camp.data.presenterUrl + ' target="other"><b>' + camp.data.presenter + '</b></a>'
                 : '<b>' + camp.data.presenter + '</b>'
 const url = baseUrl + "/camps/" + camp.id;
-const campName = camp.data.name + ' Eliot ' + year;
 const img = {
     src: camp.data.photo,
     alt: camp.data.presenter,
@@ -21,15 +20,14 @@ const img = {
 };
 
 const workshopsAll = await getCollection('workshops');
-const isCAE = camp.data.name === 'Creative Arts';
 
 function filterByYear(w) {
     return parseInt(year) === w.data.year;
 }
-const workshops = isCAE ? Object.values(workshopsAll).filter(filterByYear) : [];
+const workshops = camp.data.isCAE ? Object.values(workshopsAll).filter(filterByYear) : [];
 ---
 
-<h2><a href={url}>{campName}</a></h2>
+<h2><a href={url}>{camp.data.name}</a></h2>
 <p>{startDate} &mdash; {endDate}</p>
 <p><i>{camp.data.theme}</i></p>
 <p set:html={presenter}></p>
@@ -37,8 +35,8 @@ const workshops = isCAE ? Object.values(workshopsAll).filter(filterByYear) : [];
 
 <article set:html={camp.rendered.html}></article>
 
-{ isCAE && <h3>Workshops</h3>}
-{ isCAE && workshops.map((ws) => {
+{ camp.data.isCAE && <h3>Workshops</h3>}
+{ camp.data.isCAE && workshops.length > 0 && workshops.map((ws) => {
     return (
       <Workshop workshop={ws} />
     )})}

@@ -1,9 +1,11 @@
 ---
-import CampList from '@components/CampList.astro'
+import BaseLayout from "@layouts/LayoutBase.astro";
+import Camp from "@components/Camp2.astro";
+
+const today = new Date();
  
 import { getCollection } from 'astro:content';
-const campsAll = await getCollection('camps');
-const now = new Date();
+const campsAll = await getCollection('camps2');
 
 interface Camp {
     id: string,
@@ -29,10 +31,32 @@ function compare( a: Camp, b: Camp ) {
 }
 
 function filter( c: Camp) {
-    return c.data.end >= now;
+    const campEnd = new Date(c.data.end);
+    return campEnd >= today;
 }
 
 const camps = Object.values(campsAll).filter(filter).sort(compare); 
 ---
 
-<CampList title="Upcoming Camps" camps={camps} />
+<BaseLayout title="Eliot|Upcoming">
+  <div class="container">
+
+    <hgroup>
+      <h1>Upcoming Camps</h1>
+    </hgroup>
+
+      <section>
+        { camps.map((camp: Camp) => {
+          const campYear = new Date(camp.data.start).getFullYear();
+
+          return(
+            <details>
+              <summary class="outline" role="button">
+                {camp.data.name}
+              </summary>
+              <Camp camp={camp} year={campYear}></Camp>
+            </details>
+          )})}
+      </section>
+  </div>
+</BaseLayout>
