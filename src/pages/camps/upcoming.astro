@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/LayoutBase.astro";
-import Camp from "@components/Camp2.astro";
+import Brief from "@components/CampBrief.astro";
+import Details from "@components/CampDetails.astro";
 
 const today = new Date();
  
@@ -50,13 +51,17 @@ const camps = Object.values(campsAll).filter(filter).sort(compare);
           const campYear = new Date(camp.data.start).getFullYear();
 
           return(
-            <details>
-              <summary class="outline" role="button">
-                {camp.data.name}
-              </summary>
-              <Camp camp={camp} year={campYear}></Camp>
-            </details>
+            <article>
+              <Brief camp={camp} />
+              <p></p>
+              <details>
+                <summary class="outline" role="button">
+                  {camp.data.name} program details ...
+                </summary>
+                <Details camp={camp} year={campYear} />
+              </details>
+            </article>
           )})}
       </section>
-  </div>
+    </div>
 </BaseLayout>

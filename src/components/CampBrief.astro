@@ -1,0 +1,23 @@
+---
+const { camp } = Astro.props;
+
+const startDate = new Date(camp.data.start).toDateString();
+const endDate = camp.data.end.toDateString();
+
+let presenter = "";
+
+if (!camp.data.isCAE) {
+
+    presenter += camp.data.presenterUrl
+    ? 'with <a href=' + camp.data.presenterUrl + ' target="other"><b>' + camp.data.presenter + '</b></a>'
+    : 'with <b>' + camp.data.presenter + '</b>'
+}
+
+---
+
+<h2>{camp.data.name}</h2>
+<p>{startDate} &mdash; {endDate}</p>
+<p><i><strong>{camp.data.theme}</strong></i>
+    <span set:html={presenter}></span>
+</p>
+

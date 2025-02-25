@@ -49,6 +49,7 @@ const camps2 = defineCollection({
         start: z.date(),
         end: z.date(),
         presenter: z.string().optional(),
+        presenterUrl: z.string().optional(),
         theme: z.string(), 
         photo: image().optional(),
         width: z.number().optional(),

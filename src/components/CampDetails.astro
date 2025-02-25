@@ -27,13 +27,9 @@ function filterByYear(w) {
 const workshops = camp.data.isCAE ? Object.values(workshopsAll).filter(filterByYear) : [];
 ---
 
-<h2><a href={url}>{camp.data.name}</a></h2>
-<p>{startDate} &mdash; {endDate}</p>
-<p><i>{camp.data.theme}</i></p>
-<p set:html={presenter}></p>
 <Image src={img.src} alt={img.alt} width={img.width} />
-
-<article set:html={camp.rendered.html}></article>
+<p></p>
+<div set:html={camp.rendered.html}></div>
 
 { camp.data.isCAE && <h3>Workshops</h3>}
 { camp.data.isCAE && workshops.length > 0 && workshops.map((ws) => {
