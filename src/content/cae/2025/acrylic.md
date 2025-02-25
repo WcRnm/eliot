@@ -3,7 +3,7 @@
 year:         2025
 title:        Adventures in Acrylic Painting
 presenter:    Amy Dapice
-presenterUrl: www.artconspiracy.net
+presenterUrl: https://www.artconspiracy.net
 
 photo:       ./cae24_dapice.jpg
 # alt:         Amy Dapice
