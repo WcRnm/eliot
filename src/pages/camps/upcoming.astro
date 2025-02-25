@@ -55,7 +55,7 @@ const camps = Object.values(campsAll).filter(filter).sort(compare);
               <Brief camp={camp} />
               <p></p>
               <details>
-                <summary class="outline" role="button">
+                <summary class="outline" role="button" tabindex="0">
                   {camp.data.name} program details ...
                 </summary>
                 <Details camp={camp} year={campYear} />
