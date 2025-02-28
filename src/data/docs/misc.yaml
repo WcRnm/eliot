@@ -28,3 +28,18 @@
   name: Eliot Institute Financial Assistance Application
   file: Eliot_Financial_Assistance_Application_Form_4-24.pdf
   type: info
+
+- id:   giving-opportunity
+  name: Eliot Institute Giving Opportunity Brochure
+  file: Eliot_Giving_Opportunity_Brochure_online.pdf
+  type: info
+
+- id:   camp-flier-2025
+  name: 2025 Eliot Flier
+  file: 2025_Eliot_Flyer.pdf
+  type: info
+
+- id:   2024-fall-newsletter
+  name: 2024 Fall Newsletter
+  file: FALL_2024_NEWSLETTER.pdf
+  type: info

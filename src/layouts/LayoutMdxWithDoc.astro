@@ -10,7 +10,7 @@ const policyDocs = await getCollection('policyDocs');
 
 const docArr = [miscDocs, newsDocs, policyDocs];
 
-function getDoc(id: string) {
+function getDocById(id: string) {
     for (let i in docArr) {
         let doc = docArr[i].find((element: any) => element.id === id)?.data;
         if (doc) {
@@ -19,16 +19,44 @@ function getDoc(id: string) {
     }
     return undefined;    
 }
+function getDocsByType(type: string) {
+    let docs: string[] = [];
+    for (let i in docArr) {
+        docArr[i].forEach((doc) => {
+            if (doc.data.type == type) {
+                console.log(doc);
+                docs.push(doc.data);
+            }
+        });
+    }
+    return docs;    
+}
 
 let docList = []
-const ids = frontmatter.docs.split(',');
-for (const id of ids) {
-    const doc = getDoc(id.trim());
-    if (doc) {
-        docList.push(doc);
-    }
-};
 
+if (frontmatter.docs) {
+    const ids = frontmatter.docs.split(',');
+    console.log(ids);
+    for (const id of ids) {
+        const doc = getDocById(id.trim());
+        if (doc) {
+            docList.push(doc);
+        }
+    };
+}
+
+if (frontmatter.docTypes) {
+    const types = frontmatter.docTypes.split(',');
+    console.log(types);
+    for (const type of types) {
+        const docs = getDocsByType(type.trim());
+        for (const doc of docs) {
+            docList.push(doc);
+        }
+    };
+}
+
+console.log(docList);
 const baseUrl = import.meta.env.BASE_URL;
 function pageUrl(page : string) {
   return baseUrl + page;
